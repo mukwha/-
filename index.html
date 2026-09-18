@@ -22,7 +22,10 @@ body {
 }
 
 body {
+    margin: 0;
+
     background: #260508;
+
     color: #d0cecc;
 
     font-family:
@@ -42,6 +45,7 @@ body {
 
 .page {
     width: 100%;
+
     max-width: 760px;
 
     margin: 0 auto;
@@ -77,9 +81,9 @@ body {
 }
 
 
-/* 작은 제목 */
+/* 상단 */
 
-.small-title {
+.logo-small {
     color: #8f1d24;
 
     font-size: 12px;
@@ -97,9 +101,11 @@ body {
 }
 
 
-/* 묵화 */
+/* 메인 로고 */
 
 .logo {
+    margin: 0;
+
     color: #e2dfdd;
 
     font-size: 76px;
@@ -108,9 +114,9 @@ body {
 
     letter-spacing: 18px;
 
-    margin-left: 18px;
-
     line-height: 1;
+
+    margin-left: 18px;
 
     opacity: 0;
 
@@ -163,7 +169,7 @@ body {
 }
 
 
-/* 문구 */
+/* 인용문 */
 
 .quote {
     margin-top: 55px;
@@ -210,10 +216,12 @@ body {
     animation-delay: 1.7s;
 }
 
+
 .menu a {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     height: 72px;
@@ -244,6 +252,7 @@ body {
         color 0.3s ease,
         border-color 0.3s ease;
 }
+
 
 .menu a:hover {
     background: #351013;
@@ -279,6 +288,7 @@ body {
     animation-delay: 2.1s;
 }
 
+
 .mark {
     color: #5f0c12;
 
@@ -294,15 +304,18 @@ body {
 
     from {
         opacity: 0;
+
         transform: translateY(15px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
 }
+
 
 @keyframes fadeIn {
 
@@ -316,15 +329,18 @@ body {
 
 }
 
+
 @keyframes fadeUp {
 
     from {
         opacity: 0;
+
         transform: translateY(15px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
@@ -339,13 +355,16 @@ body {
         padding: 20px 12px;
     }
 
+
     .page {
         padding: 40px 25px;
     }
 
+
     .cover {
         min-height: 650px;
     }
+
 
     .logo {
         font-size: 58px;
@@ -355,11 +374,13 @@ body {
         margin-left: 12px;
     }
 
+
     .logo-korean {
         font-size: 13px;
 
         letter-spacing: 5px;
     }
+
 
     .description {
         font-size: 12px;
@@ -367,15 +388,18 @@ body {
         line-height: 2;
     }
 
+
     .quote {
         font-size: 12px;
 
         letter-spacing: 2px;
     }
 
+
     .menu {
         grid-template-columns: 1fr;
     }
+
 
     .menu a {
         height: 65px;
@@ -406,75 +430,73 @@ body {
 
 <main class="page">
 
-
-    <section class="cover">
-
-
-        <div class="small-title">
-            ORGANIZATION FILE
-        </div>
+<section class="cover">
 
 
-        <div class="logo">
+    <div class="logo-small">
+        ORGANIZATION FILE
+    </div>
+
+
+    <h1 class="logo">
+        墨花
+    </h1>
+
+
+    <div class="logo-korean">
+        묵화
+    </div>
+
+
+    <div class="description">
+
+        러시아를 주요 거점으로 삼는 대형 범죄 조직.
+        <br>
+        모습을 드러내지 않은 채 오랜 시간 세력을 확장해 왔다.
+
+        <br><br>
+
+        영혼까지도 묵화의 것이 된다.
+
+    </div>
+
+
+    <div class="quote">
+        기록되지 않은 것은, 존재하지 않는 것과 같다.
+    </div>
+
+
+    <nav class="menu">
+
+        <a href="organization.html">
+            조직 개요
+        </a>
+
+        <a href="hierarchy.html">
+            내부 계층
+        </a>
+
+        <a href="outside.html">
+            대외 신분
+        </a>
+
+        <a href="records.html">
+            기록 및 정보
+        </a>
+
+    </nav>
+
+
+    <footer class="footer">
+
+        <span class="mark">
             墨花
-        </div>
+        </span>
+
+    </footer>
 
 
-        <div class="logo-korean">
-            묵화
-        </div>
-
-
-        <div class="description">
-
-            러시아를 주요 거점으로 삼는 대형 범죄 조직.
-            <br>
-            모습을 드러내지 않은 채 오랜 시간 세력을 확장해 왔다.
-
-            <br><br>
-
-            영혼까지도 묵화의 것이 된다.
-
-        </div>
-
-
-        <div class="quote">
-            기록되지 않은 것은, 존재하지 않는 것과 같다.
-        </div>
-
-
-        <nav class="menu">
-
-            <a href="organization.html">
-                조직 개요
-            </a>
-
-            <a href="hierarchy.html">
-                내부 계층
-            </a>
-
-            <a href="outside.html">
-                대외 신분
-            </a>
-
-            <a href="records.html">
-                기록 및 정보
-            </a>
-
-        </nav>
-
-
-        <footer class="footer">
-
-            <span class="mark">
-                墨花
-            </span>
-
-        </footer>
-
-
-    </section>
-
+</section>
 
 </main>
 
