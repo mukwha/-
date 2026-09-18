@@ -1,15 +1,12 @@
  <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>墨花 — 내부 계층</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>墨花 — 대외 신분</title>
 
 <style>
 
@@ -39,9 +36,6 @@ body {
 
     overflow-x: hidden;
 }
-
-
-/* 전체 페이지 */
 
 .page {
     width: 100%;
@@ -93,13 +87,13 @@ body {
 .title {
     margin: 0;
 
+    color: #e2dfdd;
+
     font-size: 48px;
 
     font-weight: 400;
 
     letter-spacing: 8px;
-
-    color: #e2dfdd;
 }
 
 .subtitle {
@@ -113,15 +107,9 @@ body {
 }
 
 
-/* 계층 구조 */
+/* 본문 */
 
-.hierarchy {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
+.content {
     opacity: 0;
 
     animation:
@@ -130,80 +118,65 @@ body {
     animation-delay: 0.5s;
 }
 
-.rank {
-    width: 100%;
+.content p {
+    margin: 0;
 
-    max-width: 560px;
+    color: #999795;
 
-    padding: 30px 32px;
+    font-size: 14px;
 
-    border: 1px solid #453536;
+    line-height: 2.15;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* 기업 정보 */
+
+.company-info {
+    margin-top: 42px;
+
+    padding: 28px 30px;
 
     background: #20201f;
 
-    text-align: left;
-
-    position: relative;
+    border: 1px solid #453536;
 }
 
-.rank.top {
-    border-color: #6b171d;
+.info-row {
+    display: flex;
 
-    background: #241719;
+    padding: 13px 0;
+
+    border-bottom: 1px solid #353433;
 }
 
-.rank-number {
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    width: 105px;
+
+    flex-shrink: 0;
+
     color: #8f1d24;
 
     font-size: 11px;
 
     letter-spacing: 2px;
-
-    margin-bottom: 10px;
 }
 
-.rank-name {
-    color: #d6d2d0;
-
-    font-size: 22px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 5px;
-}
-
-.rank-korean {
-    color: #777574;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 17px;
-}
-
-.rank.top .rank-name {
-    color: #b32a32;
-}
-
-.rank-description {
-    color: #999795;
+.info-value {
+    color: #aaa7a5;
 
     font-size: 13px;
 
-    line-height: 2;
-}
-
-.connector {
-    width: 1px;
-
-    height: 35px;
-
-    background: #541116;
+    line-height: 1.7;
 }
 
 
-/* 설명 */
+/* 섹션 */
 
 .section {
     margin-top: 55px;
@@ -212,6 +185,8 @@ body {
 
     animation:
         fadeUp 1.3s ease forwards;
+
+    animation-delay: 0.8s;
 }
 
 .section-title {
@@ -255,85 +230,64 @@ body {
 }
 
 
-/* 비공개 기록물 */
+/* 빨간 선 사이의 문장 */
 
-.warning {
-    margin-top: 35px;
+.final-line {
+    margin-top: 40px;
 
-    padding: 28px 30px;
-
-    background: #5f0c12;
-
-    border: 1px solid #8f1d24;
-
-    text-align: left;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.5s ease forwards;
-
-    animation-delay: 1.5s;
-}
-
-.warning-title {
-    color: #e2dfdd;
-
-    font-size: 22px;
-
-    font-weight: 500;
-
-    letter-spacing: 4px;
-
-    line-height: 1.5;
-
-    margin-bottom: 18px;
-}
-
-.warning-status {
-    color: #c4c1bf;
-
-    font-size: 12px;
-
-    font-weight: 400;
-
-    letter-spacing: 2px;
-
-    line-height: 2.3;
-}
-
-
-/* 하단 문구 */
-
-.principle {
-    margin-top: 55px;
-
-    padding: 35px 30px;
+    padding: 28px 0;
 
     border-top: 1px solid #541116;
 
     border-bottom: 1px solid #541116;
 
+    color: #8f1d24 !important;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    letter-spacing: 2px;
+
     text-align: center;
+}
+
+
+/* 기록되지 않은 문장 */
+
+.unrecorded {
+    margin-top: 55px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid #353433;
 
     opacity: 0;
 
     animation:
-        fadeIn 1.5s ease forwards;
+        fadeIn 1.3s ease forwards;
 
-    animation-delay: 1.7s;
+    animation-delay: 1.5s;
 }
 
-.principle-title {
-    color: #d6d2d0;
+.unrecorded-title {
+    color: #777574;
 
-    font-size: 15px;
-
-    font-weight: 500;
+    font-size: 11px;
 
     letter-spacing: 3px;
 
-    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.unrecorded-text {
+    color: #666463;
+
+    font-size: 11px;
+
+    line-height: 2;
+
+    letter-spacing: 0.5px;
 }
 
 
@@ -357,7 +311,7 @@ body {
     animation:
         fadeIn 1.3s ease forwards;
 
-    animation-delay: 2.3s;
+    animation-delay: 1.9s;
 }
 
 .back {
@@ -369,7 +323,8 @@ body {
 
     letter-spacing: 2px;
 
-    transition: color 0.3s ease;
+    transition:
+        color 0.3s ease;
 }
 
 .back:hover {
@@ -442,19 +397,24 @@ body {
 
     .title {
         font-size: 36px;
-
         letter-spacing: 6px;
     }
 
-    .rank {
-        padding: 26px 23px;
+    .content p {
+        font-size: 13px;
+        line-height: 2;
     }
 
-    .rank-name {
-        font-size: 19px;
+    .company-info {
+        padding: 23px 20px;
     }
 
-    .rank-description {
+    .info-label {
+        width: 85px;
+        font-size: 10px;
+    }
+
+    .info-value {
         font-size: 12px;
     }
 
@@ -464,32 +424,19 @@ body {
 
     .section p {
         font-size: 13px;
-
         line-height: 2;
     }
 
-    .warning {
-        padding: 24px 20px;
+    .final-line {
+        font-size: 14px;
     }
 
-    .warning-title {
-        font-size: 19px;
-
-        letter-spacing: 3px;
+    .unrecorded-title {
+        font-size: 10px;
     }
 
-    .warning-status {
-        font-size: 11px;
-    }
-
-    .principle {
-        padding: 30px 18px;
-    }
-
-    .principle-title {
-        font-size: 13px;
-
-        letter-spacing: 2px;
+    .unrecorded-text {
+        font-size: 10px;
     }
 
 }
@@ -502,110 +449,114 @@ body {
     *,
     *::before {
         animation: none !important;
-
         opacity: 1 !important;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 <main class="page">
 
+
     <header class="header">
 
         <div class="number">
-            기록 02
+            기록 03
         </div>
 
         <h1 class="title">
-            내부 계층
+            대외 신분
         </h1>
 
         <div class="subtitle">
-            조직 내부의 지휘 체계와 역할
+            조직이 세상에 드러내는 얼굴
         </div>
 
     </header>
 
 
-    <div class="hierarchy">
+    <section class="content">
 
-        <div class="rank top">
+        <p>
 
-            <div class="rank-number">
-                Ⅰ.
+            공식적으로는 러시아에 본사를 둔 생명과학 기업으로 존재한다.
+
+            <br><br>
+
+            신약 개발과 의약품 연구를 주요 사업으로 내세우며,
+            대외적으로는 정상적인 기업의 모습을 유지한다.
+
+            <br><br>
+
+            조직과 기업의 관계를 의심할 만한 흔적은
+            철저하게 분리되어 있다.
+
+        </p>
+
+
+        <div class="company-info">
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    법인 형태
+                </div>
+
+                <div class="info-value">
+                    러시아 소재 생명과학 기업
+                </div>
+
             </div>
 
-            <div class="rank-name">
-                墨主
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    주요 사업
+                </div>
+
+                <div class="info-value">
+                    신약 개발 · 의약품 연구
+                </div>
+
             </div>
 
-            <div class="rank-korean">
-                총수
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    대외 이미지
+                </div>
+
+                <div class="info-value">
+                    안정적이고 신뢰도 높은 연구 기업
+                </div>
+
             </div>
 
-            <div class="rank-description">
-                묵화의 최고 권력자.
-                조직의 전체적인 방향과 핵심 사항을 결정한다.
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    공개 관계
+                </div>
+
+                <div class="info-value">
+                    묵화와의 공식적인 연관성 없음
+                </div>
+
             </div>
 
         </div>
 
 
-        <div class="connector"></div>
-
-
-        <div class="rank">
-
-            <div class="rank-number">
-                Ⅱ.
-            </div>
-
-            <div class="rank-name">
-                幹部
-            </div>
-
-            <div class="rank-korean">
-                간부
-            </div>
-
-            <div class="rank-description">
-                총수의 직속으로,
-                조직의 주요 업무와 각 지역의 세력을 관리한다.
-            </div>
-
-        </div>
-
-
-        <div class="connector"></div>
-
-
-        <div class="rank">
-
-            <div class="rank-number">
-                Ⅲ.
-            </div>
-
-            <div class="rank-name">
-                組織員
-            </div>
-
-            <div class="rank-korean">
-                조직원
-            </div>
-
-            <div class="rank-description">
-                상위 계층의 지시에 따라
-                각자의 업무를 수행한다.
-            </div>
-
-        </div>
-
-    </div>
+    </section>
 
 
     <section class="section">
@@ -617,53 +568,92 @@ body {
             </span>
 
             <h2>
-                계층의 원칙
+                기업으로서의 얼굴
             </h2>
 
         </div>
 
         <p>
 
-            묵화의 내부 계층은 명확한 상하 관계를 기반으로 한다.
+            외부에서 바라보는 기업의 모습은 철저하게 평범하다.
 
             <br><br>
 
-            각 계층은 자신에게 주어진 권한과 역할을 벗어나지 않으며,
-            상위 계층의 결정은 하위 계층으로 전달된다.
+            연구 시설과 사무 공간을 운영하며,
+            의약품과 관련된 연구 성과를 꾸준히 발표한다.
 
             <br><br>
 
-            조직 내부에서 모든 정보가 동일하게 공유되는 것은 아니다.
-            직위가 높아질수록 접근할 수 있는 정보의 범위 역시 넓어진다.
+            기업 내부의 인물들 역시 각자의 직책과 업무를 가진
+            일반적인 직원으로 기록되어 있다.
+
+            <br><br>
+
+            어떠한 의심도 남기지 않는 것.
+            그것이 이 기업이 가장 오랫동안 유지해 온 원칙이다.
 
         </p>
 
     </section>
 
 
-    <div class="warning">
+    <section class="section">
 
-        <div class="warning-title">
-            비공개 기록물
+        <div class="section-title">
+
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
+                분리된 이름
+            </h2>
+
         </div>
 
-        <div class="warning-status">
+        <p>
 
-            열람 등급 : 최상위<br>
-            공개 여부 : 불가
+            기업의 이름과 묵화라는 이름은 공식적인 기록에서
+            서로 연결되지 않는다.
 
-        </div>
+            <br><br>
+
+            기업에 소속된 사람들은 조직의 존재를 알지 못하거나,
+            적어도 외부에서는 그렇게 기록된다.
+
+            <br><br>
+
+            필요한 경우에도 두 이름 사이에는
+            직접적인 흔적이 남지 않도록 관리된다.
+
+        </p>
+
+    </section>
+
+
+    <div class="final-line">
+
+        그들은 언제나, 가장 평범한 얼굴로 존재한다.
 
     </div>
 
 
-    <div class="principle">
+    <section class="unrecorded">
 
-        <div class="principle-title">
-            알고 있는 자는 입을 다문다.
+        <div class="unrecorded-title">
+            기록되지 않은 문장
         </div>
 
-    </div>
+        <div class="unrecorded-text">
+
+            기업의 이름으로 남겨진 기록은 많다.
+            <br>
+            그러나 그 기록만으로는 누구도
+            그 뒤에 무엇이 있는지 알아낼 수 없다.
+
+        </div>
+
+    </section>
 
 
     <footer class="footer">
@@ -678,7 +668,9 @@ body {
 
     </footer>
 
+
 </main>
 
 </body>
+
 </html>
