@@ -1,244 +1,282 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>墨花</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>墨花 — MOKHWA</title>
 
-    html, body {
-      width: 100%;
-      min-height: 100%;
-    }
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #5b0718;
+    color: #e8e2df;
+    font-family: "Times New Roman", "Noto Serif KR", serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+/* 중앙 카드 */
+
+.container {
+    width: 100%;
+    max-width: 560px;
+    min-height: 780px;
+
+    background: #080708;
+
+    border: 1px solid #3d1a21;
+
+    padding: 75px 55px 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,0.5),
+        0 25px 80px rgba(0,0,0,0.55);
+}
+
+/* 제목 */
+
+.title {
+    font-size: 86px;
+    font-weight: 400;
+    letter-spacing: 12px;
+
+    margin: 0 0 12px;
+
+    color: #f0e9e7;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 6px;
+
+    color: #8d8584;
+
+    margin-bottom: 55px;
+}
+
+/* 설명 */
+
+.description {
+    width: 100%;
+
+    text-align: center;
+
+    line-height: 2;
+
+    font-size: 14px;
+
+    color: #b9b1af;
+
+    margin-bottom: 55px;
+}
+
+.description strong {
+    display: block;
+
+    font-size: 17px;
+
+    color: #ded7d4;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+/* 버튼 */
+
+.menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.menu a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 62px;
+
+    border: 1px solid #49202a;
+
+    background: #130d0f;
+
+    color: #d9d1cf;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    transition: 0.25s;
+}
+
+.menu a:hover {
+    background: #5b0718;
+    border-color: #78162c;
+    color: white;
+}
+
+/* 인용문 */
+
+.quote {
+    margin-top: 60px;
+
+    color: #8e2338;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+/* 하단 */
+
+.footer {
+    margin-top: auto;
+    padding-top: 55px;
+
+    font-size: 9px;
+
+    letter-spacing: 7px;
+
+    color: #4e4848;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 600px) {
 
     body {
-      background:
-        radial-gradient(
-          circle at center,
-          #241116 0%,
-          #120b0e 45%,
-          #080809 100%
-        );
-      color: #d8d1d2;
-      font-family: "Noto Serif KR", "Malgun Gothic", serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 30px 16px;
+        padding: 20px 12px;
     }
 
-    /* 중앙 세로형 카드 */
-    .card {
-      width: min(92vw, 560px);
-      min-height: min(88vh, 850px);
+    .container {
+        min-height: 720px;
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(17, 16, 19, 0.98),
-          rgba(35, 12, 18, 0.98)
-        );
-
-      border: 1px solid rgba(100, 35, 45, 0.16);
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      padding: 110px 55px 75px;
-
-      box-shadow:
-        0 0 80px rgba(45, 8, 18, 0.35);
-
-      position: relative;
-      overflow: hidden;
+        padding: 55px 28px 35px;
     }
 
-    /* 카드 안쪽의 은은한 버건디 */
-    .card::before {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 500px;
-      top: -100px;
-      right: -130px;
-
-      background: rgba(83, 20, 31, 0.16);
-      filter: blur(80px);
-      transform: rotate(25deg);
-    }
-
-    .content {
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      text-align: center;
-    }
-
-    /* 제목 */
     .title {
-      font-size: clamp(52px, 9vw, 76px);
-      font-weight: 500;
-      letter-spacing: 14px;
-      margin-left: 14px;
-      color: #bbb3b5;
+        font-size: 62px;
+        letter-spacing: 8px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+        letter-spacing: 4px;
+
+        margin-bottom: 45px;
     }
 
     .description {
-      margin-top: 25px;
-      color: #9d9698;
-      line-height: 1.8;
-      font-size: clamp(13px, 2vw, 16px);
-      font-weight: 500;
+        font-size: 13px;
+
+        margin-bottom: 45px;
     }
 
-    .description span {
-      display: block;
-    }
-
-    /* 메뉴 */
-    .menu {
-      width: 100%;
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    .description strong {
+        font-size: 16px;
     }
 
     .menu a {
-      width: 100%;
-      min-height: 62px;
+        height: 58px;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background: rgba(57, 14, 21, 0.72);
-      color: #d5ced0;
-
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 600;
-
-      transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+        font-size: 12px;
+        letter-spacing: 3px;
     }
 
-    .menu a:hover {
-      background: rgba(91, 23, 34, 0.85);
-      color: #eee9ea;
-      transform: translateY(-2px);
-    }
-
-    /* 하단 문구 */
     .quote {
-      margin-top: 32px;
-      color: #7d1b29;
-      font-family: "Noto Serif KR", serif;
-      font-size: 14px;
-      letter-spacing: 1px;
+        margin-top: 45px;
+        font-size: 11px;
     }
 
-    .footer {
-      margin-top: 60px;
-      color: #4d4447;
-      font-family: Arial, sans-serif;
-      font-size: 9px;
-      letter-spacing: 4px;
-    }
+}
 
-    /* 휴대폰 */
-    @media (max-width: 600px) {
-      body {
-        padding: 0;
-      }
-
-      .card {
-        width: 100%;
-        min-height: 100vh;
-        border: none;
-        padding: 125px 48px 70px;
-      }
-
-      .title {
-        font-size: 55px;
-      }
-
-      .description {
-        font-size: 14px;
-      }
-
-      .menu a {
-        min-height: 62px;
-        font-size: 16px;
-      }
-    }
-
-    /* 아주 작은 휴대폰 */
-    @media (max-width: 380px) {
-      .card {
-        padding-left: 32px;
-        padding-right: 32px;
-      }
-
-      .title {
-        font-size: 48px;
-        letter-spacing: 10px;
-        margin-left: 10px;
-      }
-
-      .description {
-        font-size: 13px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 
 <body>
 
-  <div class="card">
+<div class="container">
 
-    <div class="content">
+    <h1 class="title">墨花</h1>
 
-      <div class="title">墨花</div>
-
-      <div class="description">
-        <span>먹으로 그린 꽃.</span>
-        <span>한 번 새겨진 흔적은 쉽게 지워지지 않는다.</span>
-      </div>
-
-      <nav class="menu">
-
-        <a href="#">조직 개요</a>
-
-        <a href="#">내부 계층</a>
-
-        <a href="#">대외 신분</a>
-
-        <a href="#">정보 통제</a>
-
-      </nav>
-
-      <div class="quote">
-        「墨落成花，闇覆其身。」
-      </div>
-
-      <div class="footer">
+    <div class="subtitle">
         M O K H W A
-      </div>
+    </div>
+
+
+    <div class="description">
+
+        <strong>먹으로 그린 꽃.</strong>
+
+        한 번 새겨진 흔적은 쉽게 지워지지 않는다.<br>
+        검은 흔적 위에 피어난 꽃은<br>
+        그 누구도 쉽게 지울 수 없는 이름이 된다.
 
     </div>
 
-  </div>
+
+    <nav class="menu">
+
+        <a href="organization.html">
+            조직 개요
+        </a>
+
+        <a href="hierarchy.html">
+            내부 계층
+        </a>
+
+        <a href="identity.html">
+            대외 신분
+        </a>
+
+        <a href="records.html">
+            기록 및 정보
+        </a>
+
+    </nav>
+
+
+    <div class="quote">
+        「墨落成花，闇覆其身。」
+    </div>
+
+
+    <div class="footer">
+        M O K H W A
+    </div>
+
+</div>
 
 </body>
 </html>
