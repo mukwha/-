@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>墨花</title>
+<title>墨花 — 대외 신분</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -30,19 +30,15 @@ body {
 
     font-family:
         "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        "바탕체",
         serif;
-
-    font-weight: 500;
 
     padding: 45px 20px;
 
     overflow-x: hidden;
 }
-
-
-/* =========================
-   PAGE
-========================= */
 
 .page {
     width: 100%;
@@ -54,7 +50,7 @@ body {
 
     border: 1px solid #451014;
 
-    padding: 65px;
+    padding: 65px 65px 60px;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
@@ -65,15 +61,15 @@ body {
 
 
 /* =========================
-   HEADER
+   상단
 ========================= */
 
 .header {
-    text-align: center;
-
-    padding-bottom: 42px;
-
     border-bottom: 1px solid #451014;
+
+    padding-bottom: 32px;
+
+    margin-bottom: 45px;
 
     opacity: 0;
 
@@ -83,170 +79,171 @@ body {
     animation-delay: 0.2s;
 }
 
-
-.logo {
+.number {
     color: #8f1d24;
 
-    font-size: 14px;
+    font-size: 12px;
 
-    font-weight: 600;
+    letter-spacing: 3px;
 
-    letter-spacing: 7px;
-
-    margin-bottom: 22px;
+    margin-bottom: 17px;
 }
-
 
 .title {
     margin: 0;
 
+    font-size: 48px;
+
+    font-weight: 400;
+
+    letter-spacing: 8px;
+
     color: #e2dfdd;
-
-    font-size: 62px;
-
-    font-weight: 700;
-
-    letter-spacing: 12px;
-
-    line-height: 1.2;
 }
 
-
 .subtitle {
-    margin-top: 18px;
+    margin-top: 15px;
 
     color: #777574;
 
     font-size: 13px;
 
-    font-weight: 500;
-
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 
 /* =========================
-   DESCRIPTION
+   대외 신분
 ========================= */
 
-.description {
-    margin: 48px auto;
+.identity {
+    opacity: 0;
 
-    max-width: 540px;
+    animation:
+        fadeUp 1.4s ease forwards;
 
-    text-align: center;
+    animation-delay: 0.5s;
+}
+
+.identity-card {
+    width: 100%;
+
+    padding: 35px;
+
+    background: #20201f;
+
+    border: 1px solid #453536;
+
+    position: relative;
+}
+
+.identity-label {
+    color: #8f1d24;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.identity-name {
+    color: #d6d2d0;
+
+    font-size: 25px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 8px;
+}
+
+.identity-sub {
+    color: #777574;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.identity-description {
+    color: #999795;
+
+    font-size: 14px;
+
+    line-height: 2.2;
+}
+
+
+/* =========================
+   설명
+========================= */
+
+.section {
+    margin-top: 55px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.3s ease forwards;
+
+    animation-delay: 0.9s;
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.section-number {
+    color: #8f1d24;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    color: #d5d2d0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+}
+
+.section p {
+    margin: 0;
 
     color: #999795;
 
     font-size: 14px;
 
-    font-weight: 500;
-
-    line-height: 2.2;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-
-    animation-delay: 0.6s;
-}
-
-
-.description strong {
-    color: #c4c1bf;
-
-    font-weight: 700;
+    line-height: 2.15;
 }
 
 
 /* =========================
-   MENU
+   비공개 기록
 ========================= */
 
-.menu {
-    display: grid;
+.principle {
+    margin-top: 55px;
 
-    grid-template-columns: 1fr 1fr;
+    padding: 40px 30px;
 
-    gap: 12px;
+    border-top: 1px solid #541116;
 
-    opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-
-    animation-delay: 1s;
-}
-
-
-.menu a {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    height: 72px;
-
-    background: #242423;
-
-    border: 1px solid #541116;
-
-    color: #aaa7a5;
-
-    text-decoration: none;
-
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        serif;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease;
-}
-
-
-.menu a:hover {
-    background: #301013;
-
-    border-color: #8f1d24;
-
-    color: #e2dfdd;
-}
-
-
-/* =========================
-   QUOTE
-========================= */
-
-.quote {
-    margin-top: 52px;
-
-    padding-top: 30px;
-
-    border-top: 1px solid #353433;
-
-    text-align: center;
-
-    color: #5f0c12;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    line-height: 2;
+    border-bottom: 1px solid #541116;
 
     opacity: 0;
 
@@ -256,57 +253,98 @@ body {
     animation-delay: 1.5s;
 }
 
+.principle-title {
+    color: #d6d2d0;
 
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-    margin-top: 38px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #353433;
-
-    text-align: center;
-
-    color: #4f4d4b;
-
-    font-size: 11px;
+    font-size: 25px;
 
     font-weight: 500;
 
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+.record-status {
+    color: #999795;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    line-height: 2.3;
+}
+
+
+/* =========================
+   하단
+========================= */
+
+.footer {
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #353433;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
 
     opacity: 0;
 
     animation:
         fadeIn 1.3s ease forwards;
 
-    animation-delay: 1.8s;
+    animation-delay: 2s;
+}
+
+.back {
+    color: #777574;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: color 0.3s ease;
+}
+
+.back:hover {
+    color: #b32a32;
+}
+
+.mark {
+    color: #5f0c12;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
 }
 
 
 /* =========================
-   ANIMATION
+   애니메이션
 ========================= */
 
 @keyframes pageAppear {
 
     from {
         opacity: 0;
-
         transform: translateY(15px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 
 }
-
 
 @keyframes fadeIn {
 
@@ -320,18 +358,15 @@ body {
 
 }
 
-
 @keyframes fadeUp {
 
     from {
         opacity: 0;
-
         transform: translateY(15px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 
@@ -339,7 +374,7 @@ body {
 
 
 /* =========================
-   MOBILE
+   모바일
 ========================= */
 
 @media (max-width: 600px) {
@@ -353,32 +388,52 @@ body {
     }
 
     .title {
-        font-size: 46px;
+        font-size: 36px;
 
-        letter-spacing: 8px;
+        letter-spacing: 6px;
     }
 
-    .menu {
-        grid-template-columns: 1fr;
+    .identity-card {
+        padding: 28px 23px;
     }
 
-    .menu a {
-        height: 64px;
+    .identity-name {
+        font-size: 21px;
     }
 
-    .description {
+    .identity-description {
         font-size: 13px;
     }
 
-    .quote {
-        font-size: 12px;
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+    .section p {
+        font-size: 13px;
+
+        line-height: 2;
+    }
+
+    .principle {
+        padding: 32px 18px;
+    }
+
+    .principle-title {
+        font-size: 21px;
+
+        letter-spacing: 4px;
+    }
+
+    .record-status {
+        font-size: 11px;
     }
 
 }
 
 
 /* =========================
-   REDUCED MOTION
+   모션 줄이기
 ========================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -395,7 +450,6 @@ body {
 </style>
 </head>
 
-
 <body>
 
 <main class="page">
@@ -403,65 +457,144 @@ body {
 
     <header class="header">
 
-        <div class="logo">
-            墨花
+        <div class="number">
+            기록 03
         </div>
 
         <h1 class="title">
-            墨花
+            대외 신분
         </h1>
 
         <div class="subtitle">
-            기록되지 않은 이름
+            외부에 드러나는 조직의 모습
         </div>
 
     </header>
 
 
-    <div class="description">
+    <div class="identity">
 
-        러시아를 주요 거점으로 삼는 대형 범죄 조직.<br>
-        모습을 드러내지 않은 채 오랜 시간 세력을 확장해 왔다.<br><br>
+        <div class="identity-card">
 
-        <strong>
-            영혼까지도 묵화의 것이 된다.
-        </strong>
+            <div class="identity-label">
+                EXTERNAL IDENTITY
+            </div>
+
+            <div class="identity-name">
+                합법적인 얼굴
+            </div>
+
+            <div class="identity-sub">
+                외부에 공개되는 신분
+            </div>
+
+            <div class="identity-description">
+                묵화는 조직의 실체를 외부에 직접적으로 드러내지 않는다.
+                <br><br>
+                조직과 관련된 인물들은 각자의 신분과 목적에 따라
+                서로 다른 이름과 직업을 사용하며 활동한다.
+                <br><br>
+                겉으로 드러난 모습만으로는 이들이 하나의 조직에
+                소속되어 있다는 사실을 확인하기 어렵다.
+            </div>
+
+        </div>
 
     </div>
 
 
-    <nav class="menu">
+    <section class="section">
 
-        <a href="organization.html">
-            조직 개요
-        </a>
+        <div class="section-title">
 
-        <a href="hierarchy.html">
-            내부 계층
-        </a>
+            <span class="section-number">
+                01
+            </span>
 
-        <a href="identity.html">
-            대외 신분
-        </a>
+            <h2>
+                외부에 보이는 모습
+            </h2>
 
-        <a href="records.html">
-            기록 및 정보
-        </a>
+        </div>
 
-    </nav>
+        <p>
+
+            묵화의 조직원들은 외부에서 평범한 사회 구성원으로
+            행동하도록 요구받는다.
+
+            <br><br>
+
+            사업가, 회사원, 의료인 등 서로 다른 직업과 신분을
+            가지고 있으며, 조직과 관련된 흔적을 남기지 않는다.
+
+            <br><br>
+
+            겉으로 드러난 이름은 실체를 숨기기 위한 것에 불과하다.
+
+        </p>
+
+    </section>
 
 
-    <div class="quote">
+    <section class="section">
 
-        기록되지 않은 것은,
-        존재하지 않는 것과 같다.
+        <div class="section-title">
+
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
+                신분의 분리
+            </h2>
+
+        </div>
+
+        <p>
+
+            외부에서 사용되는 신분과 조직 내부에서의 신분은
+            명확하게 구분된다.
+
+            <br><br>
+
+            조직 내부의 이름과 외부에서 사용하는 이름이
+            일치하는 경우는 극히 드물다.
+
+            <br><br>
+
+            외부에서의 삶은 조직의 존재를 감추기 위한
+            또 하나의 가면으로 취급된다.
+
+        </p>
+
+    </section>
+
+
+    <div class="principle">
+
+        <div class="principle-title">
+            비공개 기록물
+        </div>
+
+        <div class="record-status">
+
+            열람 등급 : 최상위<br>
+            공개 여부 : 불가
+
+        </div>
 
     </div>
 
 
     <footer class="footer">
 
-        墨花
+        <a class="back" href="index.html">
+            ← 메인으로
+        </a>
+
+        <span class="mark">
+            墨花
+        </span>
 
     </footer>
 
