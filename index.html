@@ -1,6 +1,8 @@
  <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,14 +14,17 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     min-height: 100%;
 }
 
 body {
+
     background: #260508;
+
     color: #d0cecc;
 
     font-family:
@@ -30,6 +35,7 @@ body {
         serif;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -41,19 +47,24 @@ body {
 }
 
 .container {
+
     position: relative;
-    z-index: 2;
+
     width: 100%;
     max-width: 560px;
+
     min-height: 780px;
 
     background: #1b1b1a;
+
     border: 1px solid #451014;
 
     padding: 75px 55px 45px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     box-shadow:
@@ -66,18 +77,27 @@ body {
 @keyframes cardAppear {
 
     from {
+
         opacity: 0;
-        transform: translateY(15px);
+
+        transform:
+            translateY(15px);
+
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
     }
 
 }
 
 .title {
+
     margin: 0 0 55px;
 
     font-family:
@@ -87,6 +107,7 @@ body {
         serif;
 
     font-size: 86px;
+
     font-weight: 400;
 
     letter-spacing: 10px;
@@ -102,17 +123,12 @@ body {
 }
 
 .description {
+
     width: 100%;
 
     text-align: center;
 
     line-height: 2.1;
-
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        serif;
 
     font-size: 15px;
 
@@ -129,9 +145,11 @@ body {
 }
 
 .description strong {
+
     display: block;
 
     font-size: 18px;
+
     font-weight: 400;
 
     color: #aaa8a6;
@@ -140,6 +158,7 @@ body {
 }
 
 .menu {
+
     width: 100%;
 
     display: grid;
@@ -157,6 +176,7 @@ body {
 }
 
 .menu a {
+
     display: flex;
 
     align-items: center;
@@ -189,6 +209,7 @@ body {
 }
 
 .menu a:hover {
+
     background: #35080b;
 
     border-color: #75151b;
@@ -197,6 +218,7 @@ body {
 }
 
 .quote {
+
     margin-top: 60px;
 
     color: #8f1d24;
@@ -223,11 +245,15 @@ body {
 @keyframes fadeIn {
 
     from {
+
         opacity: 0;
+
     }
 
     to {
+
         opacity: 1;
+
     }
 
 }
@@ -235,13 +261,21 @@ body {
 @keyframes fadeUp {
 
     from {
+
         opacity: 0;
-        transform: translateY(18px);
+
+        transform:
+            translateY(18px);
+
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
     }
 
 }
@@ -249,10 +283,13 @@ body {
 @media (max-width: 600px) {
 
     body {
-        padding: 20px 12px;
+
+        padding:
+            20px 12px;
     }
 
     .container {
+
         min-height: 720px;
 
         padding:
@@ -260,6 +297,7 @@ body {
     }
 
     .title {
+
         font-size: 62px;
 
         letter-spacing: 7px;
@@ -268,6 +306,7 @@ body {
     }
 
     .description {
+
         font-size: 13px;
 
         margin-bottom: 45px;
@@ -276,14 +315,17 @@ body {
     }
 
     .description strong {
+
         font-size: 16px;
     }
 
     .menu {
+
         gap: 10px;
     }
 
     .menu a {
+
         height: 62px;
 
         font-size: 12px;
@@ -292,6 +334,7 @@ body {
     }
 
     .quote {
+
         margin-top: 45px;
 
         font-size: 16px;
@@ -315,15 +358,19 @@ body {
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 <div class="container">
 
+
     <h1 class="title">
         墨花
     </h1>
+
 
     <div class="description">
 
@@ -339,31 +386,42 @@ body {
 
     </div>
 
+
     <nav class="menu">
+
 
         <a href="organization.html">
             조직 개요
         </a>
 
+
         <a href="hierarchy.html">
             내부 계층
         </a>
+
 
         <a href="outside.html">
             대외 신분
         </a>
 
-        <a href="records.html">
+
+        <a href="record.html">
             기록 및 정보
         </a>
 
+
     </nav>
 
+
     <div class="quote">
+
         「墨落成花，闇覆其身。」
+
     </div>
+
 
 </div>
 
 </body>
+
 </html>
