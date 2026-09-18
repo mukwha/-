@@ -310,9 +310,9 @@ body {
 
     padding: 35px 30px;
 
-    border-top: 1px solid #541116;
+    border-top: 1px solid #b32a32;
 
-    border-bottom: 1px solid #541116;
+    border-bottom: 1px solid #b32a32;
 
     text-align: center;
 
@@ -325,7 +325,7 @@ body {
 }
 
 .principle-title {
-    color: #d6d2d0;
+    color: #b32a32;
 
     font-size: 15px;
 
@@ -334,6 +334,44 @@ body {
     letter-spacing: 3px;
 
     line-height: 1.8;
+}
+
+
+/* 기록되지 않은 문장 */
+
+.unrecorded {
+    margin-top: 55px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid #353433;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.3s ease forwards;
+
+    animation-delay: 2s;
+}
+
+.unrecorded-title {
+    color: #777574;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 14px;
+}
+
+.unrecorded-text {
+    color: #666463;
+
+    font-size: 11px;
+
+    line-height: 2;
+
+    letter-spacing: 0.5px;
 }
 
 
@@ -661,6 +699,21 @@ body {
 
         <div class="principle-title">
             알고 있는 자는 입을 다문다.
+        </div>
+
+    </div>
+
+
+    <div class="unrecorded">
+
+        <div class="unrecorded-title">
+            기록되지 않은 문장
+        </div>
+
+        <div class="unrecorded-text">
+            상위 계층이 허락하지 않은 기록은<br>
+            존재하지 않는 것으로 취급된다.<br>
+            보이지 않는 것은, 알 수 없는 것이어야 한다.
         </div>
 
     </div>
