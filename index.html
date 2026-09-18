@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>墨花 — MOKHWA</title>
+<title>墨花</title>
 
 <style>
 
@@ -19,17 +19,24 @@ html, body {
 }
 
 body {
-    background: #5b0718;
-    color: #e8e2df;
-    font-family: "Times New Roman", "Noto Serif KR", serif;
+    background: #3b0a15;
+    color: #ddd7d5;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "Batang",
+        serif;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     min-height: 100vh;
+
     padding: 50px 20px;
 }
+
 
 /* 중앙 카드 */
 
@@ -38,9 +45,9 @@ body {
     max-width: 560px;
     min-height: 780px;
 
-    background: #080708;
+    background: #171619;
 
-    border: 1px solid #3d1a21;
+    border: 1px solid #4b1825;
 
     padding: 75px 55px 45px;
 
@@ -49,30 +56,23 @@ body {
     align-items: center;
 
     box-shadow:
-        0 0 0 1px rgba(0,0,0,0.5),
-        0 25px 80px rgba(0,0,0,0.55);
+        0 20px 70px rgba(0, 0, 0, 0.45);
 }
+
 
 /* 제목 */
 
 .title {
+    margin: 0 0 55px;
+
     font-size: 86px;
     font-weight: 400;
+
     letter-spacing: 12px;
 
-    margin: 0 0 12px;
-
-    color: #f0e9e7;
+    color: #e4dedc;
 }
 
-.subtitle {
-    font-size: 12px;
-    letter-spacing: 6px;
-
-    color: #8d8584;
-
-    margin-bottom: 55px;
-}
 
 /* 설명 */
 
@@ -85,7 +85,7 @@ body {
 
     font-size: 14px;
 
-    color: #b9b1af;
+    color: #aaa3a1;
 
     margin-bottom: 55px;
 }
@@ -93,14 +93,14 @@ body {
 .description strong {
     display: block;
 
-    font-size: 17px;
-
-    color: #ded7d4;
-
+    font-size: 18px;
     font-weight: 400;
 
-    margin-bottom: 12px;
+    color: #d5cecc;
+
+    margin-bottom: 14px;
 }
+
 
 /* 버튼 */
 
@@ -122,51 +122,42 @@ body {
     width: 100%;
     height: 62px;
 
-    border: 1px solid #49202a;
+    background: #211c1e;
 
-    background: #130d0f;
+    border: 1px solid #54202d;
 
-    color: #d9d1cf;
+    color: #c9c1bf;
 
     text-decoration: none;
 
     font-size: 14px;
-    letter-spacing: 4px;
+
+    letter-spacing: 3px;
 
     transition: 0.25s;
 }
 
 .menu a:hover {
-    background: #5b0718;
-    border-color: #78162c;
-    color: white;
+    background: #3b0a15;
+
+    border-color: #702238;
+
+    color: #eee8e6;
 }
+
 
 /* 인용문 */
 
 .quote {
     margin-top: 60px;
 
-    color: #8e2338;
+    color: #74243a;
 
     font-size: 13px;
 
     letter-spacing: 2px;
 
     text-align: center;
-}
-
-/* 하단 */
-
-.footer {
-    margin-top: auto;
-    padding-top: 55px;
-
-    font-size: 9px;
-
-    letter-spacing: 7px;
-
-    color: #4e4848;
 }
 
 
@@ -186,12 +177,8 @@ body {
 
     .title {
         font-size: 62px;
-        letter-spacing: 8px;
-    }
 
-    .subtitle {
-        font-size: 9px;
-        letter-spacing: 4px;
+        letter-spacing: 8px;
 
         margin-bottom: 45px;
     }
@@ -210,11 +197,13 @@ body {
         height: 58px;
 
         font-size: 12px;
+
         letter-spacing: 3px;
     }
 
     .quote {
         margin-top: 45px;
+
         font-size: 11px;
     }
 
@@ -229,10 +218,6 @@ body {
 <div class="container">
 
     <h1 class="title">墨花</h1>
-
-    <div class="subtitle">
-        M O K H W A
-    </div>
 
 
     <div class="description">
@@ -269,11 +254,6 @@ body {
 
     <div class="quote">
         「墨落成花，闇覆其身。」
-    </div>
-
-
-    <div class="footer">
-        M O K H W A
     </div>
 
 </div>
