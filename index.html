@@ -1,10 +1,13 @@
- <!DOCTYPE html>
+ ```html
+<!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>墨花 — 조직 개요</title>
+<title>墨花</title>
 
 <style>
 
@@ -12,14 +15,17 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     min-height: 100%;
 }
 
 body {
+
     background: #260508;
+
     color: #d0cecc;
 
     font-family:
@@ -31,471 +37,366 @@ body {
 
     font-weight: 500;
 
-    padding: 45px 20px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 50px 20px;
 
     overflow-x: hidden;
 }
 
 
-/* =========================
-   페이지
-========================= */
+/* ─────────────
+   메인 카드
+───────────── */
 
-.page {
+.container {
+
     width: 100%;
-    max-width: 760px;
+    max-width: 560px;
 
-    margin: 0 auto;
+    min-height: 780px;
 
     background: #1b1b1a;
 
     border: 1px solid #451014;
 
-    padding: 65px 65px 60px;
+    padding: 75px 55px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
 
     animation:
-        pageAppear 1.4s ease forwards;
+        cardAppear 1.5s ease forwards;
 }
 
 
-/* =========================
-   상단
-========================= */
+/* ─────────────
+   등장 애니메이션
+───────────── */
 
-.header {
-    border-bottom: 1px solid #451014;
+@keyframes cardAppear {
 
-    padding-bottom: 32px;
+    from {
 
-    margin-bottom: 45px;
+        opacity: 0;
 
-    opacity: 0;
+        transform:
+            translateY(15px);
 
-    animation:
-        fadeIn 1.3s ease forwards;
+    }
 
-    animation-delay: 0.2s;
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
 }
 
 
-.number {
-    color: #8f1d24;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 17px;
-}
-
+/* ─────────────
+   제목
+───────────── */
 
 .title {
-    margin: 0;
 
-    font-size: 48px;
+    margin: 0 0 55px;
 
-    font-weight: 700;
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
 
-    letter-spacing: 8px;
-
-    color: #e2dfdd;
-}
-
-
-.subtitle {
-    margin-top: 15px;
-
-    color: #777574;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================
-   기본 정보
-========================= */
-
-.info {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    border-top: 1px solid #353433;
-
-    border-left: 1px solid #353433;
-
-    margin-bottom: 55px;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-
-    animation-delay: 0.5s;
-}
-
-
-.info-item {
-    padding: 22px 20px;
-
-    border-right: 1px solid #353433;
-
-    border-bottom: 1px solid #353433;
-}
-
-
-.info-label {
-    display: block;
-
-    color: #777574;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-}
-
-
-.info-value {
-    color: #c4c1bf;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    line-height: 1.7;
-}
-
-
-/* =========================
-   본문
-========================= */
-
-.section {
-    margin-bottom: 48px;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-}
-
-
-.section:nth-of-type(1) {
-    animation-delay: 0.8s;
-}
-
-.section:nth-of-type(2) {
-    animation-delay: 1.1s;
-}
-
-.section:nth-of-type(3) {
-    animation-delay: 1.4s;
-}
-
-
-.section-title {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 20px;
-}
-
-
-.section-number {
-    color: #8f1d24;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-}
-
-
-.section-title h2 {
-    margin: 0;
-
-    color: #d5d2d0;
-
-    font-size: 20px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-}
-
-
-.section p {
-    margin: 0;
-
-    color: #999795;
-
-    font-size: 14px;
+    font-size: 86px;
 
     font-weight: 500;
 
-    line-height: 2.15;
-}
+    letter-spacing: 10px;
 
-
-/* =========================
-   조직의 문구
-========================= */
-
-.statement {
-    margin: 58px 0;
-
-    padding: 32px 20px;
-
-    border-top: 1px solid #541116;
-
-    border-bottom: 1px solid #541116;
-
-    text-align: center;
-
-    color: #8f1d24;
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-    letter-spacing: 3px;
-
-    line-height: 2;
+    color: #e2dfdd;
 
     opacity: 0;
 
     animation:
         fadeIn 1.5s ease forwards;
 
-    animation-delay: 1.8s;
+    animation-delay: 0.4s;
 }
 
 
-/* =========================
-   기록
-========================= */
+/* ─────────────
+   설명
+───────────── */
 
-.record {
-    padding: 24px 0;
+.description {
 
-    border-top: 1px solid #353433;
+    width: 100%;
 
-    border-bottom: 1px solid #353433;
+    text-align: center;
+
+    line-height: 2.1;
+
+    font-size: 15px;
+
+    color: #999795;
+
+    margin-bottom: 55px;
 
     opacity: 0;
 
     animation:
-        fadeUp 1.3s ease forwards;
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 0.9s;
+}
+
+.description strong {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #aaa8a6;
+
+    margin-bottom: 14px;
+}
+
+
+/* ─────────────
+   메뉴
+───────────── */
+
+.menu {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: 1.5s;
+}
+
+
+.menu a {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 72px;
+
+    background: #242423;
+
+    border: 1px solid #541116;
+
+    color: #aaa7a5;
+
+    text-decoration: none;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.menu a:hover {
+
+    background: #35080b;
+
+    border-color: #75151b;
+
+    color: #ddd9d7;
+}
+
+
+/* ─────────────
+   문구
+───────────── */
+
+.quote {
+
+    margin-top: 60px;
+
+    color: #8f1d24;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
 
     animation-delay: 2.1s;
 }
 
 
-.record-label {
-    color: #777574;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
-}
-
-
-.record-text {
-    color: #999795;
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    line-height: 2;
-}
-
-
-/* =========================
-   하단
-========================= */
-
-.footer {
-    margin-top: 45px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #353433;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.3s ease forwards;
-
-    animation-delay: 2.4s;
-}
-
-
-.back {
-    color: #777574;
-
-    text-decoration: none;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    transition: color 0.3s ease;
-}
-
-
-.back:hover {
-    color: #b32a32;
-}
-
-
-.mark {
-    color: #5f0c12;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    letter-spacing: 3px;
-}
-
-
-/* =========================
-   애니메이션
-========================= */
-
-@keyframes pageAppear {
-
-    from {
-        opacity: 0;
-
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-
-}
-
-
-@keyframes fadeIn {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-
-}
-
-
-@keyframes fadeUp {
-
-    from {
-        opacity: 0;
-
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-
-}
-
-
-/* =========================
+/* ─────────────
    모바일
-========================= */
+───────────── */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 20px 12px;
+
+        padding:
+            20px 12px;
     }
 
-    .page {
-        padding: 45px 28px 50px;
+    .container {
+
+        min-height: 720px;
+
+        padding:
+            55px 28px 35px;
     }
 
     .title {
-        font-size: 36px;
 
-        letter-spacing: 6px;
+        font-size: 62px;
+
+        letter-spacing: 7px;
+
+        margin-bottom: 45px;
     }
 
-    .info {
-        grid-template-columns: 1fr;
-    }
+    .description {
 
-    .section-title h2 {
-        font-size: 18px;
-    }
-
-    .section p {
         font-size: 13px;
 
-        font-weight: 500;
+        margin-bottom: 45px;
 
         line-height: 2;
     }
 
-    .statement {
-        font-size: 15px;
+    .description strong {
 
-        font-weight: 600;
+        font-size: 16px;
+    }
 
-        padding: 25px 15px;
+    .menu {
+
+        gap: 10px;
+    }
+
+    .menu a {
+
+        height: 62px;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .quote {
+
+        margin-top: 45px;
+
+        font-size: 16px;
     }
 
 }
 
 
-/* =========================
-   모션 줄이기
-========================= */
+/* ─────────────
+   애니메이션 감소 설정
+───────────── */
 
 @media (prefers-reduced-motion: reduce) {
 
-    *,
-    *::before,
-    *::after {
+    .container,
+    .title,
+    .description,
+    .menu,
+    .quote {
+
         animation: none !important;
 
         opacity: 1 !important;
@@ -504,275 +405,81 @@ body {
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<main class="page">
+
+<div class="container">
 
 
-    <!-- =====================
-         제목
-    ====================== -->
+    <!-- 제목 -->
 
-    <header class="header">
+    <h1 class="title">
+        墨花
+    </h1>
 
-        <div class="number">
-            기록 01
-        </div>
 
-        <h1 class="title">
+    <!-- 설명 -->
+
+    <div class="description">
+
+        <strong>
+            먹으로 그린 꽃.
+        </strong>
+
+        한 번 새겨진 흔적은 쉽게 지워지지 않는다.<br>
+
+        검은 흔적 위에 피어난 꽃은<br>
+
+        그 누구도 쉽게 지울 수 없는 이름이 된다.
+
+    </div>
+
+
+    <!-- 메뉴 -->
+
+    <nav class="menu">
+
+
+        <a href="organization.html">
             조직 개요
-        </h1>
-
-        <div class="subtitle">
-            墨花 / 묵화
-        </div>
-
-    </header>
-
-
-    <!-- =====================
-         기본 정보
-    ====================== -->
-
-    <section class="info">
-
-
-        <div class="info-item">
-
-            <span class="info-label">
-                조직명
-            </span>
-
-            <div class="info-value">
-                墨花 / 묵화
-            </div>
-
-        </div>
-
-
-        <div class="info-item">
-
-            <span class="info-label">
-                주요 거점
-            </span>
-
-            <div class="info-value">
-                러시아
-            </div>
-
-        </div>
-
-
-        <div class="info-item">
-
-            <span class="info-label">
-                조직 성격
-            </span>
-
-            <div class="info-value">
-                대형 범죄 조직
-            </div>
-
-        </div>
-
-
-        <div class="info-item">
-
-            <span class="info-label">
-                주요 활동
-            </span>
-
-            <div class="info-value">
-                마약 · 인신매매
-            </div>
-
-        </div>
-
-
-    </section>
-
-
-    <!-- =====================
-         조직 개요
-    ====================== -->
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span class="section-number">
-                01
-            </span>
-
-            <h2>
-                조직 개요
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            러시아를 주요 거점으로 삼는 대형 범죄 조직.
-            러시아 내 여러 지역에 세력을 뻗고 있으며,
-            상당한 영향력을 행사한다.
-
-            <br><br>
-
-            주요 사업은 마약 및 인신매매.
-            납치한 사람을 필요에 따라 거래하며,
-            인간을 상품으로 취급한다.
-
-            <br><br>
-
-            오랜 시간 동안 모습을 드러내지 않은 채
-            세력을 확장해 왔으며, 현재는 하나의 지역에
-            국한되지 않는 거대한 조직으로 성장했다.
-
-        </p>
-
-    </section>
-
-
-    <!-- =====================
-         조직의 성격
-    ====================== -->
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span class="section-number">
-                02
-            </span>
-
-            <h2>
-                조직의 성격
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            묵화는 사람보다 조직의 존속을 우선한다.
-
-            <br><br>
-
-            개인의 감정이나 사정은 조직의 판단 앞에서
-            쉽게 무시되며, 필요하다고 판단된 경우에는
-            구성원조차 하나의 수단으로 취급된다.
-
-            <br><br>
-
-            조직에 들어온 순간부터 개인의 가치는
-            자신이 가진 능력과 역할에 의해 결정된다.
-
-        </p>
-
-    </section>
-
-
-    <!-- =====================
-         조직의 영향력
-    ====================== -->
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span class="section-number">
-                03
-            </span>
-
-            <h2>
-                세력과 영향력
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            러시아 여러 지역에 거점을 두고 있으며,
-            각 지역의 조직원과 관계자들을 통해
-            넓은 범위의 활동을 이어가고 있다.
-
-            <br><br>
-
-            조직의 이름이 직접적으로 드러나는 경우는
-            많지 않지만, 묵화와 관련된 사건은
-            서로 다른 지역에서 반복적으로 발견된다.
-
-            <br><br>
-
-            개별 사건만으로는 서로 연관성을 찾기 어렵지만,
-            일정한 흔적을 따라가다 보면 그 중심에는
-            언제나 같은 이름이 남는다.
-
-        </p>
-
-    </section>
-
-
-    <!-- =====================
-         핵심 문구
-    ====================== -->
-
-    <div class="statement">
-
-        한 번 새겨진 흔적은<br>
-        쉽게 지워지지 않는다.
-
-    </div>
-
-
-    <!-- =====================
-         기록
-    ====================== -->
-
-    <div class="record">
-
-        <div class="record-label">
-            기록되지 않은 문장
-        </div>
-
-        <div class="record-text">
-
-            묵화라는 이름은 조직의 시작부터
-            현재까지 변하지 않았다.
-
-            <br>
-
-            형태는 달라졌고 사람도 바뀌었지만,
-            남겨진 흔적만큼은 사라지지 않았다.
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================
-         하단
-    ====================== -->
-
-    <footer class="footer">
-
-        <a class="back" href="index.html">
-            ← 메인으로
         </a>
 
-        <span class="mark">
-            墨花
-        </span>
 
-    </footer>
+        <a href="hierarchy.html">
+            내부 계층
+        </a>
 
 
-</main>
+        <a href="outside.html">
+            대외 신분
+        </a>
+
+
+        <a href="record.html">
+            기록 및 정보
+        </a>
+
+
+    </nav>
+
+
+    <!-- 문구 -->
+
+    <div class="quote">
+
+        「墨落成花，闇覆其身。」
+
+    </div>
+
+
+</div>
+
 
 </body>
+
 </html>
+```
