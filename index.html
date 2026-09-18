@@ -81,26 +81,6 @@ body {
 }
 
 
-/* 상단 */
-
-.logo-small {
-    color: #8f1d24;
-
-    font-size: 12px;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 35px;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.2s ease forwards;
-
-    animation-delay: 0.3s;
-}
-
-
 /* 메인 로고 */
 
 .logo {
@@ -276,6 +256,8 @@ body {
 
     display: flex;
 
+    flex-direction: column;
+
     justify-content: center;
 
     align-items: center;
@@ -288,6 +270,23 @@ body {
     animation-delay: 2.1s;
 }
 
+
+/* 묵화 표어 */
+
+.slogan {
+    margin-bottom: 25px;
+
+    color: #b32a32;
+
+    font-size: 20px;
+
+    letter-spacing: 4px;
+
+    line-height: 1.5;
+}
+
+
+/* 하단 로고 */
 
 .mark {
     color: #5f0c12;
@@ -347,8 +346,6 @@ body {
 }
 
 
-/* 모바일 */
-
 @media (max-width: 600px) {
 
     body {
@@ -405,6 +402,13 @@ body {
         height: 65px;
     }
 
+
+    .slogan {
+        font-size: 17px;
+
+        letter-spacing: 3px;
+    }
+
 }
 
 
@@ -431,11 +435,6 @@ body {
 <main class="page">
 
 <section class="cover">
-
-
-    <div class="logo-small">
-        ORGANIZATION FILE
-    </div>
 
 
     <h1 class="logo">
@@ -488,6 +487,10 @@ body {
 
 
     <footer class="footer">
+
+        <div class="slogan">
+            墨落成花，闇覆其身。
+        </div>
 
         <span class="mark">
             墨花
