@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +13,13 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 body {
-    min-height: 100vh;
-
     background: #260508;
     color: #d0cecc;
 
@@ -31,7 +30,9 @@ body {
         "바탕체",
         serif;
 
-    padding: 60px 20px;
+    min-height: 100vh;
+
+    padding: 50px 20px;
 }
 
 .page {
@@ -40,246 +41,174 @@ body {
 
     margin: 0 auto;
 
-    padding: 65px 60px 45px;
-
     background: #1b1b1a;
 
     border: 1px solid #451014;
+
+    padding: 65px 60px 45px;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
 }
 
-
-/* ====================
-   제목
-==================== */
-
 .header {
-    width: 100%;
-
-    padding-bottom: 40px;
-
-    border-bottom: 1px solid #393836;
-
     text-align: left;
+
+    margin-bottom: 55px;
 }
 
-.number {
-    margin-bottom: 18px;
-
-    color: #78171d;
+.label {
+    font-family: Arial, sans-serif;
 
     font-size: 11px;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+
+    color: #7f2026;
+
+    margin-bottom: 14px;
 }
 
 .title {
     margin: 0;
 
-    color: #dedbd9;
-
-    font-size: 46px;
+    font-size: 42px;
 
     font-weight: 400;
 
-    letter-spacing: 6px;
+    letter-spacing: 4px;
 
-    text-align: left;
+    color: #e2dfdd;
 }
 
 .subtitle {
     margin-top: 18px;
 
-    color: #777472;
+    font-size: 14px;
 
-    font-size: 13px;
+    color: #858381;
 
-    letter-spacing: 2px;
-
-    text-align: left;
+    line-height: 1.8;
 }
-
-
-/* ====================
-   본문
-==================== */
 
 .content {
-    width: 100%;
-
-    margin-top: 45px;
-
     text-align: left;
 }
 
-.block {
-    width: 100%;
-
+.section {
     margin-bottom: 42px;
 }
 
-.block-title {
-    margin-bottom: 18px;
+.section-title {
+    margin: 0 0 18px;
 
-    color: #b5b2b0;
-
-    font-size: 17px;
+    font-size: 18px;
 
     font-weight: 400;
 
-    letter-spacing: 3px;
+    color: #b8b5b3;
 
-    text-align: left;
+    letter-spacing: 2px;
 }
 
-.block p {
-    margin: 0;
-
-    color: #918e8c;
+.section p {
+    margin: 0 0 16px;
 
     font-size: 14px;
 
-    line-height: 2.15;
+    line-height: 2.1;
 
-    text-align: left;
+    color: #969492;
 }
 
-.block p + p {
-    margin-top: 16px;
-}
+.info-box {
+    margin-top: 25px;
 
-
-/* ====================
-   정보 박스
-==================== */
-
-.note {
-    margin-top: 22px;
-
-    padding: 22px 25px;
+    padding: 25px;
 
     background: #222221;
 
-    border-left: 2px solid #67151b;
-
-    text-align: left;
+    border-left: 2px solid #68151b;
 }
 
-.note p {
+.info-box p {
     margin: 0;
 
-    color: #898684;
-
-    font-size: 13px;
+    color: #aaa7a5;
 
     line-height: 2;
-
-    text-align: left;
 }
-
-
-/* ====================
-   구분선
-==================== */
-
-.line {
-    width: 100%;
-
-    height: 1px;
-
-    margin: 45px 0;
-
-    background: #343331;
-}
-
-
-/* ====================
-   마지막 문장
-==================== */
 
 .quote {
-    width: 100%;
+    margin-top: 55px;
 
-    margin-bottom: 45px;
+    padding-top: 30px;
 
-    color: #821a20;
+    border-top: 1px solid #3b1115;
 
-    font-size: 15px;
+    text-align: center;
+
+    font-size: 16px;
 
     line-height: 2;
 
     letter-spacing: 2px;
 
-    text-align: center;
+    color: #8f1d24;
 }
-
-
-/* ====================
-   메인으로
-==================== */
 
 .back {
     display: block;
 
-    width: 100%;
+    margin-top: 45px;
 
-    margin: 0;
-    padding: 0;
+    text-align: left;
 
     color: #777472;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 13px;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
-    text-align: left;
+    transition: color 0.3s ease;
 }
 
 .back:hover {
-    color: #aaa7a5;
+    color: #b5b1af;
 }
-
-
-/* ====================
-   모바일
-==================== */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 25px 12px;
+        padding: 20px 12px;
     }
 
     .page {
-        padding: 45px 28px 35px;
+        padding: 50px 28px 35px;
     }
 
     .title {
-        font-size: 37px;
+        font-size: 32px;
 
-        letter-spacing: 5px;
+        letter-spacing: 3px;
     }
 
-    .block-title {
-        font-size: 15px;
-    }
-
-    .block p {
+    .subtitle {
         font-size: 13px;
-
-        line-height: 2;
     }
 
-    .note {
-        padding: 20px;
+    .section-title {
+        font-size: 16px;
+    }
+
+    .section p {
+        font-size: 13px;
     }
 
     .quote {
-        font-size: 13px;
+        font-size: 14px;
     }
 
 }
@@ -287,17 +216,13 @@ body {
 </style>
 </head>
 
-
 <body>
 
 <div class="page">
 
-
-    <!-- 제목 -->
-
     <header class="header">
 
-        <div class="number">
+        <div class="label">
             IDENTITY 03
         </div>
 
@@ -312,16 +237,13 @@ body {
     </header>
 
 
-    <!-- 본문 -->
-
     <main class="content">
 
+        <section class="section">
 
-        <section class="block">
-
-            <div class="block-title">
+            <h2 class="section-title">
                 공식 신분
-            </div>
+            </h2>
 
             <p>
                 공식적으로는 러시아에 본사를 둔
@@ -330,77 +252,70 @@ body {
 
             <p>
                 신약 개발과 의약품 연구를 주요 사업으로 내세우며,
-                대외적으로는 정상적인 기업의 형태를 유지하고 있다.
+                대외적으로는 정상적인 기업으로 활동한다.
             </p>
 
         </section>
 
 
-        <section class="block">
+        <section class="section">
 
-            <div class="block-title">
-                기업 활동
-            </div>
-
-            <p>
-                의약품과 신약에 관한 연구 및 개발을 진행하며,
-                의료 및 연구 기관과의 협력 관계를 유지한다.
-            </p>
-
-            <div class="note">
-
-                <p>
-                    연구 성과와 기술 개발에 관한 자료를 지속적으로 공개하며,
-                    기업의 연구 역량과 전문성을 강조한다.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section class="block">
-
-            <div class="block-title">
-                대외적 이미지
-            </div>
+            <h2 class="section-title">
+                대외 활동
+            </h2>
 
             <p>
-                외부에서 보이는 모습은 일반적인 생명과학 기업과 크게 다르지 않다.
+                의료 및 연구 기관과의 협력,
+                연구 지원과 사회 공헌 등의 활동을 통해
+                정상적인 기업이라는 이미지를 유지한다.
             </p>
 
             <p>
-                연구 성과와 투자, 사업 활동 등을 통해
-                기술 중심의 기업이라는 이미지를 유지한다.
+                외부에 공개되는 자료 역시 연구 성과와
+                투자, 사업 활동을 중심으로 구성되어 있다.
             </p>
 
         </section>
 
 
-        <div class="line"></div>
+        <section class="section">
+
+            <h2 class="section-title">
+                기업의 구조
+            </h2>
+
+            <p>
+                내부 조직 역시 일반적인 생명과학 기업과
+                유사한 형태를 갖추고 있다.
+            </p>
+
+            <p>
+                각 부서와 연구 시설은 기업의 업무를 수행하는
+                정상적인 조직처럼 운영되며,
+                외부에서 조직의 실체를 확인할 수 있는 흔적은 남기지 않는다.
+            </p>
+
+        </section>
 
 
-        <section class="block">
+        <section class="section">
 
-            <div class="block-title">
+            <h2 class="section-title">
                 조직과 기업
-            </div>
+            </h2>
 
             <p>
                 묵화와 기업 사이의 관계를 의심할 만한 흔적은
                 철저하게 분리되어 있다.
             </p>
 
-            <p>
-                외부에서 이루어지는 모든 활동은 기업의 이름으로 진행되며,
-                조직과 관련된 사항은 공식적인 기업 활동과 구분되어 존재한다.
-            </p>
-
-            <div class="note">
+            <div class="info-box">
 
                 <p>
-                    겉으로 보이는 모습과 실제 존재하는 조직 사이에는
-                    어떠한 접점도 남기지 않는다.
+                    기업의 이름으로 이루어진 모든 대외 활동은
+                    정상적인 사업 활동으로 기록된다.
+                    조직과 관련된 활동은 기업의 공식적인 기록과
+                    분리되어 관리된다.
                 </p>
 
             </div>
@@ -408,23 +323,17 @@ body {
         </section>
 
 
+        <div class="quote">
+            겉으로 보이는 모습과<br>
+            실제 존재하는 조직 사이에는 어떠한 접점도 남기지 않는다.
+        </div>
+
+
+        <a class="back" href="index.html">
+            ← 메인으로
+        </a>
+
     </main>
-
-
-    <!-- 마지막 문장 -->
-
-    <div class="quote">
-        보이는 것은 기업.<br>
-        남겨지는 것은 흔적뿐이다.
-    </div>
-
-
-    <!-- 메인으로 -->
-
-    <a class="back" href="index.html">
-        ← 메인으로
-    </a>
-
 
 </div>
 
