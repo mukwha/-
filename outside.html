@@ -1,11 +1,19 @@
  <!DOCTYPE html>
 <html lang="ko">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>대외 신분</title>
+<title>墨花 — 대외 신분</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+    rel="stylesheet"
+>
 
 <style>
 
@@ -13,7 +21,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     min-height: 100%;
@@ -21,6 +30,7 @@ html, body {
 
 body {
     background: #260508;
+
     color: #d0cecc;
 
     font-family:
@@ -30,14 +40,18 @@ body {
         "바탕체",
         serif;
 
-    min-height: 100vh;
+    padding: 45px 20px;
 
-    padding: 50px 20px;
+    overflow-x: hidden;
 }
+
+
+/* 전체 페이지 */
 
 .page {
     width: 100%;
-    max-width: 680px;
+
+    max-width: 760px;
 
     margin: 0 auto;
 
@@ -45,139 +59,347 @@ body {
 
     border: 1px solid #451014;
 
-    padding: 65px 60px 45px;
+    padding: 65px 65px 60px;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
+
+    animation:
+        pageAppear 1.4s ease forwards;
 }
+
+
+/* 상단 */
 
 .header {
-    text-align: left;
+    border-bottom: 1px solid #451014;
 
-    margin-bottom: 55px;
+    padding-bottom: 32px;
+
+    margin-bottom: 45px;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.3s ease forwards;
+
+    animation-delay: 0.2s;
 }
 
-.label {
-    font-family: Arial, sans-serif;
+.number {
+    color: #8f1d24;
 
-    font-size: 11px;
+    font-size: 12px;
 
     letter-spacing: 3px;
 
-    color: #7f2026;
-
-    margin-bottom: 14px;
+    margin-bottom: 17px;
 }
 
 .title {
     margin: 0;
 
-    font-size: 42px;
+    color: #e2dfdd;
+
+    font-size: 48px;
 
     font-weight: 400;
 
-    letter-spacing: 4px;
-
-    color: #e2dfdd;
+    letter-spacing: 8px;
 }
 
 .subtitle {
-    margin-top: 18px;
+    margin-top: 15px;
+
+    color: #777574;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+
+/* 본문 */
+
+.section {
+    margin-top: 55px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.3s ease forwards;
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.section-number {
+    color: #8f1d24;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    color: #d5d2d0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+}
+
+.section p {
+    margin: 0;
+
+    color: #999795;
 
     font-size: 14px;
 
-    color: #858381;
+    line-height: 2.15;
+}
+
+
+/* 공식 신분 */
+
+.identity-box {
+    margin-top: 30px;
+
+    padding: 28px 30px;
+
+    background: #20201f;
+
+    border: 1px solid #453536;
+}
+
+.identity-label {
+    color: #777574;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.identity-name {
+    color: #d6d2d0;
+
+    font-size: 19px;
+
+    letter-spacing: 3px;
 
     line-height: 1.8;
 }
 
-.content {
-    text-align: left;
+
+/* 기업과 조직 */
+
+.separation {
+    margin-top: 30px;
+
+    padding: 28px 30px;
+
+    border-left: 2px solid #6b171d;
+
+    background: #20201f;
 }
 
-.section {
-    margin-bottom: 42px;
-}
-
-.section-title {
-    margin: 0 0 18px;
-
-    font-size: 18px;
-
-    font-weight: 400;
-
-    color: #b8b5b3;
-
-    letter-spacing: 2px;
-}
-
-.section p {
-    margin: 0 0 16px;
-
-    font-size: 14px;
-
-    line-height: 2.1;
-
-    color: #969492;
-}
-
-.info-box {
-    margin-top: 25px;
-
-    padding: 25px;
-
-    background: #222221;
-
-    border-left: 2px solid #68151b;
-}
-
-.info-box p {
+.separation p {
     margin: 0;
 
-    color: #aaa7a5;
-
-    line-height: 2;
-}
-
-.quote {
-    margin-top: 55px;
-
-    padding-top: 30px;
-
-    border-top: 1px solid #3b1115;
-
-    text-align: center;
-
-    font-size: 16px;
-
-    line-height: 2;
-
-    letter-spacing: 2px;
-
-    color: #8f1d24;
-}
-
-.back {
-    display: block;
-
-    margin-top: 45px;
-
-    text-align: left;
-
-    color: #777472;
-
-    text-decoration: none;
+    color: #999795;
 
     font-size: 13px;
 
-    letter-spacing: 1px;
+    line-height: 2.1;
+}
 
-    transition: color 0.3s ease;
+
+/* 기록되지 않은 말 */
+
+.unrecorded {
+    margin-top: 55px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #353433;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 1.5s;
+}
+
+.unrecorded-title {
+    color: #777574;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 13px;
+}
+
+.unrecorded-text {
+    color: #8d8987;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 2;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* 하단 문구 */
+
+.principle {
+    margin-top: 45px;
+
+    padding: 35px 30px;
+
+    border-top: 1px solid #541116;
+
+    border-bottom: 1px solid #541116;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 1.8s;
+}
+
+.principle-title {
+    color: #d6d2d0;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    line-height: 1.8;
+}
+
+
+/* 하단 */
+
+.footer {
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #353433;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.3s ease forwards;
+
+    animation-delay: 2.3s;
+}
+
+.back {
+    color: #777574;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.3s ease;
 }
 
 .back:hover {
-    color: #b5b1af;
+    color: #b32a32;
 }
+
+.mark {
+    color: #5f0c12;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* 애니메이션 */
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* 모바일 */
 
 @media (max-width: 600px) {
 
@@ -186,29 +408,67 @@ body {
     }
 
     .page {
-        padding: 50px 28px 35px;
+        padding: 45px 28px 50px;
     }
 
     .title {
-        font-size: 32px;
+        font-size: 36px;
 
-        letter-spacing: 3px;
+        letter-spacing: 6px;
     }
 
-    .subtitle {
-        font-size: 13px;
-    }
-
-    .section-title {
-        font-size: 16px;
+    .section-title h2 {
+        font-size: 18px;
     }
 
     .section p {
         font-size: 13px;
+
+        line-height: 2;
     }
 
-    .quote {
-        font-size: 14px;
+    .identity-box {
+        padding: 24px 22px;
+    }
+
+    .identity-name {
+        font-size: 17px;
+    }
+
+    .separation {
+        padding: 24px 22px;
+    }
+
+    .unrecorded-title {
+        font-size: 9px;
+    }
+
+    .unrecorded-text {
+        font-size: 10px;
+    }
+
+    .principle {
+        padding: 30px 18px;
+    }
+
+    .principle-title {
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+}
+
+
+/* 모션 줄이기 */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before {
+        animation: none !important;
+
+        opacity: 1 !important;
     }
 
 }
@@ -216,14 +476,16 @@ body {
 </style>
 </head>
 
+
 <body>
 
-<div class="page">
+<main class="page">
+
 
     <header class="header">
 
-        <div class="label">
-            IDENTITY 03
+        <div class="number">
+            기록 03
         </div>
 
         <h1 class="title">
@@ -237,105 +499,149 @@ body {
     </header>
 
 
-    <main class="content">
+    <section class="section">
 
-        <section class="section">
+        <div class="section-title">
 
-            <h2 class="section-title">
+            <span class="section-number">
+                01
+            </span>
+
+            <h2>
                 공식 신분
             </h2>
 
-            <p>
-                공식적으로는 러시아에 본사를 둔
-                생명과학 기업으로 존재한다.
-            </p>
+        </div>
 
-            <p>
-                신약 개발과 의약품 연구를 주요 사업으로 내세우며,
-                대외적으로는 정상적인 기업으로 활동한다.
-            </p>
+        <p>
+            공식적으로는 러시아에 본사를 둔 생명과학 기업으로 존재한다.
 
-        </section>
+            <br><br>
+
+            신약 개발과 의약품 연구를 주요 사업으로 내세우며,
+            대외적으로는 정상적인 기업의 모습을 유지한다.
+        </p>
 
 
-        <section class="section">
+        <div class="identity-box">
 
-            <h2 class="section-title">
+            <div class="identity-label">
+                공식적으로 존재하는 이름
+            </div>
+
+            <div class="identity-name">
+                러시아에 본사를 둔 생명과학 기업
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
                 대외 활동
             </h2>
 
-            <p>
-                의료 및 연구 기관과의 협력,
-                연구 지원과 사회 공헌 등의 활동을 통해
-                정상적인 기업이라는 이미지를 유지한다.
-            </p>
+        </div>
 
-            <p>
-                외부에 공개되는 자료 역시 연구 성과와
-                투자, 사업 활동을 중심으로 구성되어 있다.
-            </p>
+        <p>
+            신약 개발과 의약품 연구를 주요 사업으로 내세우며,
+            대외적으로는 정상적인 기업의 모습을 유지한다.
 
-        </section>
+            <br><br>
 
+            의료 및 연구 기관과의 협력,
+            연구 지원과 사회 공헌 등의 활동을 통해
+            정상적인 기업이라는 이미지를 유지한다.
+        </p>
 
-        <section class="section">
-
-            <h2 class="section-title">
-                기업의 구조
-            </h2>
-
-            <p>
-                내부 조직 역시 일반적인 생명과학 기업과
-                유사한 형태를 갖추고 있다.
-            </p>
-
-            <p>
-                각 부서와 연구 시설은 기업의 업무를 수행하는
-                정상적인 조직처럼 운영되며,
-                외부에서 조직의 실체를 확인할 수 있는 흔적은 남기지 않는다.
-            </p>
-
-        </section>
+    </section>
 
 
-        <section class="section">
+    <section class="section">
 
-            <h2 class="section-title">
+        <div class="section-title">
+
+            <span class="section-number">
+                03
+            </span>
+
+            <h2>
                 조직과 기업
             </h2>
 
-            <p>
-                묵화와 기업 사이의 관계를 의심할 만한 흔적은
-                철저하게 분리되어 있다.
-            </p>
-
-            <div class="info-box">
-
-                <p>
-                    기업의 이름으로 이루어진 모든 대외 활동은
-                    정상적인 사업 활동으로 기록된다.
-                    조직과 관련된 활동은 기업의 공식적인 기록과
-                    분리되어 관리된다.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <div class="quote">
-            겉으로 보이는 모습과<br>
-            실제 존재하는 조직 사이에는 어떠한 접점도 남기지 않는다.
         </div>
 
+        <p>
+            조직과 기업의 관계를 의심할 만한 흔적은
+            철저하게 분리되어 있다.
+        </p>
+
+
+        <div class="separation">
+
+            <p>
+                기업의 이름으로 이루어진 모든 대외 활동은
+                정상적인 사업 활동으로 기록된다.
+
+                <br><br>
+
+                조직과 관련된 활동은 기업의 공식적인 기록과
+                분리되어 관리된다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <div class="unrecorded">
+
+        <div class="unrecorded-title">
+            기록되지 않은 말
+        </div>
+
+        <div class="unrecorded-text">
+            기업의 이름은 깨끗해야 한다.<br>
+            그 이름 아래에서 무슨 일이 이루어지는지는,
+            아무도 알 필요가 없다.
+        </div>
+
+    </div>
+
+
+    <div class="principle">
+
+        <div class="principle-title">
+            그들은 언제나,<br>
+            가장 평범한 얼굴로 존재한다.
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
 
         <a class="back" href="index.html">
             ← 메인으로
         </a>
 
-    </main>
+        <span class="mark">
+            墨花
+        </span>
 
-</div>
+    </footer>
+
+
+</main>
 
 </body>
 </html>
