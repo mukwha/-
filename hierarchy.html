@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,7 +17,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     min-height: 100%;
@@ -278,21 +279,17 @@ body {
 
 
 /* =========================
-   정보 통제 기록
+   비공개 기록
 ========================= */
 
 .principle {
-    position: relative;
-
     margin-top: 55px;
 
-    padding: 38px 30px 34px;
+    padding: 38px 30px;
 
     border-top: 1px solid #541116;
 
     border-bottom: 1px solid #541116;
-
-    text-align: center;
 
     opacity: 0;
 
@@ -303,133 +300,29 @@ body {
 }
 
 
-.principle-text {
-    position: relative;
+.principle-title {
+    color: #d6d2d0;
 
-    display: inline-block;
-
-    color: #b9b5b2;
-
-    font-size: 17px;
+    font-size: 25px;
 
     font-weight: 500;
 
-    letter-spacing: 2px;
+    letter-spacing: 5px;
 
-    line-height: 2;
-
-    z-index: 1;
-}
-
-
-/* 붉은 펜으로 표시한 듯한 밑줄 */
-
-.principle-text::after {
-    content: "";
-
-    position: absolute;
-
-    left: -8px;
-
-    right: -8px;
-
-    bottom: 1px;
-
-    height: 8px;
-
-    border-bottom: 2px solid #8f1d24;
-
-    border-radius: 50%;
-
-    transform: rotate(-1deg);
-
-    opacity: 0.8;
-
-    z-index: -1;
-}
-
-
-/* 손으로 적은 듯한 작은 표시 */
-
-.pen-note {
-    margin-top: 18px;
-
-    color: #8f1d24;
-
-    font-family:
-        "Nanum Pen Script",
-        cursive;
-
-    font-size: 20px;
-
-    letter-spacing: 1px;
-
-    transform: rotate(-2deg);
-}
-
-
-.pen-mark {
-    position: absolute;
-
-    top: 14px;
-
-    right: 20px;
-
-    color: #8f1d24;
-
-    font-family:
-        "Nanum Pen Script",
-        cursive;
-
-    font-size: 18px;
-
-    transform: rotate(7deg);
-}
-
-
-/* =========================
-   내부 기록
-========================= */
-
-.record {
-    margin-top: 48px;
-
-    padding: 24px 0;
-
-    border-top: 1px solid #353433;
-
-    border-bottom: 1px solid #353433;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-
-    animation-delay: 2s;
-}
-
-
-.record-label {
-    color: #777574;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 
 .record-status {
-    color: #5f0c12;
+    color: #999795;
 
-    font-size: 11px;
+    font-size: 13px;
 
-    font-weight: 600;
+    font-weight: 400;
 
     letter-spacing: 2px;
 
-    line-height: 2;
+    line-height: 2.2;
 }
 
 
@@ -579,10 +472,14 @@ body {
         padding: 32px 18px;
     }
 
-    .principle-text {
-        font-size: 15px;
+    .principle-title {
+        font-size: 21px;
 
-        letter-spacing: 1px;
+        letter-spacing: 4px;
+    }
+
+    .record-status {
+        font-size: 12px;
     }
 
 }
@@ -640,8 +537,6 @@ body {
     <div class="hierarchy">
 
 
-        <!-- Ⅰ. 墨主 -->
-
         <div class="rank top">
 
             <div class="rank-number">
@@ -666,8 +561,6 @@ body {
 
         <div class="connector"></div>
 
-
-        <!-- Ⅱ. 幹部 -->
 
         <div class="rank">
 
@@ -694,8 +587,6 @@ body {
         <div class="connector"></div>
 
 
-        <!-- Ⅲ. 組織員 -->
-
         <div class="rank">
 
             <div class="rank-number">
@@ -713,33 +604,6 @@ body {
             <div class="rank-description">
                 상위 계층의 지시에 따라
                 각자의 업무를 수행한다.
-            </div>
-
-        </div>
-
-
-        <div class="connector"></div>
-
-
-        <!-- Ⅳ. 外部協力者 -->
-
-        <div class="rank">
-
-            <div class="rank-number">
-                Ⅳ.
-            </div>
-
-            <div class="rank-name">
-                外部協力者
-            </div>
-
-            <div class="rank-korean">
-                외부 협력자
-            </div>
-
-            <div class="rank-description">
-                묵화에 직접 소속되지는 않지만,
-                필요에 따라 조직과 거래하거나 협력한다.
             </div>
 
         </div>
@@ -787,76 +651,12 @@ body {
 
 
     <!-- =====================
-         외부 협력자
-===================== -->
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span class="section-number">
-                02
-            </span>
-
-            <h2>
-                외부 협력자에 대하여
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            外部協力者는 묵화의 정식 조직원으로 분류되지 않는다.
-
-            <br><br>
-
-            이들은 특정한 목적이나 이해관계에 따라
-            묵화와 거래하거나 협력하며,
-            협력이 끝난 뒤에는 조직과의 관계가
-            유지되지 않을 수도 있다.
-
-            <br><br>
-
-            다만 조직에 직접 소속되지 않았다는 이유만으로
-            그들의 존재가 가볍게 취급되는 것은 아니다.
-
-        </p>
-
-    </section>
-
-
-    <!-- =====================
-         정보 통제
+         비공개 기록
 ===================== -->
 
     <div class="principle">
 
-        <div class="pen-mark">
-            확인
-        </div>
-
-        <div class="principle-text">
-
-            묵화의 조직원은 자신의 직급과<br>
-            업무에 필요한 정보만 제공받는다.
-
-        </div>
-
-        <div class="pen-note">
-            기록은 권한을 가진 자에게만.
-        </div>
-
-    </div>
-
-
-    <!-- =====================
-         내부 기록
-===================== -->
-
-    <div class="record">
-
-        <div class="record-label">
+        <div class="principle-title">
             비공개 기록물
         </div>
 
