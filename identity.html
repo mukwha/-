@@ -31,13 +31,11 @@ body {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     min-height: 100vh;
 
-    padding: 50px 20px;
-
-    overflow-x: hidden;
+    padding: 60px 20px;
 }
 
 .container {
@@ -53,8 +51,7 @@ body {
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
 
-    animation:
-        cardAppear 1.5s ease forwards;
+    animation: cardAppear 1.2s ease forwards;
 }
 
 @keyframes cardAppear {
@@ -71,151 +68,124 @@ body {
 
 }
 
-.label {
-    color: #8f1d24;
+.header {
+    text-align: center;
 
-    font-size: 12px;
+    padding-bottom: 45px;
 
-    letter-spacing: 3px;
-
-    margin-bottom: 15px;
+    border-bottom: 1px solid #3b3a38;
 }
 
-.title {
-    margin: 0;
+.label {
+    font-size: 11px;
 
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        serif;
+    letter-spacing: 4px;
+
+    color: #7f1b21;
+
+    margin-bottom: 18px;
+}
+
+h1 {
+    margin: 0;
 
     font-size: 48px;
 
     font-weight: 400;
 
-    letter-spacing: 6px;
+    letter-spacing: 7px;
 
-    color: #e2dfdd;
+    color: #dedbd9;
 }
 
 .subtitle {
     margin-top: 18px;
 
-    margin-bottom: 50px;
+    font-size: 13px;
 
-    color: #8f8c8a;
+    letter-spacing: 2px;
 
-    font-size: 14px;
-
-    letter-spacing: 1px;
-}
-
-.company {
-    border: 1px solid #541116;
-
-    background: #242423;
-
-    padding: 30px;
-
-    margin-bottom: 35px;
-}
-
-.company-label {
-    color: #8f1d24;
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 15px;
-}
-
-.company-name {
-    color: #d5d2d0;
-
-    font-size: 23px;
-
-    letter-spacing: 3px;
-}
-
-.company-description {
-    margin-top: 15px;
-
-    color: #999795;
-
-    font-size: 14px;
-
-    line-height: 2;
+    color: #777472;
 }
 
 .section {
-    margin-bottom: 38px;
+    margin-top: 45px;
 }
 
-.section h2 {
-    margin: 0 0 15px;
+.section-title {
+    margin-bottom: 20px;
 
-    font-size: 18px;
+    font-size: 17px;
 
     font-weight: 400;
 
-    color: #c4c1bf;
+    letter-spacing: 3px;
 
-    letter-spacing: 2px;
+    color: #b4b1af;
 }
 
 .section p {
     margin: 0;
 
-    color: #999795;
-
     font-size: 14px;
 
     line-height: 2.1;
+
+    color: #918e8c;
 }
 
-.separation {
-    border-left: 2px solid #75151b;
+.info-box {
+    margin-top: 28px;
 
-    padding: 20px 25px;
+    padding: 25px 28px;
 
-    background: #211f1e;
+    background: #222221;
 
-    margin-top: 10px;
+    border-left: 2px solid #67151b;
 }
 
-.separation p {
-    color: #aaa7a5;
+.info-box p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #8d8a88;
 }
 
-.quote {
-    margin-top: 55px;
+.highlight {
+    color: #b3afad;
+}
 
+.divider {
+    width: 100%;
+
+    height: 1px;
+
+    background: #343331;
+
+    margin: 45px 0;
+}
+
+.statement {
     text-align: center;
 
-    color: #8f1d24;
+    font-size: 15px;
 
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        serif;
-
-    font-size: 16px;
+    line-height: 2;
 
     letter-spacing: 2px;
 
-    line-height: 1.8;
+    color: #8e1d24;
 }
-
-/* 메인으로 버튼 */
 
 .back {
     display: block;
 
-    width: fit-content;
+    width: 100%;
 
-    margin-top: 45px;
+    margin-top: 50px;
 
     text-align: left;
 
@@ -227,55 +197,53 @@ body {
 
     letter-spacing: 2px;
 
-    transition:
-        color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .back:hover {
-    color: #c4c1bf;
+    color: #aaa7a5;
 }
 
 @media (max-width: 600px) {
 
     body {
-        padding: 20px 12px;
+        padding: 25px 12px;
     }
 
     .container {
         padding: 45px 28px 35px;
     }
 
-    .title {
-        font-size: 36px;
+    h1 {
+        font-size: 37px;
 
-        letter-spacing: 4px;
+        letter-spacing: 5px;
     }
 
-    .subtitle {
-        font-size: 12px;
-
-        margin-bottom: 40px;
+    .header {
+        padding-bottom: 35px;
     }
 
-    .company {
-        padding: 23px;
+    .section {
+        margin-top: 35px;
     }
 
-    .company-name {
-        font-size: 19px;
+    .section-title {
+        font-size: 15px;
     }
 
-    .section h2 {
-        font-size: 16px;
-    }
-
-    .section p,
-    .company-description {
+    .section p {
         font-size: 13px;
+
+        line-height: 2;
     }
 
-    .quote {
-        font-size: 14px;
+    .info-box {
+        padding: 20px;
+    }
+
+    .statement {
+        font-size: 13px;
     }
 
 }
@@ -283,9 +251,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
 
     .container {
-        animation: none !important;
-
-        opacity: 1 !important;
+        animation: none;
     }
 
 }
@@ -297,96 +263,118 @@ body {
 
 <div class="container">
 
-    <div class="label">
-        기록 03
-    </div>
+    <header class="header">
 
-    <h1 class="title">
-        대외 신분
-    </h1>
-
-    <div class="subtitle">
-        세상에 드러난 묵화의 또 다른 얼굴
-    </div>
-
-
-    <div class="company">
-
-        <div class="company-label">
-            OFFICIAL IDENTITY
+        <div class="label">
+            IDENTITY 03
         </div>
 
-        <div class="company-name">
-            생명과학 기업
+        <h1>
+            대외 신분
+        </h1>
+
+        <div class="subtitle">
+            묵화가 외부에 드러내는 공식적인 모습
         </div>
 
-        <div class="company-description">
-            공식적으로는 러시아에 본사를 둔 생명과학 기업으로 활동한다.
+    </header>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            공식 신분
+        </div>
+
+        <p>
+            공식적으로는 러시아에 본사를 둔
+            <span class="highlight">생명과학 기업</span>으로 존재한다.
+        </p>
+
+        <p style="margin-top: 18px;">
             신약 개발과 의약품 연구를 주요 사업으로 내세우며,
-            외부에서는 정상적인 기업으로 인식되고 있다.
+            대외적으로는 정상적인 기업의 형태를 유지하고 있다.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            기업 활동
         </div>
 
-    </div>
-
-
-    <div class="section">
-
-        <h2>
-            공식 사업
-        </h2>
-
         <p>
-            신약 개발과 의약품 연구를 중심으로 사업을 운영한다.
-            의료 및 연구 기관과의 협력, 연구 지원과 같은 활동도
-            지속적으로 진행하며 정상적인 생명과학 기업의 모습을 유지한다.
+            의약품과 신약에 관한 연구 및 개발을 진행하며,
+            의료 및 연구 기관과의 협력 관계를 유지한다.
         </p>
 
-    </div>
-
-
-    <div class="section">
-
-        <h2>
-            대외적 이미지
-        </h2>
-
-        <p>
-            외부에 공개되는 자료에는 연구 성과와 투자 내역,
-            사업 활동 등이 기록되어 있다.
-            기업 내부 역시 일반적인 생명과학 기업과 유사한 형태로 구성되어 있어
-            조직의 실체를 의심할 만한 흔적은 쉽게 발견되지 않는다.
-        </p>
-
-    </div>
-
-
-    <div class="section">
-
-        <h2>
-            완전한 분리
-        </h2>
-
-        <div class="separation">
+        <div class="info-box">
 
             <p>
-                조직과 기업의 관계를 의심할 만한 흔적은 철저하게 분리되어 있다.
-                외부에서 이루어지는 모든 활동은 기업의 이름 아래 이루어지며,
-                조직과 관련된 흔적은 공식적인 기록에서 찾아볼 수 없다.
-            </p>
-
-            <p style="margin-top: 15px;">
-                겉으로 보이는 것은 하나의 기업뿐이다.
-                그 아래에 존재하는 조직의 이름은 어디에도 남지 않는다.
+                연구 성과와 기술 개발에 관한 자료를 지속적으로 공개하며,
+                기업의 연구 역량과 전문성을 강조한다.
             </p>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="quote">
-        보이는 것은 기업이고,<br>
-        남겨진 것은 흔적뿐이다.
+    <section class="section">
+
+        <div class="section-title">
+            대외적 이미지
+        </div>
+
+        <p>
+            외부에서 보이는 모습은 일반적인 생명과학 기업과 크게 다르지 않다.
+        </p>
+
+        <p style="margin-top: 18px;">
+            연구 성과와 투자, 사업 활동 등을 통해
+            기술 중심의 기업이라는 이미지를 유지하며,
+            조직과 관련된 흔적은 외부에서 확인하기 어렵게 관리된다.
+        </p>
+
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <section class="section">
+
+        <div class="section-title">
+            조직과 기업
+        </div>
+
+        <p>
+            묵화와 기업 사이의 관계를 의심할 만한 흔적은
+            철저하게 분리되어 있다.
+        </p>
+
+        <p style="margin-top: 18px;">
+            외부에서 이루어지는 모든 활동은 기업의 이름으로 진행되며,
+            조직과 관련된 사항은 공식적인 기업 활동과 구분되어 존재한다.
+        </p>
+
+        <div class="info-box">
+
+            <p>
+                겉으로 보이는 모습과 실제 존재하는 조직 사이에는
+                <span class="highlight">어떠한 접점도 남기지 않는다.</span>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <div class="statement">
+        보이는 것은 기업.<br>
+        남겨지는 것은 흔적뿐이다.
     </div>
 
 
