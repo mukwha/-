@@ -1,13 +1,15 @@
- ```html
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>墨花</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -23,228 +25,141 @@ body {
 }
 
 body {
-
     background: #260508;
-
     color: #d0cecc;
 
     font-family:
         "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        "바탕체",
         serif;
 
     font-weight: 500;
 
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    min-height: 100vh;
-
-    padding: 50px 20px;
+    padding: 45px 20px;
 
     overflow-x: hidden;
 }
 
-
-/* ─────────────
-   메인 카드
-───────────── */
-
-.container {
-
+.page {
     width: 100%;
-    max-width: 560px;
+    max-width: 760px;
 
-    min-height: 780px;
+    margin: 0 auto;
 
     background: #1b1b1a;
 
     border: 1px solid #451014;
 
-    padding: 75px 55px 45px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
+    padding: 65px;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
 
     animation:
-        cardAppear 1.5s ease forwards;
+        pageAppear 1.4s ease forwards;
 }
 
+.header {
+    text-align: center;
 
-/* ─────────────
-   등장 애니메이션
-───────────── */
+    padding-bottom: 42px;
 
-@keyframes cardAppear {
+    border-bottom: 1px solid #451014;
 
-    from {
+    opacity: 0;
 
-        opacity: 0;
+    animation:
+        fadeIn 1.3s ease forwards;
 
-        transform:
-            translateY(15px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-
-    }
-
+    animation-delay: 0.2s;
 }
 
-@keyframes fadeIn {
+.logo {
+    color: #8f1d24;
 
-    from {
+    font-size: 14px;
 
-        opacity: 0;
+    font-weight: 600;
 
-    }
+    letter-spacing: 7px;
 
-    to {
-
-        opacity: 1;
-
-    }
-
+    margin-bottom: 22px;
 }
-
-@keyframes fadeUp {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(18px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-
-    }
-
-}
-
-
-/* ─────────────
-   제목
-───────────── */
 
 .title {
-
-    margin: 0 0 55px;
-
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        serif;
-
-    font-size: 86px;
-
-    font-weight: 500;
-
-    letter-spacing: 10px;
+    margin: 0;
 
     color: #e2dfdd;
 
-    opacity: 0;
+    font-size: 62px;
 
-    animation:
-        fadeIn 1.5s ease forwards;
+    font-weight: 700;
 
-    animation-delay: 0.4s;
+    letter-spacing: 12px;
+
+    line-height: 1.2;
 }
 
+.subtitle {
+    margin-top: 18px;
 
-/* ─────────────
-   설명
-───────────── */
+    color: #777574;
 
-.description {
-
-    width: 100%;
-
-    text-align: center;
-
-    line-height: 2.1;
-
-    font-size: 15px;
-
-    color: #999795;
-
-    margin-bottom: 55px;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.5s ease forwards;
-
-    animation-delay: 0.9s;
-}
-
-.description strong {
-
-    display: block;
-
-    font-size: 18px;
+    font-size: 13px;
 
     font-weight: 500;
 
-    color: #aaa8a6;
-
-    margin-bottom: 14px;
+    letter-spacing: 4px;
 }
 
+.description {
+    margin: 48px auto;
 
-/* ─────────────
-   메뉴
-───────────── */
+    max-width: 540px;
+
+    text-align: center;
+
+    color: #999795;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 2.2;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.3s ease forwards;
+
+    animation-delay: 0.6s;
+}
+
+.description strong {
+    color: #c4c1bf;
+
+    font-weight: 700;
+}
 
 .menu {
-
-    width: 100%;
-
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 14px;
+    gap: 12px;
 
     opacity: 0;
 
     animation:
-        fadeUp 1.5s ease forwards;
+        fadeUp 1.3s ease forwards;
 
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
-
 .menu a {
-
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     height: 72px;
@@ -265,7 +180,7 @@ body {
 
     font-size: 14px;
 
-    font-weight: 500;
+    font-weight: 700;
 
     letter-spacing: 3px;
 
@@ -275,211 +190,221 @@ body {
         border-color 0.3s ease;
 }
 
-
 .menu a:hover {
+    background: #301013;
 
-    background: #35080b;
+    border-color: #8f1d24;
 
-    border-color: #75151b;
-
-    color: #ddd9d7;
+    color: #e2dfdd;
 }
 
-
-/* ─────────────
-   문구
-───────────── */
-
 .quote {
+    margin-top: 52px;
 
-    margin-top: 60px;
+    padding-top: 30px;
 
-    color: #8f1d24;
+    border-top: 1px solid #353433;
 
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        serif;
+    text-align: center;
 
-    font-size: 18px;
+    color: #5f0c12;
 
-    font-weight: 500;
+    font-size: 13px;
+
+    font-weight: 700;
 
     letter-spacing: 3px;
 
-    text-align: center;
+    line-height: 2;
 
     opacity: 0;
 
     animation:
         fadeIn 1.5s ease forwards;
 
-    animation-delay: 2.1s;
+    animation-delay: 1.5s;
 }
 
+.footer {
+    margin-top: 38px;
 
-/* ─────────────
-   모바일
-───────────── */
+    padding-top: 20px;
+
+    border-top: 1px solid #353433;
+
+    text-align: center;
+
+    color: #4f4d4b;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.3s ease forwards;
+
+    animation-delay: 1.8s;
+}
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
 
 @media (max-width: 600px) {
 
     body {
-
-        padding:
-            20px 12px;
+        padding: 20px 12px;
     }
 
-    .container {
-
-        min-height: 720px;
-
-        padding:
-            55px 28px 35px;
+    .page {
+        padding: 45px 28px 50px;
     }
 
     .title {
-
-        font-size: 62px;
-
-        letter-spacing: 7px;
-
-        margin-bottom: 45px;
-    }
-
-    .description {
-
-        font-size: 13px;
-
-        margin-bottom: 45px;
-
-        line-height: 2;
-    }
-
-    .description strong {
-
-        font-size: 16px;
+        font-size: 46px;
+        letter-spacing: 8px;
     }
 
     .menu {
-
-        gap: 10px;
+        grid-template-columns: 1fr;
     }
 
     .menu a {
+        height: 64px;
+    }
 
-        height: 62px;
-
-        font-size: 12px;
-
-        letter-spacing: 2px;
+    .description {
+        font-size: 13px;
     }
 
     .quote {
-
-        margin-top: 45px;
-
-        font-size: 16px;
+        font-size: 12px;
     }
 
 }
 
-
-/* ─────────────
-   애니메이션 감소 설정
-───────────── */
-
 @media (prefers-reduced-motion: reduce) {
 
-    .container,
-    .title,
-    .description,
-    .menu,
-    .quote {
-
+    *,
+    *::before {
         animation: none !important;
-
         opacity: 1 !important;
     }
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
+<main class="page">
 
-<div class="container">
+    <header class="header">
 
+        <div class="logo">
+            墨花
+        </div>
 
-    <!-- 제목 -->
+        <h1 class="title">
+            墨花
+        </h1>
 
-    <h1 class="title">
-        墨花
-    </h1>
+        <div class="subtitle">
+            기록되지 않은 이름
+        </div>
 
+    </header>
 
-    <!-- 설명 -->
 
     <div class="description">
 
+        러시아를 주요 거점으로 삼는 대형 범죄 조직.<br>
+        모습을 드러내지 않은 채 오랜 시간 세력을 확장해 왔다.<br><br>
+
         <strong>
-            먹으로 그린 꽃.
+            영혼까지도 묵화의 것이 된다.
         </strong>
-
-        한 번 새겨진 흔적은 쉽게 지워지지 않는다.<br>
-
-        검은 흔적 위에 피어난 꽃은<br>
-
-        그 누구도 쉽게 지울 수 없는 이름이 된다.
 
     </div>
 
 
-    <!-- 메뉴 -->
-
     <nav class="menu">
-
 
         <a href="organization.html">
             조직 개요
         </a>
 
-
         <a href="hierarchy.html">
             내부 계층
         </a>
 
-
-        <a href="outside.html">
+        <a href="identity.html">
             대외 신분
         </a>
 
-
-        <a href="record.html">
+        <a href="records.html">
             기록 및 정보
         </a>
-
 
     </nav>
 
 
-    <!-- 문구 -->
-
     <div class="quote">
 
-        「墨落成花，闇覆其身。」
+        기록되지 않은 것은,
+        존재하지 않는 것과 같다.
 
     </div>
 
 
-</div>
+    <footer class="footer">
 
+        墨花
+
+    </footer>
+
+</main>
 
 </body>
-
 </html>
-```
