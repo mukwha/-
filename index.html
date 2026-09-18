@@ -1,11 +1,12 @@
  <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>墨花 — 대외 신분</title>
+<title>墨花</title>
 
 <style>
 
@@ -49,7 +50,7 @@ body {
 
     border: 1px solid #451014;
 
-    padding: 65px 65px 60px;
+    padding: 65px;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
@@ -59,244 +60,206 @@ body {
 }
 
 
-/* 상단 */
+/* 표지 */
 
-.header {
-    border-bottom: 1px solid #451014;
+.cover {
+    min-height: 700px;
 
-    padding-bottom: 32px;
+    display: flex;
 
-    margin-bottom: 45px;
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* 작은 제목 */
+
+.small-title {
+    color: #8f1d24;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 35px;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.2s ease forwards;
+
+    animation-delay: 0.3s;
+}
+
+
+/* 묵화 */
+
+.logo {
+    color: #e2dfdd;
+
+    font-size: 76px;
+
+    font-weight: 400;
+
+    letter-spacing: 18px;
+
+    margin-left: 18px;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: 0.5s;
+}
+
+
+/* 한글 */
+
+.logo-korean {
+    margin-top: 25px;
+
+    color: #777574;
+
+    font-size: 15px;
+
+    letter-spacing: 7px;
 
     opacity: 0;
 
     animation:
         fadeIn 1.3s ease forwards;
 
-    animation-delay: 0.2s;
-}
-
-.number {
-    color: #8f1d24;
-
-    font-size: 12px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 17px;
-}
-
-.title {
-    margin: 0;
-
-    color: #e2dfdd;
-
-    font-size: 48px;
-
-    font-weight: 400;
-
-    letter-spacing: 8px;
-}
-
-.subtitle {
-    margin-top: 15px;
-
-    color: #777574;
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
+    animation-delay: 0.9s;
 }
 
 
-/* 본문 */
+/* 설명 */
 
-.section {
-    margin-top: 55px;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-}
-
-.section-title {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 20px;
-}
-
-.section-number {
-    color: #8f1d24;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-}
-
-.section-title h2 {
-    margin: 0;
-
-    color: #d5d2d0;
-
-    font-size: 20px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-}
-
-.section p {
-    margin: 0;
-
-    color: #999795;
-
-    font-size: 14px;
-
-    line-height: 2.15;
-}
-
-
-/* 공식 신분 */
-
-.identity-box {
-    margin-top: 30px;
-
-    padding: 28px 30px;
-
-    background: #20201f;
-
-    border: 1px solid #453536;
-}
-
-.identity-label {
-    color: #777574;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
-}
-
-.identity-name {
-    color: #d6d2d0;
-
-    font-size: 19px;
-
-    letter-spacing: 3px;
-
-    line-height: 1.8;
-}
-
-
-/* 기업과 조직 */
-
-.separation {
-    margin-top: 30px;
-
-    padding: 28px 30px;
-
-    border-left: 2px solid #6b171d;
-
-    background: #20201f;
-}
-
-.separation p {
-    margin: 0;
+.description {
+    margin-top: 65px;
 
     color: #999795;
 
     font-size: 13px;
 
-    line-height: 2.1;
-}
+    line-height: 2.2;
 
-
-/* 기록되지 않은 말 */
-
-.unrecorded {
-    margin-top: 55px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #353433;
+    letter-spacing: 1px;
 
     opacity: 0;
 
     animation:
-        fadeIn 1.5s ease forwards;
+        fadeUp 1.4s ease forwards;
 
-    animation-delay: 1.5s;
-}
-
-.unrecorded-title {
-    color: #777574;
-
-    font-size: 10px;
-
-    font-weight: 400;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 13px;
-}
-
-.unrecorded-text {
-    color: #8d8987;
-
-    font-size: 11px;
-
-    font-weight: 400;
-
-    line-height: 2;
-
-    letter-spacing: 0.5px;
+    animation-delay: 1.1s;
 }
 
 
-/* 하단 문구 */
+/* 문구 */
 
-.principle {
-    margin-top: 45px;
+.quote {
+    margin-top: 55px;
 
-    padding: 35px 30px;
+    padding-top: 30px;
 
     border-top: 1px solid #541116;
 
-    border-bottom: 1px solid #541116;
+    color: #d6d2d0;
 
-    text-align: center;
+    font-size: 14px;
+
+    letter-spacing: 3px;
 
     opacity: 0;
 
     animation:
-        fadeIn 1.5s ease forwards;
+        fadeIn 1.4s ease forwards;
 
-    animation-delay: 1.8s;
+    animation-delay: 1.4s;
 }
 
-.principle-title {
-    color: #d6d2d0;
 
-    font-size: 15px;
+/* 메뉴 */
 
-    font-weight: 500;
+.menu {
+    width: 100%;
+
+    max-width: 560px;
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.4s ease forwards;
+
+    animation-delay: 1.7s;
+}
+
+.menu a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 72px;
+
+    background: #242423;
+
+    border: 1px solid #541116;
+
+    color: #aaa7a5;
+
+    text-decoration: none;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        "바탕체",
+        serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
 
     letter-spacing: 3px;
 
-    line-height: 1.8;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.menu a:hover {
+    background: #351013;
+
+    border-color: #8f1d24;
+
+    color: #e2dfdd;
 }
 
 
 /* 하단 */
 
 .footer {
-    margin-top: 45px;
+    width: 100%;
+
+    margin-top: 55px;
 
     padding-top: 25px;
 
@@ -304,7 +267,7 @@ body {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: center;
 
     align-items: center;
 
@@ -313,26 +276,7 @@ body {
     animation:
         fadeIn 1.3s ease forwards;
 
-    animation-delay: 2.3s;
-}
-
-.back {
-    color: #777574;
-
-    text-decoration: none;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    text-decoration: none;
-
-    transition:
-        color 0.3s ease;
-}
-
-.back:hover {
-    color: #b32a32;
+    animation-delay: 2.1s;
 }
 
 .mark {
@@ -340,7 +284,7 @@ body {
 
     font-size: 13px;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 
@@ -396,50 +340,45 @@ body {
     }
 
     .page {
-        padding: 45px 28px 50px;
+        padding: 40px 25px;
     }
 
-    .title {
-        font-size: 36px;
-        letter-spacing: 6px;
+    .cover {
+        min-height: 650px;
     }
 
-    .section-title h2 {
-        font-size: 18px;
+    .logo {
+        font-size: 58px;
+
+        letter-spacing: 12px;
+
+        margin-left: 12px;
     }
 
-    .section p {
+    .logo-korean {
         font-size: 13px;
+
+        letter-spacing: 5px;
+    }
+
+    .description {
+        font-size: 12px;
+
         line-height: 2;
     }
 
-    .identity-box {
-        padding: 24px 22px;
-    }
+    .quote {
+        font-size: 12px;
 
-    .identity-name {
-        font-size: 17px;
-    }
-
-    .separation {
-        padding: 24px 22px;
-    }
-
-    .unrecorded-title {
-        font-size: 9px;
-    }
-
-    .unrecorded-text {
-        font-size: 10px;
-    }
-
-    .principle {
-        padding: 30px 18px;
-    }
-
-    .principle-title {
-        font-size: 13px;
         letter-spacing: 2px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .menu a {
+        height: 65px;
     }
 
 }
@@ -452,12 +391,14 @@ body {
     *,
     *::before {
         animation: none !important;
+
         opacity: 1 !important;
     }
 
 }
 
 </style>
+
 </head>
 
 
@@ -466,166 +407,77 @@ body {
 <main class="page">
 
 
-    <header class="header">
+    <section class="cover">
 
-        <div class="number">
-            기록 03
+
+        <div class="small-title">
+            ORGANIZATION FILE
         </div>
 
-        <h1 class="title">
-            대외 신분
-        </h1>
 
-        <div class="subtitle">
-            묵화가 외부에 드러내는 공식적인 모습
-        </div>
-
-    </header>
-
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span class="section-number">
-                01
-            </span>
-
-            <h2>
-                공식 신분
-            </h2>
-
-        </div>
-
-        <p>
-            공식적으로는 러시아에 본사를 둔 생명과학 기업으로 존재한다.
-
-            <br><br>
-
-            신약 개발과 의약품 연구를 주요 사업으로 내세우며,
-            대외적으로는 정상적인 기업의 모습을 유지한다.
-        </p>
-
-
-        <div class="identity-box">
-
-            <div class="identity-label">
-                공식적으로 존재하는 이름
-            </div>
-
-            <div class="identity-name">
-                러시아에 본사를 둔 생명과학 기업
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span class="section-number">
-                02
-            </span>
-
-            <h2>
-                대외 활동
-            </h2>
-
-        </div>
-
-        <p>
-            신약 개발과 의약품 연구를 주요 사업으로 내세우며,
-            대외적으로는 정상적인 기업의 모습을 유지한다.
-
-            <br><br>
-
-            의료 및 연구 기관과의 협력,
-            연구 지원과 사회 공헌 등의 활동을 통해
-            정상적인 기업이라는 이미지를 유지한다.
-        </p>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <span class="section-number">
-                03
-            </span>
-
-            <h2>
-                조직과 기업
-            </h2>
-
-        </div>
-
-        <p>
-            조직과 기업의 관계를 의심할 만한 흔적은
-            철저하게 분리되어 있다.
-        </p>
-
-
-        <div class="separation">
-
-            <p>
-                기업의 이름으로 이루어진 모든 대외 활동은
-                정상적인 사업 활동으로 기록된다.
-
-                <br><br>
-
-                조직과 관련된 활동은 기업의 공식적인 기록과
-                분리되어 관리된다.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <div class="unrecorded">
-
-        <div class="unrecorded-title">
-            기록되지 않은 말
-        </div>
-
-        <div class="unrecorded-text">
-            기업의 이름은 깨끗해야 한다.<br>
-            그 이름 아래에서 무슨 일이 이루어지는지는,
-            아무도 알 필요가 없다.
-        </div>
-
-    </div>
-
-
-    <div class="principle">
-
-        <div class="principle-title">
-            그들은 언제나,<br>
-            가장 평범한 얼굴로 존재한다.
-        </div>
-
-    </div>
-
-
-    <footer class="footer">
-
-        <a class="back" href="index.html">
-            ← 메인으로
-        </a>
-
-        <span class="mark">
+        <div class="logo">
             墨花
-        </span>
+        </div>
 
-    </footer>
+
+        <div class="logo-korean">
+            묵화
+        </div>
+
+
+        <div class="description">
+
+            러시아를 주요 거점으로 삼는 대형 범죄 조직.
+            <br>
+            모습을 드러내지 않은 채 오랜 시간 세력을 확장해 왔다.
+
+            <br><br>
+
+            영혼까지도 묵화의 것이 된다.
+
+        </div>
+
+
+        <div class="quote">
+            기록되지 않은 것은, 존재하지 않는 것과 같다.
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="organization.html">
+                조직 개요
+            </a>
+
+            <a href="hierarchy.html">
+                내부 계층
+            </a>
+
+            <a href="outside.html">
+                대외 신분
+            </a>
+
+            <a href="records.html">
+                기록 및 정보
+            </a>
+
+        </nav>
+
+
+        <footer class="footer">
+
+            <span class="mark">
+                墨花
+            </span>
+
+        </footer>
+
+
+    </section>
 
 
 </main>
 
 </body>
+
 </html>
