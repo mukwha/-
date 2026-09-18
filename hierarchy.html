@@ -40,11 +40,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* =========================
-   전체 페이지
-========================= */
-
 .page {
     width: 100%;
     max-width: 760px;
@@ -64,11 +59,6 @@ body {
         pageAppear 1.4s ease forwards;
 }
 
-
-/* =========================
-   상단
-========================= */
-
 .header {
     border-bottom: 1px solid #451014;
 
@@ -84,7 +74,6 @@ body {
     animation-delay: 0.2s;
 }
 
-
 .number {
     color: #8f1d24;
 
@@ -94,7 +83,6 @@ body {
 
     margin-bottom: 17px;
 }
-
 
 .title {
     margin: 0;
@@ -108,7 +96,6 @@ body {
     color: #e2dfdd;
 }
 
-
 .subtitle {
     margin-top: 15px;
 
@@ -118,11 +105,6 @@ body {
 
     letter-spacing: 2px;
 }
-
-
-/* =========================
-   계층 구조
-========================= */
 
 .hierarchy {
     display: flex;
@@ -138,7 +120,6 @@ body {
 
     animation-delay: 0.5s;
 }
-
 
 .rank {
     width: 100%;
@@ -156,13 +137,11 @@ body {
     position: relative;
 }
 
-
 .rank.top {
     border-color: #6b171d;
 
     background: #241719;
 }
-
 
 .rank-number {
     color: #8f1d24;
@@ -174,7 +153,6 @@ body {
     margin-bottom: 10px;
 }
 
-
 .rank-name {
     color: #d6d2d0;
 
@@ -184,7 +162,6 @@ body {
 
     margin-bottom: 5px;
 }
-
 
 .rank-korean {
     color: #777574;
@@ -196,11 +173,9 @@ body {
     margin-bottom: 17px;
 }
 
-
 .rank.top .rank-name {
     color: #b32a32;
 }
-
 
 .rank-description {
     color: #999795;
@@ -210,7 +185,6 @@ body {
     line-height: 2;
 }
 
-
 .connector {
     width: 1px;
 
@@ -218,11 +192,6 @@ body {
 
     background: #541116;
 }
-
-
-/* =========================
-   설명
-========================= */
 
 .section {
     margin-top: 55px;
@@ -232,7 +201,6 @@ body {
     animation:
         fadeUp 1.3s ease forwards;
 }
-
 
 .section-title {
     display: flex;
@@ -244,7 +212,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 .section-number {
     color: #8f1d24;
 
@@ -252,7 +219,6 @@ body {
 
     letter-spacing: 2px;
 }
-
 
 .section-title h2 {
     margin: 0;
@@ -265,7 +231,6 @@ body {
 
     letter-spacing: 3px;
 }
-
 
 .section p {
     margin: 0;
@@ -285,7 +250,7 @@ body {
 .principle {
     margin-top: 55px;
 
-    padding: 38px 30px;
+    padding: 40px 30px;
 
     border-top: 1px solid #541116;
 
@@ -299,30 +264,30 @@ body {
     animation-delay: 1.7s;
 }
 
-
 .principle-title {
     color: #d6d2d0;
 
-    font-size: 25px;
+    font-size: 28px;
 
     font-weight: 500;
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 
-    margin-bottom: 25px;
+    line-height: 1.5;
+
+    margin-bottom: 28px;
 }
-
 
 .record-status {
     color: #999795;
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 400;
 
     letter-spacing: 2px;
 
-    line-height: 2.2;
+    line-height: 2.3;
 }
 
 
@@ -351,7 +316,6 @@ body {
     animation-delay: 2.3s;
 }
 
-
 .back {
     color: #777574;
 
@@ -364,11 +328,9 @@ body {
     transition: color 0.3s ease;
 }
 
-
 .back:hover {
     color: #b32a32;
 }
-
 
 .mark {
     color: #5f0c12;
@@ -397,7 +359,6 @@ body {
 
 }
 
-
 @keyframes fadeIn {
 
     from {
@@ -409,7 +370,6 @@ body {
     }
 
 }
-
 
 @keyframes fadeUp {
 
@@ -473,13 +433,13 @@ body {
     }
 
     .principle-title {
-        font-size: 21px;
+        font-size: 22px;
 
         letter-spacing: 4px;
     }
 
     .record-status {
-        font-size: 12px;
+        font-size: 11px;
     }
 
 }
@@ -503,15 +463,9 @@ body {
 </style>
 </head>
 
-
 <body>
 
 <main class="page">
-
-
-    <!-- =====================
-         제목
-    ====================== -->
 
     <header class="header">
 
@@ -530,12 +484,7 @@ body {
     </header>
 
 
-    <!-- =====================
-         계층 구조
-    ====================== -->
-
     <div class="hierarchy">
-
 
         <div class="rank top">
 
@@ -608,13 +557,8 @@ body {
 
         </div>
 
-
     </div>
 
-
-    <!-- =====================
-         계층의 특징
-===================== -->
 
     <section class="section">
 
@@ -629,7 +573,6 @@ body {
             </h2>
 
         </div>
-
 
         <p>
 
@@ -650,10 +593,6 @@ body {
     </section>
 
 
-    <!-- =====================
-         비공개 기록
-===================== -->
-
     <div class="principle">
 
         <div class="principle-title">
@@ -670,10 +609,6 @@ body {
     </div>
 
 
-    <!-- =====================
-         하단
-===================== -->
-
     <footer class="footer">
 
         <a class="back" href="index.html">
@@ -685,7 +620,6 @@ body {
         </span>
 
     </footer>
-
 
 </main>
 
