@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>대외적 신분 — 墨花</title>
+<title>墨花</title>
 
 <style>
 
@@ -40,19 +40,18 @@ body {
     overflow-x: hidden;
 }
 
-
-/* 메인 카드 */
-
 .container {
+    position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 560px;
-
+    min-height: 780px;
     background: #1b1b1a;
-
     border: 1px solid #451014;
-
-    padding: 65px 55px 50px;
-
+    padding: 75px 55px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
 
@@ -60,9 +59,7 @@ body {
         cardAppear 1.5s ease forwards;
 }
 
-
 @keyframes cardAppear {
-
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -72,36 +69,10 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
-
-
-/* 상단 */
-
-.label {
-    text-align: center;
-
-    color: #74151b;
-
-    font-size: 12px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 18px;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.4s ease forwards;
-
-    animation-delay: 0.3s;
-}
-
 
 .title {
-    margin: 0;
-
-    text-align: center;
+    margin: 0 0 55px;
 
     font-family:
         "Noto Serif KR",
@@ -109,285 +80,130 @@ body {
         "함초롬바탕",
         serif;
 
-    font-size: 52px;
-
+    font-size: 86px;
     font-weight: 400;
-
-    letter-spacing: 7px;
-
-    color: #dedbd9;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.4s ease forwards;
-
-    animation-delay: 0.6s;
-}
-
-
-.subtitle {
-    text-align: center;
-
-    color: #777573;
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
-
-    margin-top: 18px;
-
-    margin-bottom: 55px;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.4s ease forwards;
-
-    animation-delay: 0.9s;
-}
-
-
-/* 기업 정보 */
-
-.company-box {
-    padding: 27px 26px;
-
-    background: #242423;
-
-    border: 1px solid #3e1014;
-
-    margin-bottom: 14px;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.4s ease forwards;
-
-    animation-delay: 1.2s;
-}
-
-
-.company-label {
-    color: #7e171e;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-}
-
-
-.company-name {
-    color: #d1cecc;
-
-    font-size: 20px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 10px;
-}
-
-
-.company-text {
-    color: #858280;
-
-    font-size: 13px;
-
-    line-height: 2;
-
-    margin: 0;
-}
-
-
-/* 일반 정보 */
-
-.section {
-    margin-top: 14px;
-
-    padding: 27px 26px;
-
-    background: #242423;
-
-    border: 1px solid #3e1014;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.4s ease forwards;
-
-    animation-delay: 1.5s;
-}
-
-
-.section-title {
-    color: #aaa7a5;
-
-    font-size: 18px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-
-    margin: 0 0 18px;
-}
-
-
-.section-text {
-    color: #858280;
-
-    font-size: 13px;
-
-    line-height: 2.05;
-
-    margin: 0;
-}
-
-
-/* 기업 이미지 */
-
-.image-box {
-    margin-top: 14px;
-
-    padding: 27px 26px;
-
-    background: #201718;
-
-    border-left: 2px solid #74151b;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.4s ease forwards;
-
-    animation-delay: 1.8s;
-}
-
-
-.image-title {
-    color: #b1adaa;
-
-    font-size: 16px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-
-    margin: 0 0 16px;
-}
-
-
-.image-text {
-    color: #858180;
-
-    font-size: 13px;
-
-    line-height: 2;
-
-    margin: 0;
-}
-
-
-/* 분리 */
-
-.separation {
-    margin-top: 14px;
-
-    padding: 27px 26px;
-
-    background: #242423;
-
-    border: 1px solid #3e1014;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.4s ease forwards;
-
-    animation-delay: 2.1s;
-}
-
-
-.separation-title {
-    color: #aaa7a5;
-
-    font-size: 18px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-
-    margin: 0 0 18px;
-}
-
-
-.separation-text {
-    color: #858280;
-
-    font-size: 13px;
-
-    line-height: 2.05;
-
-    margin: 0;
-}
-
-
-/* 마지막 문장 */
-
-.principle {
-    margin-top: 55px;
-
-    text-align: center;
-
-    color: #8f1d24;
-
-    font-size: 18px;
-
-    letter-spacing: 3px;
-
-    line-height: 1.9;
+    letter-spacing: 10px;
+    color: #e2dfdd;
 
     opacity: 0;
 
     animation:
         fadeIn 1.5s ease forwards;
 
-    animation-delay: 2.5s;
+    animation-delay: 0.4s;
 }
 
+.description {
+    width: 100%;
+    text-align: center;
 
-/* 돌아가기 */
+    line-height: 2.1;
 
-.back {
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
+
+    font-size: 15px;
+    color: #999795;
+
+    margin-bottom: 55px;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 0.9s;
+}
+
+.description strong {
     display: block;
 
-    width: fit-content;
+    font-size: 18px;
+    font-weight: 400;
 
-    margin: 55px auto 0;
+    color: #aaa8a6;
 
-    color: #666361;
+    margin-bottom: 14px;
+}
+
+.menu {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: 1.5s;
+}
+
+.menu a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 72px;
+
+    background: #242423;
+    border: 1px solid #541116;
+
+    color: #aaa7a5;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
 
-    letter-spacing: 2px;
+    font-size: 14px;
+    letter-spacing: 3px;
 
     transition:
-        color 0.3s ease;
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
-
-.back:hover {
-    color: #aaa7a5;
+.menu a:hover {
+    background: #35080b;
+    border-color: #75151b;
+    color: #ddd9d7;
 }
 
+.quote {
+    margin-top: 60px;
 
-/* 애니메이션 */
+    color: #8f1d24;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 2.1s;
+}
 
 @keyframes fadeIn {
-
     from {
         opacity: 0;
     }
@@ -395,12 +211,9 @@ body {
     to {
         opacity: 1;
     }
-
 }
 
-
 @keyframes fadeUp {
-
     from {
         opacity: 0;
         transform: translateY(18px);
@@ -410,11 +223,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
-
-
-/* 모바일 */
 
 @media (max-width: 600px) {
 
@@ -422,205 +231,103 @@ body {
         padding: 20px 12px;
     }
 
-
     .container {
-        padding: 50px 28px 40px;
+        min-height: 720px;
+        padding: 55px 28px 35px;
     }
-
 
     .title {
-        font-size: 40px;
-        letter-spacing: 5px;
-    }
-
-
-    .subtitle {
-        font-size: 11px;
+        font-size: 62px;
+        letter-spacing: 7px;
         margin-bottom: 45px;
     }
 
-
-    .company-box,
-    .section,
-    .image-box,
-    .separation {
-        padding: 22px 20px;
+    .description {
+        font-size: 13px;
+        margin-bottom: 45px;
+        line-height: 2;
     }
 
-
-    .company-name {
-        font-size: 18px;
+    .description strong {
+        font-size: 16px;
     }
 
+    .menu {
+        gap: 10px;
+    }
 
-    .company-text,
-    .section-text,
-    .image-text,
-    .separation-text {
+    .menu a {
+        height: 62px;
         font-size: 12px;
+        letter-spacing: 2px;
     }
 
-
-    .section-title,
-    .separation-title {
+    .quote {
+        margin-top: 45px;
         font-size: 16px;
     }
-
-
-    .image-title {
-        font-size: 15px;
-    }
-
-
-    .principle {
-        font-size: 16px;
-    }
-
 }
-
-
-/* 애니메이션 감소 */
 
 @media (prefers-reduced-motion: reduce) {
 
     .container,
-    .label,
     .title,
-    .subtitle,
-    .company-box,
-    .section,
-    .image-box,
-    .separation,
-    .principle {
-
+    .description,
+    .menu,
+    .quote {
         animation: none !important;
-
         opacity: 1 !important;
     }
-
 }
 
 </style>
 </head>
 
-
 <body>
 
 <div class="container">
 
-
-    <div class="label">
-        기록 03
-    </div>
-
-
     <h1 class="title">
-        대외적 신분
+        墨花
     </h1>
 
+    <div class="description">
 
-    <div class="subtitle">
-        세상에 드러난 묵화의 또 다른 얼굴
-    </div>
+        <strong>
+            먹으로 그린 꽃.
+        </strong>
 
+        한 번 새겨진 흔적은 쉽게 지워지지 않는다.<br>
 
-    <div class="company-box">
+        검은 흔적 위에 피어난 꽃은<br>
 
-        <div class="company-label">
-            OFFICIAL IDENTITY
-        </div>
-
-        <div class="company-name">
-            생명과학 기업
-        </div>
-
-        <p class="company-text">
-            공식적으로는 러시아에 본사를 둔 생명과학 기업으로 알려져 있다.
-        </p>
+        그 누구도 쉽게 지울 수 없는 이름이 된다.
 
     </div>
 
+    <nav class="menu">
 
-    <div class="section">
+        <a href="organization.html">
+            조직 개요
+        </a>
 
-        <h2 class="section-title">
-            공식 사업
-        </h2>
+        <a href="hierarchy.html">
+            내부 계층
+        </a>
 
-        <p class="section-text">
+        <a href="identity.html">
+            대외적 신분
+        </a>
 
-            신약 개발과 의약품 연구를 주요 사업으로 내세우며,
-            대외적으로는 정상적인 기업으로 활동한다.
-            <br><br>
+        <a href="records.html">
+            기록 및 정보
+        </a>
 
-            의료기관 및 연구기관과의 협력 관계를 유지하고 있으며,
-            연구 지원과 사회공헌 활동에도 참여한다.
-            <br><br>
+    </nav>
 
-            외부에는 기술력과 연구 성과를 갖춘 기업이라는
-            이미지가 형성되어 있다.
-
-        </p>
-
+    <div class="quote">
+        「墨落成花，闇覆其身。」
     </div>
-
-
-    <div class="image-box">
-
-        <h2 class="image-title">
-            대외적 이미지
-        </h2>
-
-        <p class="image-text">
-
-            기업 내부의 조직 구조와 운영 방식 역시
-            일반적인 생명과학 기업과 크게 다르지 않도록 구성되어 있다.
-            <br><br>
-
-            공식적으로 공개되는 자료에는 연구 성과와 투자 내역,
-            기업 활동에 관한 내용만이 기록된다.
-
-        </p>
-
-    </div>
-
-
-    <div class="separation">
-
-        <h2 class="separation-title">
-            완전한 분리
-        </h2>
-
-        <p class="separation-text">
-
-            조직과 기업의 관계를 의심할 만한 흔적은
-            철저하게 분리되어 있다.
-            <br><br>
-
-            묵화와 기업 사이에 직접적인 연결고리가 드러나지 않도록
-            모든 대외적인 활동은 기업의 이름으로 이루어진다.
-            <br><br>
-
-            겉으로 보이는 모습과 실제 존재하는 조직 사이에는
-            어떠한 접점도 남기지 않는다.
-
-        </p>
-
-    </div>
-
-
-    <div class="principle">
-
-        보이는 것은 기업이고,<br>
-        남겨진 것은 흔적뿐이다.
-
-    </div>
-
-
-    <a href="index.html" class="back">
-        ← 메인으로
-    </a>
-
 
 </div>
 
