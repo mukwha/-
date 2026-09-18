@@ -23,6 +23,7 @@ body {
 
 body {
     background: #260508;
+
     color: #d0cecc;
 
     font-family:
@@ -42,6 +43,7 @@ body {
 
 .page {
     width: 100%;
+
     max-width: 760px;
 
     margin: 0 auto;
@@ -90,13 +92,13 @@ body {
 .title {
     margin: 0;
 
+    color: #e2dfdd;
+
     font-size: 48px;
 
     font-weight: 400;
 
     letter-spacing: 8px;
-
-    color: #e2dfdd;
 }
 
 .subtitle {
@@ -134,10 +136,109 @@ body {
 }
 
 
+/* 기업 정보 */
+
+.company-info {
+    margin-top: 42px;
+
+    padding: 28px 30px;
+
+    background: #20201f;
+
+    border: 1px solid #453536;
+}
+
+.info-row {
+    display: flex;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #353433;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    width: 105px;
+
+    flex-shrink: 0;
+
+    color: #8f1d24;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.info-value {
+    color: #aaa7a5;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* 섹션 */
+
+.section {
+    margin-top: 55px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.3s ease forwards;
+
+    animation-delay: 0.8s;
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.section-number {
+    color: #8f1d24;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    color: #d5d2d0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+}
+
+.section p {
+    margin: 0;
+
+    color: #999795;
+
+    font-size: 14px;
+
+    line-height: 2.15;
+}
+
+
 /* 마지막 문장 */
 
 .final-line {
-    margin-top: 38px;
+    margin-top: 40px;
 
     padding-top: 28px;
 
@@ -155,49 +256,37 @@ body {
 
 /* 기록되지 않은 말 */
 
-.secret {
+.unrecorded {
     margin-top: 55px;
 
-    padding: 30px 32px;
+    padding-top: 24px;
 
-    background: #20201f;
-
-    border: 1px solid #453536;
+    border-top: 1px solid #353433;
 
     opacity: 0;
 
     animation:
-        fadeUp 1.3s ease forwards;
+        fadeIn 1.3s ease forwards;
 
-    animation-delay: 1.2s;
+    animation-delay: 1.5s;
 }
 
-.secret-title {
-    color: #8f1d24;
-
-    font-size: 12px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 18px;
-}
-
-.secret-subtitle {
-    color: #d6d2d0;
-
-    font-size: 17px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 18px;
-}
-
-.secret-text {
+.unrecorded-title {
     color: #777574;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    line-height: 2.1;
+    letter-spacing: 3px;
+
+    margin-bottom: 14px;
+}
+
+.unrecorded-text {
+    color: #666463;
+
+    font-size: 11px;
+
+    line-height: 2;
 
     letter-spacing: 0.5px;
 }
@@ -223,7 +312,7 @@ body {
     animation:
         fadeIn 1.3s ease forwards;
 
-    animation-delay: 1.8s;
+    animation-delay: 1.9s;
 }
 
 .back {
@@ -258,11 +347,13 @@ body {
 
     from {
         opacity: 0;
+
         transform: translateY(15px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
@@ -284,11 +375,13 @@ body {
 
     from {
         opacity: 0;
+
         transform: translateY(15px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
@@ -319,20 +412,40 @@ body {
         line-height: 2;
     }
 
+    .company-info {
+        padding: 23px 20px;
+    }
+
+    .info-label {
+        width: 85px;
+
+        font-size: 10px;
+    }
+
+    .info-value {
+        font-size: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+    .section p {
+        font-size: 13px;
+
+        line-height: 2;
+    }
+
     .final-line {
         font-size: 14px;
     }
 
-    .secret {
-        padding: 26px 23px;
+    .unrecorded-title {
+        font-size: 10px;
     }
 
-    .secret-subtitle {
-        font-size: 15px;
-    }
-
-    .secret-text {
-        font-size: 11px;
+    .unrecorded-text {
+        font-size: 10px;
     }
 
 }
@@ -380,6 +493,7 @@ body {
 
     <section class="content">
 
+
         <p>
 
             공식적으로는 러시아에 본사를 둔 생명과학 기업으로 존재한다.
@@ -397,31 +511,156 @@ body {
         </p>
 
 
-        <div class="final-line">
+        <div class="company-info">
 
-            그들은 언제나, 가장 평범한 얼굴로 존재한다.
+            <div class="info-row">
+
+                <div class="info-label">
+                    법인 형태
+                </div>
+
+                <div class="info-value">
+                    러시아 소재 생명과학 기업
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    주요 사업
+                </div>
+
+                <div class="info-value">
+                    신약 개발 · 의약품 연구
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    대외 이미지
+                </div>
+
+                <div class="info-value">
+                    안정적이고 신뢰도 높은 연구 기업
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    공개 관계
+                </div>
+
+                <div class="info-value">
+                    묵화와의 공식적인 연관성 없음
+                </div>
+
+            </div>
 
         </div>
+
 
     </section>
 
 
-    <section class="secret">
+    <section class="section">
 
-        <div class="secret-title">
+        <div class="section-title">
+
+            <span class="section-number">
+                01
+            </span>
+
+            <h2>
+                기업으로서의 얼굴
+            </h2>
+
+        </div>
+
+        <p>
+
+            외부에서 바라보는 기업의 모습은 철저하게 평범하다.
+
+            <br><br>
+
+            연구 시설과 사무 공간을 운영하며,
+            의약품과 관련된 연구 성과를 꾸준히 발표한다.
+
+            <br><br>
+
+            기업 내부의 인물들 역시 각자의 직책과 업무를 가진
+            일반적인 직원으로 기록되어 있다.
+
+            <br><br>
+
+            어떠한 의심도 남기지 않는 것.
+            그것이 이 기업이 가장 오랫동안 유지해 온 원칙이다.
+
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
+                분리된 이름
+            </h2>
+
+        </div>
+
+        <p>
+
+            기업의 이름과 묵화라는 이름은 공식적인 기록에서
+            서로 연결되지 않는다.
+
+            <br><br>
+
+            기업에 소속된 사람들은 조직의 존재를 알지 못하거나,
+            적어도 외부에서는 그렇게 기록된다.
+
+            <br><br>
+
+            필요한 경우에도 두 이름 사이에는
+            직접적인 흔적이 남지 않도록 관리된다.
+
+        </p>
+
+    </section>
+
+
+    <div class="final-line">
+
+        그들은 언제나, 가장 평범한 얼굴로 존재한다.
+
+    </div>
+
+
+    <section class="unrecorded">
+
+        <div class="unrecorded-title">
             기록되지 않은 말
         </div>
 
-        <div class="secret-subtitle">
-            보이지 않는 얼굴
-        </div>
+        <div class="unrecorded-text">
 
-        <div class="secret-text">
-
-            공식적인 기록에는 남지 않는다.
+            기업의 이름으로 남겨진 기록은 많다.
             <br>
-            알려져서는 안 되는 것들은 언제나
-            기록보다 먼저 지워진다.
+            그러나 그 기록만으로는 누구도
+            그 뒤에 무엇이 있는지 알아낼 수 없다.
 
         </div>
 
