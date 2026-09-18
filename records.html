@@ -1,5 +1,6 @@
  <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +13,13 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 body {
-    min-height: 100vh;
-
     background: #260508;
     color: #d0cecc;
 
@@ -31,7 +30,9 @@ body {
         "바탕체",
         serif;
 
-    padding: 60px 20px;
+    min-height: 100vh;
+
+    padding: 50px 20px;
 }
 
 .page {
@@ -40,51 +41,44 @@ body {
 
     margin: 0 auto;
 
-    padding: 65px 60px 45px;
-
     background: #1b1b1a;
 
     border: 1px solid #451014;
+
+    padding: 65px 60px 45px;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
 }
 
-
-/* ====================
-   제목
-==================== */
-
 .header {
-    width: 100%;
-
-    padding-bottom: 40px;
-
-    border-bottom: 1px solid #393836;
-
     text-align: left;
+
+    margin-bottom: 55px;
 }
 
-.number {
-    margin-bottom: 18px;
-
-    color: #78171d;
+.label {
+    font-family: Arial, sans-serif;
 
     font-size: 11px;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+
+    color: #7f2026;
+
+    margin-bottom: 14px;
 }
 
 .title {
     margin: 0;
 
-    color: #dedbd9;
-
-    font-size: 46px;
+    font-size: 42px;
 
     font-weight: 400;
 
-    letter-spacing: 6px;
+    letter-spacing: 4px;
+
+    color: #e2dfdd;
 
     text-align: left;
 }
@@ -92,243 +86,189 @@ body {
 .subtitle {
     margin-top: 18px;
 
-    color: #777472;
+    font-size: 14px;
 
-    font-size: 13px;
+    color: #858381;
+
+    line-height: 1.8;
+
+    text-align: left;
+}
+
+.content {
+    text-align: left;
+}
+
+.record-box {
+    padding: 25px;
+
+    margin-bottom: 14px;
+
+    background: #222221;
+
+    border: 1px solid #351014;
+}
+
+.record-number {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
 
     letter-spacing: 2px;
 
-    text-align: left;
+    color: #7f2026;
+
+    margin-bottom: 10px;
 }
 
-
-/* ====================
-   본문
-==================== */
-
-.content {
-    width: 100%;
-
-    margin-top: 45px;
-
-    text-align: left;
-}
-
-.block {
-    width: 100%;
-
-    margin-bottom: 32px;
-}
-
-.block-title {
-    margin-bottom: 14px;
-
-    color: #b5b2b0;
+.record-title {
+    margin: 0 0 12px;
 
     font-size: 17px;
 
     font-weight: 400;
 
-    letter-spacing: 3px;
+    color: #b8b5b3;
 
-    text-align: left;
+    letter-spacing: 1px;
 }
 
-.block p {
+.record-box p {
     margin: 0;
-
-    color: #918e8c;
-
-    font-size: 14px;
-
-    line-height: 2.15;
-
-    text-align: left;
-}
-
-
-/* ====================
-   기록 박스
-==================== */
-
-.record-box {
-    width: 100%;
-
-    padding: 23px 25px;
-
-    background: #222221;
-
-    border: 1px solid #353432;
-
-    border-left: 2px solid #67151b;
-}
-
-.record-number {
-    margin-bottom: 10px;
-
-    color: #72171d;
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-}
-
-.record-title {
-    margin-bottom: 12px;
-
-    color: #b5b2b0;
-
-    font-size: 15px;
-
-    letter-spacing: 2px;
-}
-
-.record-text {
-    color: #898684;
 
     font-size: 13px;
 
     line-height: 2;
+
+    color: #92908e;
 }
 
+.section {
+    margin-top: 50px;
+}
 
-/* ====================
-   미확인 기록
-==================== */
+.section-title {
+    margin: 0 0 20px;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: #b8b5b3;
+
+    letter-spacing: 2px;
+}
+
+.section p {
+    margin: 0 0 16px;
+
+    font-size: 14px;
+
+    line-height: 2.1;
+
+    color: #969492;
+}
 
 .unknown {
-    margin-top: 35px;
+    margin-top: 25px;
 
     padding: 25px;
 
-    background: #201f1e;
+    background: #201f1f;
 
-    border: 1px solid #3b3030;
-}
-
-.unknown-title {
-    margin-bottom: 14px;
-
-    color: #a5a19f;
-
-    font-size: 15px;
-
-    letter-spacing: 2px;
+    border-left: 2px solid #68151b;
 }
 
 .unknown p {
     margin: 0;
 
-    color: #858280;
-
-    font-size: 13px;
+    color: #aaa7a5;
 
     line-height: 2;
 }
 
-
-/* ====================
-   구분선
-==================== */
-
-.line {
-    width: 100%;
-
-    height: 1px;
-
-    margin: 45px 0;
-
-    background: #343331;
-}
-
-
-/* ====================
-   마지막 문장
-==================== */
-
 .quote {
-    width: 100%;
+    margin-top: 55px;
 
-    margin-top: 45px;
+    padding-top: 30px;
 
-    margin-bottom: 45px;
+    border-top: 1px solid #3b1115;
 
-    color: #821a20;
+    text-align: center;
 
-    font-size: 15px;
+    font-size: 16px;
 
     line-height: 2;
 
     letter-spacing: 2px;
 
-    text-align: center;
+    color: #8f1d24;
 }
-
-
-/* ====================
-   메인으로
-==================== */
 
 .back {
     display: block;
 
-    width: 100%;
+    margin-top: 45px;
 
-    margin: 0;
-    padding: 0;
+    text-align: left;
 
     color: #777472;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 13px;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
-    text-align: left;
+    transition: color 0.3s ease;
 }
 
 .back:hover {
-    color: #aaa7a5;
+    color: #b5b1af;
 }
-
-
-/* ====================
-   모바일
-==================== */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 25px 12px;
+        padding: 20px 12px;
     }
 
     .page {
-        padding: 45px 28px 35px;
+        padding: 50px 28px 35px;
     }
 
     .title {
-        font-size: 37px;
+        font-size: 32px;
 
-        letter-spacing: 5px;
+        letter-spacing: 3px;
+
+        text-align: left;
     }
 
-    .block-title {
-        font-size: 15px;
-    }
-
-    .block p {
+    .subtitle {
         font-size: 13px;
 
-        line-height: 2;
+        text-align: left;
     }
 
-    .record-box {
-        padding: 20px;
+    .record-title {
+        font-size: 16px;
+    }
+
+    .record-box p {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    .section p {
+        font-size: 13px;
     }
 
     .quote {
-        font-size: 13px;
+        font-size: 14px;
     }
 
 }
@@ -336,17 +276,13 @@ body {
 </style>
 </head>
 
-
 <body>
 
 <div class="page">
 
-
-    <!-- 제목 -->
-
     <header class="header">
 
-        <div class="number">
+        <div class="label">
             RECORD 04
         </div>
 
@@ -361,143 +297,115 @@ body {
     </header>
 
 
-    <!-- 기록 목록 -->
-
     <main class="content">
 
+        <div class="record-box">
 
-        <section class="block">
-
-            <div class="record-box">
-
-                <div class="record-number">
-                    RECORD 01
-                </div>
-
-                <div class="record-title">
-                    조직 기록
-                </div>
-
-                <div class="record-text">
-                    묵화의 설립과 변화,
-                    조직의 주요 활동에 관한 기록을 보관한다.
-                </div>
-
+            <div class="record-number">
+                RECORD 01
             </div>
 
-        </section>
+            <h2 class="record-title">
+                조직 기록
+            </h2>
+
+            <p>
+                묵화의 설립과 변화,
+                조직의 주요 활동에 관한 기록을 보관한다.
+            </p>
+
+        </div>
 
 
-        <section class="block">
+        <div class="record-box">
 
-            <div class="record-box">
-
-                <div class="record-number">
-                    RECORD 02
-                </div>
-
-                <div class="record-title">
-                    인물 기록
-                </div>
-
-                <div class="record-text">
-                    묵화와 관련된 주요 인물들의
-                    정보와 활동 기록을 남긴다.
-                </div>
-
+            <div class="record-number">
+                RECORD 02
             </div>
 
-        </section>
+            <h2 class="record-title">
+                인물 기록
+            </h2>
+
+            <p>
+                묵화와 관련된 주요 인물들의
+                정보와 활동 기록을 남긴다.
+            </p>
+
+        </div>
 
 
-        <section class="block">
+        <div class="record-box">
 
-            <div class="record-box">
-
-                <div class="record-number">
-                    RECORD 03
-                </div>
-
-                <div class="record-title">
-                    사건 기록
-                </div>
-
-                <div class="record-text">
-                    조직과 관련하여 발생한
-                    주요 사건과 그 경과를 기록한다.
-                </div>
-
+            <div class="record-number">
+                RECORD 03
             </div>
 
-        </section>
+            <h2 class="record-title">
+                사건 기록
+            </h2>
+
+            <p>
+                조직과 관련하여 발생한 주요 사건과
+                그 경과를 기록한다.
+            </p>
+
+        </div>
 
 
-        <section class="block">
+        <div class="record-box">
 
-            <div class="record-box">
-
-                <div class="record-number">
-                    RECORD 04
-                </div>
-
-                <div class="record-title">
-                    문서 및 자료
-                </div>
-
-                <div class="record-text">
-                    조직과 관련된 문서, 사진, 보고서 및
-                    기타 자료를 보관한다.
-                </div>
-
+            <div class="record-number">
+                RECORD 04
             </div>
 
-        </section>
+            <h2 class="record-title">
+                문서 및 자료
+            </h2>
+
+            <p>
+                조직과 관련된 문서, 사진, 보고서 및
+                기타 자료를 보관한다.
+            </p>
+
+        </div>
 
 
-        <section class="block">
+        <div class="record-box">
 
-            <div class="record-box">
-
-                <div class="record-number">
-                    RECORD 05
-                </div>
-
-                <div class="record-title">
-                    미확인 기록
-                </div>
-
-                <div class="record-text">
-                    출처와 작성 시점이 명확하지 않은
-                    오래된 기록을 별도로 보관한다.
-                </div>
-
+            <div class="record-number">
+                RECORD 05
             </div>
 
-        </section>
+            <h2 class="record-title">
+                미확인 기록
+            </h2>
+
+            <p>
+                출처와 작성 시점이 명확하지 않은
+                오래된 기록을 별도로 보관한다.
+            </p>
+
+        </div>
 
 
-        <div class="line"></div>
+        <section class="section">
 
-
-        <!-- 기록에 대하여 -->
-
-        <section class="block">
-
-            <div class="block-title">
+            <h2 class="section-title">
                 기록에 대하여
-            </div>
+            </h2>
 
             <p>
                 묵화에는 오랜 시간 동안 축적된
                 수많은 기록이 존재한다.
             </p>
 
-            <p style="margin-top: 16px;">
+            <p>
                 공식적인 문서부터 개인이 남긴 짧은 기록까지,
                 조직과 관련된 다양한 자료가 하나의 기록으로 남는다.
             </p>
 
-            <p style="margin-top: 16px;">
+            <p>
                 일부 자료는 정확한 사실을 담고 있지만,
                 일부는 작성자의 기억과 추측이 섞여 있어
                 진위를 확인하기 어렵다.
@@ -506,40 +414,36 @@ body {
         </section>
 
 
-        <!-- 미확인 기록 -->
+        <section class="section">
 
-        <div class="unknown">
-
-            <div class="unknown-title">
+            <h2 class="section-title">
                 미확인 기록
+            </h2>
+
+            <div class="unknown">
+
+                <p>
+                    일부 기록은 작성자와 작성 날짜가 존재하지 않는다.
+                    또한 다른 기록과 내용이 일치하지 않는 경우도 있어
+                    공식적인 기록으로 분류되지 않는다.
+                </p>
+
             </div>
 
-            <p>
-                일부 기록은 작성자와 작성 시점이 확인되지 않는다.
-                다른 기록과 내용이 서로 일치하지 않는 경우도 존재하며,
-                현재까지도 정확한 사실 여부가 확인되지 않은 자료가 남아 있다.
-            </p>
+        </section>
 
+
+        <div class="quote">
+            남겨진 기록은<br>
+            사라진 흔적을 기억한다.
         </div>
 
 
+        <a class="back" href="index.html">
+            ← 메인으로
+        </a>
+
     </main>
-
-
-    <!-- 마지막 문장 -->
-
-    <div class="quote">
-        남겨진 기록은<br>
-        사라진 흔적을 기억한다.
-    </div>
-
-
-    <!-- 메인으로 -->
-
-    <a class="back" href="index.html">
-        ← 메인으로
-    </a>
-
 
 </div>
 
