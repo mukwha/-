@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>기록 및 정보</title>
+<title>墨花 — 기록 및 정보</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,17 +113,15 @@ body {
 }
 
 
-/* 설명 */
+/* 본문 */
 
 .section {
-    margin-top: 55px;
+    margin-top: 45px;
 
     opacity: 0;
 
     animation:
         fadeUp 1.3s ease forwards;
-
-    animation-delay: 0.5s;
 }
 
 .section-title {
@@ -169,19 +167,19 @@ body {
 
 /* 정보 */
 
-.info-box {
-    margin-top: 35px;
+.info {
+    margin-top: 45px;
 
     padding: 28px 30px;
 
     background: #20201f;
 
-    border: 1px solid #453536;
+    border: 1px solid #383433;
 
     opacity: 0;
 
     animation:
-        fadeIn 1.5s ease forwards;
+        fadeIn 1.4s ease forwards;
 
     animation-delay: 1.2s;
 }
@@ -191,23 +189,17 @@ body {
 
     grid-template-columns: 120px 1fr;
 
-    padding: 12px 0;
+    padding: 13px 0;
 
-    border-bottom: 1px solid #353433;
-}
-
-.info-row:first-child {
-    padding-top: 0;
+    border-bottom: 1px solid #302f2e;
 }
 
 .info-row:last-child {
-    padding-bottom: 0;
-
     border-bottom: none;
 }
 
 .info-label {
-    color: #777574;
+    color: #8f1d24;
 
     font-size: 12px;
 
@@ -215,7 +207,7 @@ body {
 }
 
 .info-value {
-    color: #c4c1bf;
+    color: #999795;
 
     font-size: 13px;
 
@@ -271,7 +263,7 @@ body {
 }
 
 
-/* 빨간 문구 */
+/* 하단 문구 */
 
 .principle {
     margin-top: 55px;
@@ -289,7 +281,7 @@ body {
     animation:
         fadeIn 1.5s ease forwards;
 
-    animation-delay: 1.8s;
+    animation-delay: 1.7s;
 }
 
 .principle-title {
@@ -319,7 +311,7 @@ body {
     animation:
         fadeIn 1.3s ease forwards;
 
-    animation-delay: 2.1s;
+    animation-delay: 2s;
 }
 
 .unrecorded-title {
@@ -363,7 +355,7 @@ body {
     animation:
         fadeIn 1.3s ease forwards;
 
-    animation-delay: 2.4s;
+    animation-delay: 2.3s;
 }
 
 .back {
@@ -462,16 +454,12 @@ body {
         line-height: 2;
     }
 
-    .info-box {
+    .info {
         padding: 24px 20px;
     }
 
     .info-row {
         grid-template-columns: 100px 1fr;
-    }
-
-    .info-label {
-        font-size: 11px;
     }
 
     .info-value {
@@ -667,7 +655,7 @@ body {
     </section>
 
 
-    <div class="info-box">
+    <div class="info">
 
         <div class="info-row">
 
@@ -681,6 +669,7 @@ body {
 
         </div>
 
+
         <div class="info-row">
 
             <div class="info-label">
@@ -693,6 +682,7 @@ body {
 
         </div>
 
+
         <div class="info-row">
 
             <div class="info-label">
@@ -704,6 +694,7 @@ body {
             </div>
 
         </div>
+
 
         <div class="info-row">
 
@@ -753,8 +744,10 @@ body {
         </div>
 
         <div class="unrecorded-text">
+
             모든 기록에는 남겨지지 않은 부분이 있다.<br>
             말하지 않은 것은, 존재하지 않는 것과 같다.
+
         </div>
 
     </div>
