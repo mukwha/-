@@ -46,9 +46,12 @@ body {
     overflow-x: hidden;
 }
 
-.container {
 
-    position: relative;
+/* ─────────────
+   메인 카드
+───────────── */
+
+.container {
 
     width: 100%;
     max-width: 560px;
@@ -74,6 +77,11 @@ body {
         cardAppear 1.5s ease forwards;
 }
 
+
+/* ─────────────
+   등장 애니메이션
+───────────── */
+
 @keyframes cardAppear {
 
     from {
@@ -94,152 +102,6 @@ body {
 
     }
 
-}
-
-.title {
-
-    margin: 0 0 55px;
-
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        serif;
-
-    font-size: 86px;
-
-    font-weight: 400;
-
-    letter-spacing: 10px;
-
-    color: #e2dfdd;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.5s ease forwards;
-
-    animation-delay: 0.4s;
-}
-
-.description {
-
-    width: 100%;
-
-    text-align: center;
-
-    line-height: 2.1;
-
-    font-size: 15px;
-
-    color: #999795;
-
-    margin-bottom: 55px;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.5s ease forwards;
-
-    animation-delay: 0.9s;
-}
-
-.description strong {
-
-    display: block;
-
-    font-size: 18px;
-
-    font-weight: 400;
-
-    color: #aaa8a6;
-
-    margin-bottom: 14px;
-}
-
-.menu {
-
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 14px;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.5s ease forwards;
-
-    animation-delay: 1.5s;
-}
-
-.menu a {
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    height: 72px;
-
-    background: #242423;
-
-    border: 1px solid #541116;
-
-    color: #aaa7a5;
-
-    text-decoration: none;
-
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        serif;
-
-    font-size: 14px;
-
-    letter-spacing: 3px;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.menu a:hover {
-
-    background: #35080b;
-
-    border-color: #75151b;
-
-    color: #ddd9d7;
-}
-
-.quote {
-
-    margin-top: 60px;
-
-    color: #8f1d24;
-
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        serif;
-
-    font-size: 18px;
-
-    letter-spacing: 3px;
-
-    text-align: center;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.5s ease forwards;
-
-    animation-delay: 2.1s;
 }
 
 @keyframes fadeIn {
@@ -279,6 +141,179 @@ body {
     }
 
 }
+
+
+/* ─────────────
+   제목
+───────────── */
+
+.title {
+
+    margin: 0 0 55px;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
+
+    font-size: 86px;
+
+    font-weight: 400;
+
+    letter-spacing: 10px;
+
+    color: #e2dfdd;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 0.4s;
+}
+
+
+/* ─────────────
+   설명
+───────────── */
+
+.description {
+
+    width: 100%;
+
+    text-align: center;
+
+    line-height: 2.1;
+
+    font-size: 15px;
+
+    color: #999795;
+
+    margin-bottom: 55px;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 0.9s;
+}
+
+.description strong {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: #aaa8a6;
+
+    margin-bottom: 14px;
+}
+
+
+/* ─────────────
+   메뉴
+───────────── */
+
+.menu {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: 1.5s;
+}
+
+
+.menu a {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 72px;
+
+    background: #242423;
+
+    border: 1px solid #541116;
+
+    color: #aaa7a5;
+
+    text-decoration: none;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.menu a:hover {
+
+    background: #35080b;
+
+    border-color: #75151b;
+
+    color: #ddd9d7;
+}
+
+
+/* ─────────────
+   문구
+───────────── */
+
+.quote {
+
+    margin-top: 60px;
+
+    color: #8f1d24;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 2.1s;
+}
+
+
+/* ─────────────
+   모바일
+───────────── */
 
 @media (max-width: 600px) {
 
@@ -342,6 +377,11 @@ body {
 
 }
 
+
+/* ─────────────
+   애니메이션 감소 설정
+───────────── */
+
 @media (prefers-reduced-motion: reduce) {
 
     .container,
@@ -364,13 +404,18 @@ body {
 
 <body>
 
+
 <div class="container">
 
+
+    <!-- 제목 -->
 
     <h1 class="title">
         墨花
     </h1>
 
+
+    <!-- 설명 -->
 
     <div class="description">
 
@@ -386,6 +431,8 @@ body {
 
     </div>
 
+
+    <!-- 메뉴 -->
 
     <nav class="menu">
 
@@ -413,6 +460,8 @@ body {
     </nav>
 
 
+    <!-- 문구 -->
+
     <div class="quote">
 
         「墨落成花，闇覆其身。」
@@ -421,6 +470,7 @@ body {
 
 
 </div>
+
 
 </body>
 
