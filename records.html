@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>墨花 — 내부 계층</title>
+<title>기록 및 정보 — 墨花</title>
 
 <style>
 
@@ -29,461 +29,278 @@ body {
         "바탕체",
         serif;
 
-    padding: 45px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 50px 20px;
 
     overflow-x: hidden;
 }
 
-
-/* =========================
-   전체 페이지
-========================= */
-
-.page {
+.container {
     width: 100%;
-    max-width: 760px;
-
-    margin: 0 auto;
-
+    max-width: 560px;
     background: #1b1b1a;
 
     border: 1px solid #451014;
 
-    padding: 65px 65px 60px;
+    padding: 65px 55px 50px;
 
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
 
-    animation:
-        pageAppear 1.4s ease forwards;
+    animation: cardAppear 1.5s ease forwards;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-/* =========================
-   상단
-========================= */
+/* 상단 */
 
-.header {
-    border-bottom: 1px solid #451014;
+.label {
+    text-align: center;
 
-    padding-bottom: 32px;
-
-    margin-bottom: 45px;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.3s ease forwards;
-
-    animation-delay: 0.2s;
-}
-
-
-.number {
-    color: #8f1d24;
+    color: #74151b;
 
     font-size: 12px;
+    letter-spacing: 4px;
 
-    letter-spacing: 3px;
+    margin-bottom: 18px;
 
-    margin-bottom: 17px;
+    opacity: 0;
+    animation: fadeIn 1.3s ease forwards;
+    animation-delay: 0.3s;
 }
-
 
 .title {
     margin: 0;
 
-    font-size: 48px;
+    text-align: center;
 
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
+
+    font-size: 52px;
     font-weight: 400;
 
-    letter-spacing: 8px;
+    letter-spacing: 7px;
 
-    color: #e2dfdd;
-}
-
-
-.subtitle {
-    margin-top: 15px;
-
-    color: #777574;
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================
-   계층 구조
-========================= */
-
-.hierarchy {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
+    color: #dedbd9;
 
     opacity: 0;
+    animation: fadeIn 1.3s ease forwards;
+    animation-delay: 0.6s;
+}
 
-    animation:
-        fadeUp 1.4s ease forwards;
+.subtitle {
+    text-align: center;
 
-    animation-delay: 0.5s;
+    color: #777573;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    margin-top: 18px;
+    margin-bottom: 55px;
+
+    opacity: 0;
+    animation: fadeIn 1.3s ease forwards;
+    animation-delay: 0.9s;
 }
 
 
-.rank {
-    width: 100%;
+/* 기록 목록 */
 
-    max-width: 560px;
+.record-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
-    padding: 30px 32px;
-
-    border: 1px solid #453536;
-
-    background: #20201f;
-
-    text-align: left;
-
-    position: relative;
+    opacity: 0;
+    animation: fadeUp 1.4s ease forwards;
+    animation-delay: 1.2s;
 }
 
+.record {
+    padding: 24px 25px;
 
-.rank.top {
-    border-color: #6b171d;
+    background: #242423;
 
-    background: #241719;
+    border: 1px solid #3e1014;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
 }
 
+.record:hover {
+    background: #2c2020;
+    border-color: #64151b;
+}
 
-.rank-number {
-    color: #8f1d24;
+.record-number {
+    color: #7e171e;
 
     font-size: 11px;
-
     letter-spacing: 2px;
+
+    margin-bottom: 9px;
+}
+
+.record-title {
+    color: #d1cecc;
+
+    font-size: 19px;
+    letter-spacing: 3px;
 
     margin-bottom: 10px;
 }
 
-
-.rank-name {
-    color: #d6d2d0;
-
-    font-size: 22px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 5px;
-}
-
-
-.rank-korean {
-    color: #777574;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 17px;
-}
-
-
-.rank.top .rank-name {
-    color: #b32a32;
-}
-
-
-.rank-description {
-    color: #999795;
+.record-text {
+    color: #858280;
 
     font-size: 13px;
-
-    line-height: 2;
+    line-height: 1.9;
 }
 
 
-.connector {
-    width: 1px;
+/* 구분선 */
 
-    height: 35px;
+.divider {
+    width: 100%;
+    height: 1px;
 
-    background: #541116;
+    background: #3b1115;
+
+    margin: 55px 0;
 }
 
 
-/* =========================
-   설명 섹션
-========================= */
+/* 정보 섹션 */
 
 .section {
-    margin-top: 55px;
+    margin-bottom: 45px;
 
     opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-}
-
-
-.section-title {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 20px;
-}
-
-
-.section-number {
-    color: #8f1d24;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-}
-
-
-.section-title h2 {
-    margin: 0;
-
-    color: #d5d2d0;
-
-    font-size: 20px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-}
-
-
-.section p {
-    margin: 0;
-
-    color: #999795;
-
-    font-size: 14px;
-
-    line-height: 2.15;
-}
-
-
-/* =========================
-   정보 통제 강조
-========================= */
-
-.information-control {
-    margin-top: 55px;
-
-    padding: 35px 30px;
-
-    background: #20201f;
-
-    border-left: 2px solid #7b171e;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.4s ease forwards;
-
+    animation: fadeUp 1.4s ease forwards;
     animation-delay: 1.7s;
 }
 
+.section-title {
+    color: #aaa7a5;
 
-.control-title {
-    color: #d5d2d0;
-
-    font-size: 20px;
-
+    font-size: 18px;
     font-weight: 400;
 
     letter-spacing: 3px;
 
-    margin-bottom: 23px;
+    margin: 0 0 18px;
+}
+
+.section-text {
+    color: #858280;
+
+    font-size: 13px;
+    line-height: 2;
+
+    margin: 0;
 }
 
 
-.control-text {
-    color: #999795;
+/* 기밀 정보 */
 
-    font-size: 14px;
+.secret {
+    padding: 28px 27px;
 
-    line-height: 2.15;
+    background: #201718;
+
+    border-left: 2px solid #74151b;
+
+    margin-top: 20px;
 }
 
+.secret-title {
+    color: #b1adaa;
 
-.control-quote {
-    margin-top: 30px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #353433;
-
-    color: #a52a31;
-
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 400;
 
     letter-spacing: 3px;
 
-    line-height: 1.9;
+    margin: 0 0 20px;
+}
+
+.secret-text {
+    color: #858180;
+
+    font-size: 13px;
+    line-height: 2.1;
+
+    margin: 0;
 }
 
 
-/* =========================
-   내부 원칙
-========================= */
+/* 하단 문구 */
 
 .principle {
-    margin-top: 55px;
-
-    padding: 32px 20px;
-
-    border-top: 1px solid #541116;
-
-    border-bottom: 1px solid #541116;
+    margin-top: 50px;
 
     text-align: center;
 
-    opacity: 0;
+    color: #8f1d24;
 
-    animation:
-        fadeIn 1.5s ease forwards;
-
-    animation-delay: 2.1s;
-}
-
-
-.principle-text {
-    color: #a52a31;
-
-    font-size: 18px;
-
-    letter-spacing: 3px;
-
-    line-height: 1.9;
-}
-
-
-/* =========================
-   내부 기록
-========================= */
-
-.record {
-    margin-top: 48px;
-
-    padding: 24px 0;
-
-    border-top: 1px solid #353433;
-
-    border-bottom: 1px solid #353433;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.3s ease forwards;
-
-    animation-delay: 2.4s;
-}
-
-
-.record-label {
-    color: #777574;
-
-    font-size: 11px;
-
+    font-size: 15px;
     letter-spacing: 2px;
-
-    margin-bottom: 12px;
-}
-
-
-.record-text {
-    color: #999795;
-
-    font-size: 13px;
-
-    line-height: 2;
-}
-
-
-/* =========================
-   하단
-========================= */
-
-.footer {
-    margin-top: 45px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #353433;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
+    line-height: 1.9;
 
     opacity: 0;
-
-    animation:
-        fadeIn 1.3s ease forwards;
-
-    animation-delay: 2.7s;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 2.2s;
 }
 
+
+/* 돌아가기 */
 
 .back {
-    color: #777574;
+    display: block;
+
+    width: fit-content;
+
+    margin: 55px auto 0;
+
+    color: #666361;
 
     text-decoration: none;
 
     font-size: 12px;
-
     letter-spacing: 2px;
 
     transition: color 0.3s ease;
 }
 
-
 .back:hover {
-    color: #b32a32;
+    color: #aaa7a5;
 }
 
 
-.mark {
-    color: #5f0c12;
-
-    font-size: 13px;
-
-    letter-spacing: 3px;
-}
-
-
-/* =========================
-   애니메이션
-========================= */
-
-@keyframes pageAppear {
-
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
+/* 애니메이션 */
 
 @keyframes fadeIn {
-
     from {
         opacity: 0;
     }
@@ -491,28 +308,22 @@ body {
     to {
         opacity: 1;
     }
-
 }
 
-
 @keyframes fadeUp {
-
     from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(18px);
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 
-/* =========================
-   모바일
-========================= */
+/* 모바일 */
 
 @media (max-width: 600px) {
 
@@ -520,71 +331,62 @@ body {
         padding: 20px 12px;
     }
 
-    .page {
-        padding: 45px 28px 50px;
+    .container {
+        padding: 50px 28px 40px;
     }
 
     .title {
-        font-size: 36px;
-
-        letter-spacing: 6px;
+        font-size: 40px;
+        letter-spacing: 5px;
     }
 
-    .rank {
-        padding: 26px 23px;
+    .subtitle {
+        font-size: 11px;
+        margin-bottom: 45px;
     }
 
-    .rank-name {
-        font-size: 19px;
+    .record {
+        padding: 20px;
     }
 
-    .rank-description {
+    .record-title {
+        font-size: 17px;
+    }
+
+    .record-text,
+    .section-text,
+    .secret-text {
         font-size: 12px;
     }
 
-    .section-title h2 {
-        font-size: 18px;
+    .section-title {
+        font-size: 16px;
     }
 
-    .section p {
-        font-size: 13px;
-
-        line-height: 2;
+    .secret {
+        padding: 23px 20px;
     }
 
-    .information-control {
-        padding: 28px 22px;
-    }
-
-    .control-title {
-        font-size: 18px;
-    }
-
-    .control-text {
-        font-size: 13px;
-    }
-
-    .control-quote {
+    .secret-title {
         font-size: 15px;
     }
 
-    .principle-text {
-        font-size: 15px;
+    .principle {
+        font-size: 13px;
     }
-
 }
 
 
-/* =========================
-   모션 줄이기
-========================= */
-
 @media (prefers-reduced-motion: reduce) {
 
-    *,
-    *::before {
+    .container,
+    .label,
+    .title,
+    .subtitle,
+    .record-list,
+    .section,
+    .principle {
         animation: none !important;
-
         opacity: 1 !important;
     }
 
@@ -596,326 +398,148 @@ body {
 
 <body>
 
-<main class="page">
+<div class="container">
+
+    <div class="label">
+        기록 04
+    </div>
+
+    <h1 class="title">
+        기록 및 정보
+    </h1>
+
+    <div class="subtitle">
+        묵화에 관한 내부 기록과 보관 정보
+    </div>
 
 
-    <!-- =====================
-         제목
-    ====================== -->
+    <div class="record-list">
 
-    <header class="header">
+        <div class="record">
 
-        <div class="number">
-            기록 02
-        </div>
-
-        <h1 class="title">
-            내부 계층
-        </h1>
-
-        <div class="subtitle">
-            조직 내부의 지휘 체계와 역할
-        </div>
-
-    </header>
-
-
-    <!-- =====================
-         계층 구조
-    ====================== -->
-
-    <div class="hierarchy">
-
-
-        <!-- Ⅰ. 墨主 -->
-
-        <div class="rank top">
-
-            <div class="rank-number">
-                Ⅰ.
+            <div class="record-number">
+                RECORD 01
             </div>
 
-            <div class="rank-name">
-                墨主
+            <div class="record-title">
+                조직 기록
             </div>
 
-            <div class="rank-korean">
-                총수
-            </div>
-
-            <div class="rank-description">
-                묵화의 최고 권력자.
-                조직의 전체적인 방향과 핵심 사항을 결정한다.
+            <div class="record-text">
+                묵화의 설립과 변화, 조직의 주요 활동에 관한 기록을 보관한다.
             </div>
 
         </div>
 
 
-        <div class="connector"></div>
+        <div class="record">
 
-
-        <!-- Ⅱ. 幹部 -->
-
-        <div class="rank">
-
-            <div class="rank-number">
-                Ⅱ.
+            <div class="record-number">
+                RECORD 02
             </div>
 
-            <div class="rank-name">
-                幹部
+            <div class="record-title">
+                인물 기록
             </div>
 
-            <div class="rank-korean">
-                간부
-            </div>
-
-            <div class="rank-description">
-                총수의 직속으로,
-                조직의 주요 업무와 각 지역의 세력을 관리한다.
+            <div class="record-text">
+                조직과 관련된 주요 인물의 신상 및 활동 기록을 관리한다.
             </div>
 
         </div>
 
 
-        <div class="connector"></div>
+        <div class="record">
 
-
-        <!-- Ⅲ. 組織員 -->
-
-        <div class="rank">
-
-            <div class="rank-number">
-                Ⅲ.
+            <div class="record-number">
+                RECORD 03
             </div>
 
-            <div class="rank-name">
-                組織員
+            <div class="record-title">
+                사건 기록
             </div>
 
-            <div class="rank-korean">
-                조직원
-            </div>
-
-            <div class="rank-description">
-                상위 계층의 지시에 따라
-                각자의 업무를 수행한다.
+            <div class="record-text">
+                조직과 관련하여 발생한 주요 사건과 그 경과를 기록한다.
             </div>
 
         </div>
 
 
-        <div class="connector"></div>
+        <div class="record">
 
-
-        <!-- Ⅳ. 外部協力者 -->
-
-        <div class="rank">
-
-            <div class="rank-number">
-                Ⅳ.
+            <div class="record-number">
+                RECORD 04
             </div>
 
-            <div class="rank-name">
-                外部協力者
+            <div class="record-title">
+                기밀 정보
             </div>
 
-            <div class="rank-korean">
-                외부 협력자
-            </div>
-
-            <div class="rank-description">
-                묵화에 직접 소속되지는 않지만,
-                필요에 따라 조직과 거래하거나 협력한다.
+            <div class="record-text">
+                외부에 공개되지 않는 조직 내부의 중요 정보를 별도로 관리한다.
             </div>
 
         </div>
-
 
     </div>
 
 
-    <!-- =====================
-         계층의 원칙
-    ====================== -->
+    <div class="divider"></div>
+
 
     <section class="section">
 
-        <div class="section-title">
+        <h2 class="section-title">
+            기록 관리
+        </h2>
 
-            <span class="section-number">
-                01
-            </span>
-
-            <h2>
-                계층의 원칙
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            묵화의 내부 계층은 명확한 상하 관계를 기반으로 한다.
-
-            <br><br>
-
-            각 계층은 자신에게 주어진 권한과 역할을 벗어나지 않으며,
-            상위 계층의 결정은 하위 계층으로 전달된다.
-
-            <br><br>
-
-            직급은 단순한 호칭이 아니다.
-            조직 안에서 어디까지 명령할 수 있고,
-            어디까지 알아도 되는지를 결정하는 기준이 된다.
-
+        <p class="section-text">
+            묵화의 기록은 중요도와 기밀성에 따라 구분되어 보관된다.<br>
+            모든 기록에 접근할 수 있는 것은 아니며,<br>
+            기록의 열람 권한은 개인의 직급과 업무에 따라 제한된다.
         </p>
 
     </section>
 
 
-    <!-- =====================
-         정보 통제
-    ====================== -->
-
-    <section class="information-control">
-
-        <div class="control-title">
-            정보 통제
-        </div>
-
-
-        <div class="control-text">
-
-            묵화의 조직원은 자신의 직급과 업무에 필요한
-            정보만 제공받는다.
-
-            <br><br>
-
-            상위 계층으로 갈수록 더 많은 권한과 정보를 가지며,
-            하위 계층으로 갈수록 명령받은 업무 외의 사항을 알 수 없다.
-
-            <br><br>
-
-            서로 다른 부서와 지부 사이의 정보 공유 역시
-            엄격하게 제한된다.
-
-        </div>
-
-
-        <div class="control-quote">
-
-            아래로 갈수록 명령은 많아지고,<br>
-            위로 갈수록 비밀은 많아진다.
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================
-         외부 협력자
-    ====================== -->
-
     <section class="section">
 
-        <div class="section-title">
+        <div class="secret">
 
-            <span class="section-number">
-                02
-            </span>
-
-            <h2>
-                외부 협력자에 대하여
+            <h2 class="secret-title">
+                열람 제한
             </h2>
+
+            <p class="secret-text">
+
+                일부 기록은 특정 직급 이상의 인원에게만 공개된다.
+                <br><br>
+
+                열람 기록은 별도로 남으며,
+                허가되지 않은 정보의 접근은 제한된다.
+                <br><br>
+
+                조직의 중요한 정보일수록 더 엄격하게 관리된다.
+
+            </p>
 
         </div>
 
-
-        <p>
-
-            外部協力者는 묵화의 정식 조직원으로 분류되지 않는다.
-
-            <br><br>
-
-            이들은 특정한 목적이나 이해관계에 따라
-            묵화와 거래하거나 협력하며,
-            협력이 끝난 뒤에는 조직과의 관계가
-            유지되지 않을 수도 있다.
-
-            <br><br>
-
-            조직 내부의 정보 역시 필요한 범위 내에서만
-            제공된다.
-
-        </p>
-
     </section>
 
-
-    <!-- =====================
-         내부 원칙
-    ====================== -->
 
     <div class="principle">
-
-        <div class="principle-text">
-
-            명령은 위에서 내려오고,<br>
-            비밀은 위에 쌓인다.
-
-        </div>
-
+        기록은 남고,<br>
+        흔적은 쉽게 지워지지 않는다.
     </div>
 
 
-    <!-- =====================
-         내부 기록
-    ====================== -->
+    <a href="index.html" class="back">
+        ← 메인으로
+    </a>
 
-    <div class="record">
-
-        <div class="record-label">
-            비공개 기록
-        </div>
-
-        <div class="record-text">
-
-            묵화에서 정보는 곧 권한이다.
-
-            <br><br>
-
-            자신의 업무에 필요하지 않은 것을 알게 되는 순간,
-            그 정보는 개인의 것이 아니라 조직의 문제가 된다.
-
-            <br><br>
-
-            따라서 묵화에서는
-            '모르는 것' 역시 하나의 규칙으로 취급된다.
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================
-         하단
-    ====================== -->
-
-    <footer class="footer">
-
-        <a class="back" href="index.html">
-            ← 메인으로
-        </a>
-
-        <span class="mark">
-            墨花
-        </span>
-
-    </footer>
-
-
-</main>
+</div>
 
 </body>
 </html>
