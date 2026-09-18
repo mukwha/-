@@ -51,16 +51,18 @@ body {
 }
 
 
-/* 제목 */
+/* ====================
+   제목
+==================== */
 
 .header {
     width: 100%;
 
-    text-align: center;
-
     padding-bottom: 40px;
 
     border-bottom: 1px solid #393836;
+
+    text-align: left;
 }
 
 .number {
@@ -83,6 +85,8 @@ body {
     font-weight: 400;
 
     letter-spacing: 6px;
+
+    text-align: left;
 }
 
 .subtitle {
@@ -93,15 +97,21 @@ body {
     font-size: 13px;
 
     letter-spacing: 2px;
+
+    text-align: left;
 }
 
 
-/* 본문 */
+/* ====================
+   본문
+==================== */
 
 .content {
     width: 100%;
 
     margin-top: 45px;
+
+    text-align: left;
 }
 
 .block {
@@ -120,6 +130,8 @@ body {
     font-weight: 400;
 
     letter-spacing: 3px;
+
+    text-align: left;
 }
 
 .block p {
@@ -130,6 +142,8 @@ body {
     font-size: 14px;
 
     line-height: 2.15;
+
+    text-align: left;
 }
 
 .block p + p {
@@ -137,7 +151,9 @@ body {
 }
 
 
-/* 정보 박스 */
+/* ====================
+   정보 박스
+==================== */
 
 .note {
     margin-top: 22px;
@@ -147,6 +163,8 @@ body {
     background: #222221;
 
     border-left: 2px solid #67151b;
+
+    text-align: left;
 }
 
 .note p {
@@ -157,10 +175,14 @@ body {
     font-size: 13px;
 
     line-height: 2;
+
+    text-align: left;
 }
 
 
-/* 구분선 */
+/* ====================
+   구분선
+==================== */
 
 .line {
     width: 100%;
@@ -173,14 +195,14 @@ body {
 }
 
 
-/* 마지막 문장 */
+/* ====================
+   마지막 문장
+==================== */
 
 .quote {
     width: 100%;
 
     margin-bottom: 45px;
-
-    text-align: center;
 
     color: #821a20;
 
@@ -189,10 +211,14 @@ body {
     line-height: 2;
 
     letter-spacing: 2px;
+
+    text-align: center;
 }
 
 
-/* 메인으로 */
+/* ====================
+   메인으로
+==================== */
 
 .back {
     display: block;
@@ -202,8 +228,6 @@ body {
     margin: 0;
     padding: 0;
 
-    text-align: left;
-
     color: #777472;
 
     text-decoration: none;
@@ -211,6 +235,8 @@ body {
     font-size: 12px;
 
     letter-spacing: 2px;
+
+    text-align: left;
 }
 
 .back:hover {
@@ -218,7 +244,9 @@ body {
 }
 
 
-/* 모바일 */
+/* ====================
+   모바일
+==================== */
 
 @media (max-width: 600px) {
 
@@ -265,6 +293,8 @@ body {
 <div class="page">
 
 
+    <!-- 제목 -->
+
     <header class="header">
 
         <div class="number">
@@ -281,6 +311,8 @@ body {
 
     </header>
 
+
+    <!-- 본문 -->
 
     <main class="content">
 
@@ -379,11 +411,15 @@ body {
     </main>
 
 
+    <!-- 마지막 문장 -->
+
     <div class="quote">
         보이는 것은 기업.<br>
         남겨지는 것은 흔적뿐이다.
     </div>
 
+
+    <!-- 메인으로 -->
 
     <a class="back" href="index.html">
         ← 메인으로
