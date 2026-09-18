@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>기록 및 정보 — 墨花</title>
+<title>기록 및 정보</title>
 
 <style>
 
@@ -12,13 +12,15 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
 }
 
 body {
+    min-height: 100vh;
+
     background: #260508;
     color: #d0cecc;
 
@@ -29,316 +31,253 @@ body {
         "바탕체",
         serif;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 100vh;
-
-    padding: 50px 20px;
-
-    overflow-x: hidden;
+    padding: 60px 20px;
 }
 
-
-/* 메인 카드 */
-
-.container {
+.page {
     width: 100%;
-    max-width: 560px;
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    padding: 65px 60px 45px;
 
     background: #1b1b1a;
 
     border: 1px solid #451014;
 
-    padding: 65px 55px 50px;
-
     box-shadow:
         0 20px 70px rgba(0, 0, 0, 0.75);
-
-    animation:
-        cardAppear 1.5s ease forwards;
 }
 
 
-@keyframes cardAppear {
+/* ====================
+   제목
+==================== */
 
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
+.header {
+    width: 100%;
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    padding-bottom: 40px;
 
+    border-bottom: 1px solid #393836;
+
+    text-align: left;
 }
 
-
-/* 상단 */
-
-.label {
-    text-align: center;
-
-    color: #74151b;
-
-    font-size: 12px;
-
-    letter-spacing: 4px;
-
+.number {
     margin-bottom: 18px;
 
-    opacity: 0;
+    color: #78171d;
 
-    animation:
-        fadeIn 1.4s ease forwards;
+    font-size: 11px;
 
-    animation-delay: 0.3s;
+    letter-spacing: 4px;
 }
-
 
 .title {
     margin: 0;
 
-    text-align: center;
+    color: #dedbd9;
 
-    font-family:
-        "Noto Serif KR",
-        "Nanum Myeongjo",
-        "함초롬바탕",
-        serif;
-
-    font-size: 52px;
+    font-size: 46px;
 
     font-weight: 400;
 
-    letter-spacing: 7px;
+    letter-spacing: 6px;
 
-    color: #dedbd9;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.4s ease forwards;
-
-    animation-delay: 0.6s;
+    text-align: left;
 }
 
-
 .subtitle {
-    text-align: center;
+    margin-top: 18px;
 
-    color: #777573;
+    color: #777472;
 
     font-size: 13px;
 
     letter-spacing: 2px;
 
-    margin-top: 18px;
-
-    margin-bottom: 55px;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.4s ease forwards;
-
-    animation-delay: 0.9s;
+    text-align: left;
 }
 
 
-/* 기록 목록 */
+/* ====================
+   본문
+==================== */
 
-.record-list {
-    display: flex;
+.content {
+    width: 100%;
 
-    flex-direction: column;
+    margin-top: 45px;
 
-    gap: 14px;
-
-    opacity: 0;
-
-    animation:
-        fadeUp 1.4s ease forwards;
-
-    animation-delay: 1.2s;
+    text-align: left;
 }
 
+.block {
+    width: 100%;
 
-.record {
-    padding: 25px 26px;
-
-    background: #242423;
-
-    border: 1px solid #3e1014;
-
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease;
+    margin-bottom: 32px;
 }
 
+.block-title {
+    margin-bottom: 14px;
 
-.record:hover {
-    background: #2c2020;
+    color: #b5b2b0;
 
-    border-color: #64151b;
-}
+    font-size: 17px;
 
-
-.record-number {
-    color: #7e171e;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 9px;
-}
-
-
-.record-title {
-    color: #d1cecc;
-
-    font-size: 19px;
+    font-weight: 400;
 
     letter-spacing: 3px;
 
-    margin-bottom: 10px;
+    text-align: left;
+}
+
+.block p {
+    margin: 0;
+
+    color: #918e8c;
+
+    font-size: 14px;
+
+    line-height: 2.15;
+
+    text-align: left;
 }
 
 
+/* ====================
+   기록 박스
+==================== */
+
+.record-box {
+    width: 100%;
+
+    padding: 23px 25px;
+
+    background: #222221;
+
+    border: 1px solid #353432;
+
+    border-left: 2px solid #67151b;
+}
+
+.record-number {
+    margin-bottom: 10px;
+
+    color: #72171d;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.record-title {
+    margin-bottom: 12px;
+
+    color: #b5b2b0;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
 .record-text {
+    color: #898684;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* ====================
+   미확인 기록
+==================== */
+
+.unknown {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background: #201f1e;
+
+    border: 1px solid #3b3030;
+}
+
+.unknown-title {
+    margin-bottom: 14px;
+
+    color: #a5a19f;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+.unknown p {
+    margin: 0;
+
     color: #858280;
 
     font-size: 13px;
 
-    line-height: 1.9;
-
-    margin: 0;
+    line-height: 2;
 }
 
 
-/* 구분선 */
+/* ====================
+   구분선
+==================== */
 
-.divider {
+.line {
     width: 100%;
 
     height: 1px;
 
-    background: #3b1115;
+    margin: 45px 0;
 
-    margin: 55px 0;
+    background: #343331;
 }
 
 
-/* 기록 설명 */
+/* ====================
+   마지막 문장
+==================== */
 
-.section {
-    opacity: 0;
+.quote {
+    width: 100%;
 
-    animation:
-        fadeUp 1.4s ease forwards;
+    margin-top: 45px;
 
-    animation-delay: 1.8s;
-}
+    margin-bottom: 45px;
 
+    color: #821a20;
 
-.section-title {
-    color: #aaa7a5;
-
-    font-size: 18px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-
-    margin: 0 0 18px;
-}
-
-
-.section-text {
-    color: #858280;
-
-    font-size: 13px;
+    font-size: 15px;
 
     line-height: 2;
 
-    margin: 0;
-}
-
-
-/* 미확인 기록 */
-
-.unknown {
-    margin-top: 38px;
-
-    padding: 25px 26px;
-
-    background: #201718;
-
-    border-left: 2px solid #74151b;
-}
-
-
-.unknown-title {
-    color: #b1adaa;
-
-    font-size: 16px;
-
-    font-weight: 400;
-
-    letter-spacing: 3px;
-
-    margin: 0 0 15px;
-}
-
-
-.unknown-text {
-    color: #858180;
-
-    font-size: 13px;
-
-    line-height: 2;
-
-    margin: 0;
-}
-
-
-/* 하단 문구 */
-
-.principle {
-    margin-top: 55px;
+    letter-spacing: 2px;
 
     text-align: center;
-
-    color: #8f1d24;
-
-    font-size: 18px;
-
-    letter-spacing: 3px;
-
-    line-height: 1.9;
-
-    opacity: 0;
-
-    animation:
-        fadeIn 1.5s ease forwards;
-
-    animation-delay: 2.3s;
 }
 
 
-/* 돌아가기 */
+/* ====================
+   메인으로
+==================== */
 
 .back {
     display: block;
 
-    width: fit-content;
+    width: 100%;
 
-    margin: 55px auto 0;
+    margin: 0;
+    padding: 0;
 
-    color: #666361;
+    color: #777472;
 
     text-decoration: none;
 
@@ -346,134 +285,50 @@ body {
 
     letter-spacing: 2px;
 
-    transition:
-        color 0.3s ease;
+    text-align: left;
 }
-
 
 .back:hover {
     color: #aaa7a5;
 }
 
 
-/* 애니메이션 */
-
-@keyframes fadeIn {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-
-}
-
-
-@keyframes fadeUp {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(18px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-
-}
-
-
-/* 모바일 */
+/* ====================
+   모바일
+==================== */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 20px 12px;
+        padding: 25px 12px;
     }
 
-
-    .container {
-        padding:
-            50px 28px 40px;
+    .page {
+        padding: 45px 28px 35px;
     }
-
 
     .title {
-        font-size: 40px;
+        font-size: 37px;
 
         letter-spacing: 5px;
     }
 
-
-    .subtitle {
-        font-size: 11px;
-
-        margin-bottom: 45px;
-    }
-
-
-    .record {
-        padding: 21px 20px;
-    }
-
-
-    .record-title {
-        font-size: 17px;
-    }
-
-
-    .record-text,
-    .section-text,
-    .unknown-text {
-        font-size: 12px;
-    }
-
-
-    .section-title {
-        font-size: 16px;
-    }
-
-
-    .unknown {
-        padding:
-            23px 20px;
-    }
-
-
-    .unknown-title {
+    .block-title {
         font-size: 15px;
     }
 
+    .block p {
+        font-size: 13px;
 
-    .principle {
-        font-size: 16px;
+        line-height: 2;
     }
 
-}
+    .record-box {
+        padding: 20px;
+    }
 
-
-/* 애니메이션 줄이기 */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .container,
-    .label,
-    .title,
-    .subtitle,
-    .record-list,
-    .section,
-    .principle {
-
-        animation: none !important;
-
-        opacity: 1 !important;
+    .quote {
+        font-size: 13px;
     }
 
 }
@@ -484,173 +339,204 @@ body {
 
 <body>
 
-<div class="container">
+<div class="page">
 
 
-    <div class="label">
-        기록 04
-    </div>
+    <!-- 제목 -->
 
+    <header class="header">
 
-    <h1 class="title">
-        기록 및 정보
-    </h1>
-
-
-    <div class="subtitle">
-        묵화에 관한 기록과 보관 자료
-    </div>
-
-
-    <div class="record-list">
-
-
-        <div class="record">
-
-            <div class="record-number">
-                RECORD 01
-            </div>
-
-            <div class="record-title">
-                조직 기록
-            </div>
-
-            <p class="record-text">
-                묵화의 설립과 변화, 조직의 주요 활동에 관한 기록을 보관한다.
-            </p>
-
+        <div class="number">
+            RECORD 04
         </div>
 
+        <h1 class="title">
+            기록 및 정보
+        </h1>
 
-        <div class="record">
-
-            <div class="record-number">
-                RECORD 02
-            </div>
-
-            <div class="record-title">
-                인물 기록
-            </div>
-
-            <p class="record-text">
-                묵화와 관련된 주요 인물들의 정보와 활동 기록을 남긴다.
-            </p>
-
+        <div class="subtitle">
+            묵화에 관한 기록과 보관 자료
         </div>
 
+    </header>
 
-        <div class="record">
 
-            <div class="record-number">
-                RECORD 03
+    <!-- 기록 목록 -->
+
+    <main class="content">
+
+
+        <section class="block">
+
+            <div class="record-box">
+
+                <div class="record-number">
+                    RECORD 01
+                </div>
+
+                <div class="record-title">
+                    조직 기록
+                </div>
+
+                <div class="record-text">
+                    묵화의 설립과 변화,
+                    조직의 주요 활동에 관한 기록을 보관한다.
+                </div>
+
             </div>
 
-            <div class="record-title">
-                사건 기록
+        </section>
+
+
+        <section class="block">
+
+            <div class="record-box">
+
+                <div class="record-number">
+                    RECORD 02
+                </div>
+
+                <div class="record-title">
+                    인물 기록
+                </div>
+
+                <div class="record-text">
+                    묵화와 관련된 주요 인물들의
+                    정보와 활동 기록을 남긴다.
+                </div>
+
             </div>
 
-            <p class="record-text">
-                조직과 관련하여 발생한 주요 사건과 그 경과를 기록한다.
+        </section>
+
+
+        <section class="block">
+
+            <div class="record-box">
+
+                <div class="record-number">
+                    RECORD 03
+                </div>
+
+                <div class="record-title">
+                    사건 기록
+                </div>
+
+                <div class="record-text">
+                    조직과 관련하여 발생한
+                    주요 사건과 그 경과를 기록한다.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="block">
+
+            <div class="record-box">
+
+                <div class="record-number">
+                    RECORD 04
+                </div>
+
+                <div class="record-title">
+                    문서 및 자료
+                </div>
+
+                <div class="record-text">
+                    조직과 관련된 문서, 사진, 보고서 및
+                    기타 자료를 보관한다.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="block">
+
+            <div class="record-box">
+
+                <div class="record-number">
+                    RECORD 05
+                </div>
+
+                <div class="record-title">
+                    미확인 기록
+                </div>
+
+                <div class="record-text">
+                    출처와 작성 시점이 명확하지 않은
+                    오래된 기록을 별도로 보관한다.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div class="line"></div>
+
+
+        <!-- 기록에 대하여 -->
+
+        <section class="block">
+
+            <div class="block-title">
+                기록에 대하여
+            </div>
+
+            <p>
+                묵화에는 오랜 시간 동안 축적된
+                수많은 기록이 존재한다.
             </p>
 
-        </div>
-
-
-        <div class="record">
-
-            <div class="record-number">
-                RECORD 04
-            </div>
-
-            <div class="record-title">
-                문서 및 자료
-            </div>
-
-            <p class="record-text">
-                조직과 관련된 문서, 사진, 보고서 및 기타 자료를 보관한다.
+            <p style="margin-top: 16px;">
+                공식적인 문서부터 개인이 남긴 짧은 기록까지,
+                조직과 관련된 다양한 자료가 하나의 기록으로 남는다.
             </p>
 
-        </div>
-
-
-        <div class="record">
-
-            <div class="record-number">
-                RECORD 05
-            </div>
-
-            <div class="record-title">
-                미확인 기록
-            </div>
-
-            <p class="record-text">
-                출처와 작성 시점이 명확하지 않은 오래된 기록을 별도로 보관한다.
+            <p style="margin-top: 16px;">
+                일부 자료는 정확한 사실을 담고 있지만,
+                일부는 작성자의 기억과 추측이 섞여 있어
+                진위를 확인하기 어렵다.
             </p>
 
-        </div>
+        </section>
 
 
-    </div>
-
-
-    <div class="divider"></div>
-
-
-    <section class="section">
-
-
-        <h2 class="section-title">
-            기록에 대하여
-        </h2>
-
-
-        <p class="section-text">
-
-            묵화에는 오랜 시간 동안 축적된 수많은 기록이 존재한다.
-            <br>
-
-            공식적인 문서부터 개인이 남긴 짧은 기록까지,
-            조직과 관련된 다양한 자료가 하나의 기록으로 남는다.
-            <br>
-
-            일부 자료는 정확한 사실을 담고 있지만,
-            일부는 작성자의 기억과 추측이 섞여 있어 진위를 확인하기 어렵다.
-
-        </p>
-
+        <!-- 미확인 기록 -->
 
         <div class="unknown">
 
-            <h3 class="unknown-title">
+            <div class="unknown-title">
                 미확인 기록
-            </h3>
+            </div>
 
-
-            <p class="unknown-text">
-
-                기록의 일부에는 작성자와 작성 시점이 남아 있지 않다.
-                <br><br>
-
-                내용 또한 서로 다른 기록과 일치하지 않는 경우가 있어
-                사실 여부가 확인되지 않은 상태로 보관되고 있다.
-
+            <p>
+                일부 기록은 작성자와 작성 시점이 확인되지 않는다.
+                다른 기록과 내용이 서로 일치하지 않는 경우도 존재하며,
+                현재까지도 정확한 사실 여부가 확인되지 않은 자료가 남아 있다.
             </p>
 
         </div>
 
 
-    </section>
+    </main>
 
 
-    <div class="principle">
+    <!-- 마지막 문장 -->
 
+    <div class="quote">
         남겨진 기록은<br>
         사라진 흔적을 기억한다.
-
     </div>
 
 
-    <a href="index.html" class="back">
+    <!-- 메인으로 -->
+
+    <a class="back" href="index.html">
         ← 메인으로
     </a>
 
