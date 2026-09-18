@@ -6,6 +6,11 @@
 
 <title>墨花 — 내부 계층</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
 <style>
 
 * {
@@ -273,13 +278,15 @@ body {
 
 
 /* =========================
-   핵심 문구
+   정보 통제 기록
 ========================= */
 
 .principle {
+    position: relative;
+
     margin-top: 55px;
 
-    padding: 32px 20px;
+    padding: 38px 30px 34px;
 
     border-top: 1px solid #541116;
 
@@ -297,13 +304,86 @@ body {
 
 
 .principle-text {
-    color: #a52a31;
+    position: relative;
+
+    display: inline-block;
+
+    color: #b9b5b2;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    line-height: 2;
+
+    z-index: 1;
+}
+
+
+/* 붉은 펜으로 표시한 듯한 밑줄 */
+
+.principle-text::after {
+    content: "";
+
+    position: absolute;
+
+    left: -8px;
+
+    right: -8px;
+
+    bottom: 1px;
+
+    height: 8px;
+
+    border-bottom: 2px solid #8f1d24;
+
+    border-radius: 50%;
+
+    transform: rotate(-1deg);
+
+    opacity: 0.8;
+
+    z-index: -1;
+}
+
+
+/* 손으로 적은 듯한 작은 표시 */
+
+.pen-note {
+    margin-top: 18px;
+
+    color: #8f1d24;
+
+    font-family:
+        "Nanum Pen Script",
+        cursive;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+    transform: rotate(-2deg);
+}
+
+
+.pen-mark {
+    position: absolute;
+
+    top: 14px;
+
+    right: 20px;
+
+    color: #8f1d24;
+
+    font-family:
+        "Nanum Pen Script",
+        cursive;
 
     font-size: 18px;
 
-    letter-spacing: 3px;
-
-    line-height: 1.9;
+    transform: rotate(7deg);
 }
 
 
@@ -469,6 +549,7 @@ body {
 
     .title {
         font-size: 36px;
+
         letter-spacing: 6px;
     }
 
@@ -490,11 +571,18 @@ body {
 
     .section p {
         font-size: 13px;
+
         line-height: 2;
+    }
+
+    .principle {
+        padding: 32px 18px;
     }
 
     .principle-text {
         font-size: 15px;
+
+        letter-spacing: 1px;
     }
 
 }
@@ -509,6 +597,7 @@ body {
     *,
     *::before {
         animation: none !important;
+
         opacity: 1 !important;
     }
 
@@ -661,7 +750,7 @@ body {
 
     <!-- =====================
          계층의 특징
-    ====================== -->
+===================== -->
 
     <section class="section">
 
@@ -738,16 +827,24 @@ body {
 
 
     <!-- =====================
-         핵심 문구
-    ====================== -->
+         정보 통제
+===================== -->
 
     <div class="principle">
 
+        <div class="pen-mark">
+            확인
+        </div>
+
         <div class="principle-text">
 
-            위계는 명확하게.<br>
-            권한은 그에 맞게.
+            묵화의 조직원은 자신의 직급과<br>
+            업무에 필요한 정보만 제공받는다.
 
+        </div>
+
+        <div class="pen-note">
+            기록은 권한을 가진 자에게만.
         </div>
 
     </div>
@@ -755,7 +852,7 @@ body {
 
     <!-- =====================
          내부 기록
-    ====================== -->
+===================== -->
 
     <div class="record">
 
@@ -775,7 +872,7 @@ body {
 
     <!-- =====================
          하단
-    ====================== -->
+===================== -->
 
     <footer class="footer">
 
