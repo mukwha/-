@@ -12,7 +12,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     min-height: 100%;
@@ -29,10 +30,6 @@ body {
         "바탕체",
         serif;
 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
     min-height: 100vh;
 
     padding: 60px 20px;
@@ -41,6 +38,8 @@ body {
 .container {
     width: 100%;
     max-width: 700px;
+
+    margin: 0 auto;
 
     background: #1b1b1a;
 
@@ -67,6 +66,9 @@ body {
     }
 
 }
+
+
+/* HEADER */
 
 .header {
     text-align: center;
@@ -107,6 +109,9 @@ h1 {
 
     color: #777472;
 }
+
+
+/* SECTION */
 
 .section {
     margin-top: 45px;
@@ -158,6 +163,9 @@ h1 {
     color: #b3afad;
 }
 
+
+/* DIVIDER */
+
 .divider {
     width: 100%;
 
@@ -168,7 +176,12 @@ h1 {
     margin: 45px 0;
 }
 
+
+/* BOTTOM STATEMENT */
+
 .statement {
+    width: 100%;
+
     text-align: center;
 
     font-size: 15px;
@@ -180,17 +193,24 @@ h1 {
     color: #8e1d24;
 }
 
-.back {
-    display: block;
 
-    width: auto;
+/* BACK BUTTON */
 
-    align-self: flex-start;
+.back-area {
+    width: 100%;
 
     margin-top: 50px;
-    margin-right: auto;
 
-    text-align: left;
+    text-align: left !important;
+}
+
+.back {
+    display: inline-block;
+
+    margin: 0 !important;
+    padding: 0;
+
+    text-align: left !important;
 
     color: #777472;
 
@@ -207,6 +227,9 @@ h1 {
     color: #aaa7a5;
 }
 
+
+/* MOBILE */
+
 @media (max-width: 600px) {
 
     body {
@@ -214,7 +237,8 @@ h1 {
     }
 
     .container {
-        padding: 45px 28px 35px;
+        padding:
+            45px 28px 35px;
     }
 
     h1 {
@@ -262,9 +286,13 @@ h1 {
 </style>
 </head>
 
+
 <body>
 
 <div class="container">
+
+
+    <!-- HEADER -->
 
     <header class="header">
 
@@ -282,6 +310,8 @@ h1 {
 
     </header>
 
+
+    <!-- 공식 신분 -->
 
     <section class="section">
 
@@ -301,6 +331,8 @@ h1 {
 
     </section>
 
+
+    <!-- 기업 활동 -->
 
     <section class="section">
 
@@ -325,6 +357,8 @@ h1 {
     </section>
 
 
+    <!-- 대외적 이미지 -->
+
     <section class="section">
 
         <div class="section-title">
@@ -347,6 +381,8 @@ h1 {
     <div class="divider"></div>
 
 
+    <!-- 조직과 기업 -->
+
     <section class="section">
 
         <div class="section-title">
@@ -367,7 +403,9 @@ h1 {
 
             <p>
                 겉으로 보이는 모습과 실제 존재하는 조직 사이에는
-                <span class="highlight">어떠한 접점도 남기지 않는다.</span>
+                <span class="highlight">
+                    어떠한 접점도 남기지 않는다.
+                </span>
             </p>
 
         </div>
@@ -375,15 +413,26 @@ h1 {
     </section>
 
 
+    <!-- STATEMENT -->
+
     <div class="statement">
+
         보이는 것은 기업.<br>
         남겨지는 것은 흔적뿐이다.
+
     </div>
 
 
-    <a class="back" href="index.html">
-        ← 메인으로
-    </a>
+    <!-- BACK -->
+
+    <div class="back-area">
+
+        <a class="back" href="index.html">
+            ← 메인으로
+        </a>
+
+    </div>
+
 
 </div>
 
