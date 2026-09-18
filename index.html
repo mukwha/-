@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>墨花 | MOKHWA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(65, 15, 25, 0.55) 0%,
+          rgba(25, 7, 12, 0.45) 35%,
+          #080708 75%
+        );
+      color: #e3dfe0;
+      font-family: "Times New Roman", "Noto Serif KR", serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* 은은한 버건디 빛 */
+    .glow {
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: rgba(76, 17, 29, 0.18);
+      filter: blur(100px);
+      pointer-events: none;
+    }
+
+    .title {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hanja {
+      font-size: clamp(70px, 12vw, 150px);
+      font-weight: 400;
+      letter-spacing: 18px;
+      margin-left: 18px;
+      color: #ded6d8;
+      text-shadow:
+        0 0 30px rgba(90, 20, 32, 0.45);
+    }
+
+    .english {
+      margin-top: 18px;
+      font-size: 14px;
+      letter-spacing: 10px;
+      color: #80636a;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 45px;
+      height: 1px;
+      background: #5a202b;
+      margin: 35px auto 30px;
+    }
+
+    .enter {
+      position: relative;
+      display: inline-block;
+      padding: 12px 38px;
+      border: 1px solid #57212c;
+      color: #bdaeb1;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 5px;
+      transition: all 0.4s ease;
+    }
+
+    .enter:hover {
+      background: #43131e;
+      border-color: #79303d;
+      color: #eee8e9;
+      box-shadow: 0 0 25px rgba(91, 20, 34, 0.35);
+    }
+
+    .sub {
+      position: absolute;
+      bottom: 28px;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #4e4144;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <div class="glow"></div>
+
+    <div class="title">
+
+      <div class="hanja">墨花</div>
+
+      <div class="english">M O K H W A</div>
+
+      <div class="line"></div>
+
+      <a href="#" class="enter">ENTER</a>
+
+    </div>
+
+    <div class="sub">
+      A MARK THAT CANNOT BE ERASED
+    </div>
+
+  </main>
+
+</body>
+</html>
