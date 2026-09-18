@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>墨花 — 내부 계층</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #260508;
+    color: #d0cecc;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        "바탕체",
+        serif;
+
+    padding: 45px 20px;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   전체 페이지
+========================= */
+
+.page {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    background: #1b1b1a;
+
+    border: 1px solid #451014;
+
+    padding: 65px 65px 60px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.75);
+
+    animation:
+        pageAppear 1.4s ease forwards;
+}
+
+
+/* =========================
+   상단
+========================= */
+
+.header {
+    border-bottom: 1px solid #451014;
+
+    padding-bottom: 32px;
+
+    margin-bottom: 45px;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.3s ease forwards;
+
+    animation-delay: 0.2s;
+}
+
+
+.number {
+    color: #8f1d24;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 17px;
+}
+
+
+.title {
+    margin: 0;
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    letter-spacing: 8px;
+
+    color: #e2dfdd;
+}
+
+
+.subtitle {
+    margin-top: 15px;
+
+    color: #777574;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   계층 구조
+========================= */
+
+.hierarchy {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.4s ease forwards;
+
+    animation-delay: 0.5s;
+}
+
+
+.rank {
+    width: 100%;
+
+    max-width: 560px;
+
+    padding: 30px 32px;
+
+    border: 1px solid #453536;
+
+    background: #20201f;
+
+    text-align: left;
+
+    position: relative;
+}
+
+
+.rank.top {
+    border-color: #6b171d;
+
+    background: #241719;
+}
+
+
+.rank-number {
+    color: #8f1d24;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.rank-name {
+    color: #d6d2d0;
+
+    font-size: 22px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 5px;
+}
+
+
+.rank-korean {
+    color: #777574;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 17px;
+}
+
+
+.rank.top .rank-name {
+    color: #b32a32;
+}
+
+
+.rank-description {
+    color: #999795;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+.connector {
+    width: 1px;
+
+    height: 35px;
+
+    background: #541116;
+}
+
+
+/* =========================
+   설명 섹션
+========================= */
+
+.section {
+    margin-top: 55px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.3s ease forwards;
+}
+
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.section-number {
+    color: #8f1d24;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.section-title h2 {
+    margin: 0;
+
+    color: #d5d2d0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+}
+
+
+.section p {
+    margin: 0;
+
+    color: #999795;
+
+    font-size: 14px;
+
+    line-height: 2.15;
+}
+
+
+/* =========================
+   정보 통제 강조
+========================= */
+
+.information-control {
+    margin-top: 55px;
+
+    padding: 35px 30px;
+
+    background: #20201f;
+
+    border-left: 2px solid #7b171e;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.4s ease forwards;
+
+    animation-delay: 1.7s;
+}
+
+
+.control-title {
+    color: #d5d2d0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 23px;
+}
+
+
+.control-text {
+    color: #999795;
+
+    font-size: 14px;
+
+    line-height: 2.15;
+}
+
+
+.control-quote {
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #353433;
+
+    color: #a52a31;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   내부 원칙
+========================= */
+
+.principle {
+    margin-top: 55px;
+
+    padding: 32px 20px;
+
+    border-top: 1px solid #541116;
+
+    border-bottom: 1px solid #541116;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 2.1s;
+}
+
+
+.principle-text {
+    color: #a52a31;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   내부 기록
+========================= */
+
+.record {
+    margin-top: 48px;
+
+    padding: 24px 0;
+
+    border-top: 1px solid #353433;
+
+    border-bottom: 1px solid #353433;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.3s ease forwards;
+
+    animation-delay: 2.4s;
+}
+
+
+.record-label {
+    color: #777574;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.record-text {
+    color: #999795;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   하단
+========================= */
+
+.footer {
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #353433;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.3s ease forwards;
+
+    animation-delay: 2.7s;
+}
+
+
+.back {
+    color: #777574;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: color 0.3s ease;
+}
+
+
+.back:hover {
+    color: #b32a32;
+}
+
+
+.mark {
+    color: #5f0c12;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   애니메이션
+========================= */
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   모바일
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .page {
+        padding: 45px 28px 50px;
+    }
+
+    .title {
+        font-size: 36px;
+
+        letter-spacing: 6px;
+    }
+
+    .rank {
+        padding: 26px 23px;
+    }
+
+    .rank-name {
+        font-size: 19px;
+    }
+
+    .rank-description {
+        font-size: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+    .section p {
+        font-size: 13px;
+
+        line-height: 2;
+    }
+
+    .information-control {
+        padding: 28px 22px;
+    }
+
+    .control-title {
+        font-size: 18px;
+    }
+
+    .control-text {
+        font-size: 13px;
+    }
+
+    .control-quote {
+        font-size: 15px;
+    }
+
+    .principle-text {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================
+   모션 줄이기
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before {
+        animation: none !important;
+
+        opacity: 1 !important;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<main class="page">
+
+
+    <!-- =====================
+         제목
+    ====================== -->
+
+    <header class="header">
+
+        <div class="number">
+            기록 02
+        </div>
+
+        <h1 class="title">
+            내부 계층
+        </h1>
+
+        <div class="subtitle">
+            조직 내부의 지휘 체계와 역할
+        </div>
+
+    </header>
+
+
+    <!-- =====================
+         계층 구조
+    ====================== -->
+
+    <div class="hierarchy">
+
+
+        <!-- Ⅰ. 墨主 -->
+
+        <div class="rank top">
+
+            <div class="rank-number">
+                Ⅰ.
+            </div>
+
+            <div class="rank-name">
+                墨主
+            </div>
+
+            <div class="rank-korean">
+                총수
+            </div>
+
+            <div class="rank-description">
+                묵화의 최고 권력자.
+                조직의 전체적인 방향과 핵심 사항을 결정한다.
+            </div>
+
+        </div>
+
+
+        <div class="connector"></div>
+
+
+        <!-- Ⅱ. 幹部 -->
+
+        <div class="rank">
+
+            <div class="rank-number">
+                Ⅱ.
+            </div>
+
+            <div class="rank-name">
+                幹部
+            </div>
+
+            <div class="rank-korean">
+                간부
+            </div>
+
+            <div class="rank-description">
+                총수의 직속으로,
+                조직의 주요 업무와 각 지역의 세력을 관리한다.
+            </div>
+
+        </div>
+
+
+        <div class="connector"></div>
+
+
+        <!-- Ⅲ. 組織員 -->
+
+        <div class="rank">
+
+            <div class="rank-number">
+                Ⅲ.
+            </div>
+
+            <div class="rank-name">
+                組織員
+            </div>
+
+            <div class="rank-korean">
+                조직원
+            </div>
+
+            <div class="rank-description">
+                상위 계층의 지시에 따라
+                각자의 업무를 수행한다.
+            </div>
+
+        </div>
+
+
+        <div class="connector"></div>
+
+
+        <!-- Ⅳ. 外部協力者 -->
+
+        <div class="rank">
+
+            <div class="rank-number">
+                Ⅳ.
+            </div>
+
+            <div class="rank-name">
+                外部協力者
+            </div>
+
+            <div class="rank-korean">
+                외부 협력자
+            </div>
+
+            <div class="rank-description">
+                묵화에 직접 소속되지는 않지만,
+                필요에 따라 조직과 거래하거나 협력한다.
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================
+         계층의 원칙
+    ====================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span class="section-number">
+                01
+            </span>
+
+            <h2>
+                계층의 원칙
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            묵화의 내부 계층은 명확한 상하 관계를 기반으로 한다.
+
+            <br><br>
+
+            각 계층은 자신에게 주어진 권한과 역할을 벗어나지 않으며,
+            상위 계층의 결정은 하위 계층으로 전달된다.
+
+            <br><br>
+
+            직급은 단순한 호칭이 아니다.
+            조직 안에서 어디까지 명령할 수 있고,
+            어디까지 알아도 되는지를 결정하는 기준이 된다.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================
+         정보 통제
+    ====================== -->
+
+    <section class="information-control">
+
+        <div class="control-title">
+            정보 통제
+        </div>
+
+
+        <div class="control-text">
+
+            묵화의 조직원은 자신의 직급과 업무에 필요한
+            정보만 제공받는다.
+
+            <br><br>
+
+            상위 계층으로 갈수록 더 많은 권한과 정보를 가지며,
+            하위 계층으로 갈수록 명령받은 업무 외의 사항을 알 수 없다.
+
+            <br><br>
+
+            서로 다른 부서와 지부 사이의 정보 공유 역시
+            엄격하게 제한된다.
+
+        </div>
+
+
+        <div class="control-quote">
+
+            아래로 갈수록 명령은 많아지고,<br>
+            위로 갈수록 비밀은 많아진다.
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         외부 협력자
+    ====================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
+                외부 협력자에 대하여
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            外部協力者는 묵화의 정식 조직원으로 분류되지 않는다.
+
+            <br><br>
+
+            이들은 특정한 목적이나 이해관계에 따라
+            묵화와 거래하거나 협력하며,
+            협력이 끝난 뒤에는 조직과의 관계가
+            유지되지 않을 수도 있다.
+
+            <br><br>
+
+            조직 내부의 정보 역시 필요한 범위 내에서만
+            제공된다.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================
+         내부 원칙
+    ====================== -->
+
+    <div class="principle">
+
+        <div class="principle-text">
+
+            명령은 위에서 내려오고,<br>
+            비밀은 위에 쌓인다.
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         내부 기록
+    ====================== -->
+
+    <div class="record">
+
+        <div class="record-label">
+            비공개 기록
+        </div>
+
+        <div class="record-text">
+
+            묵화에서 정보는 곧 권한이다.
+
+            <br><br>
+
+            자신의 업무에 필요하지 않은 것을 알게 되는 순간,
+            그 정보는 개인의 것이 아니라 조직의 문제가 된다.
+
+            <br><br>
+
+            따라서 묵화에서는
+            '모르는 것' 역시 하나의 규칙으로 취급된다.
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         하단
+    ====================== -->
+
+    <footer class="footer">
+
+        <a class="back" href="index.html">
+            ← 메인으로
+        </a>
+
+        <span class="mark">
+            墨花
+        </span>
+
+    </footer>
+
+
+</main>
+
+</body>
+</html>
