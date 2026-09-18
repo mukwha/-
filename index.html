@@ -19,13 +19,14 @@ html, body {
 }
 
 body {
-    background: #3b0a15;
-    color: #ddd7d5;
+    background: #260508;
+    color: #d0cecc;
 
     font-family:
         "Noto Serif KR",
         "Nanum Myeongjo",
-        "Batang",
+        "함초롬바탕",
+        "바탕체",
         serif;
 
     display: flex;
@@ -35,19 +36,28 @@ body {
     min-height: 100vh;
 
     padding: 50px 20px;
+
+    overflow-x: hidden;
 }
 
 
-/* 중앙 카드 */
+/* =================================
+   중앙 카드
+================================= */
 
 .container {
+    position: relative;
+
+    z-index: 2;
+
     width: 100%;
     max-width: 560px;
+
     min-height: 780px;
 
-    background: #171619;
+    background: #1b1b1a;
 
-    border: 1px solid #4b1825;
+    border: 1px solid #451014;
 
     padding: 75px 55px 45px;
 
@@ -56,62 +66,124 @@ body {
     align-items: center;
 
     box-shadow:
-        0 20px 70px rgba(0, 0, 0, 0.45);
+        0 20px 70px rgba(0, 0, 0, 0.75);
+
+    animation:
+        cardAppear 1.5s ease forwards;
 }
 
 
-/* 제목 */
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =================================
+   제목
+================================= */
 
 .title {
     margin: 0 0 55px;
 
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
+
     font-size: 86px;
+
     font-weight: 400;
 
-    letter-spacing: 12px;
+    letter-spacing: 10px;
 
-    color: #e4dedc;
+    color: #e2dfdd;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 0.4s;
 }
 
 
-/* 설명 */
+/* =================================
+   설명
+================================= */
 
 .description {
     width: 100%;
 
     text-align: center;
 
-    line-height: 2;
+    line-height: 2.1;
 
-    font-size: 14px;
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
 
-    color: #aaa3a1;
+    font-size: 15px;
+
+    color: #999795;
 
     margin-bottom: 55px;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 0.9s;
 }
+
 
 .description strong {
     display: block;
 
     font-size: 18px;
+
     font-weight: 400;
 
-    color: #d5cecc;
+    color: #aaa8a6;
 
     margin-bottom: 14px;
 }
 
 
-/* 버튼 */
+/* =================================
+   버튼 2 × 2
+================================= */
 
 .menu {
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
-    gap: 13px;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: 1.5s;
 }
+
 
 .menu a {
     display: flex;
@@ -119,49 +191,106 @@ body {
     align-items: center;
     justify-content: center;
 
-    width: 100%;
-    height: 62px;
+    height: 72px;
 
-    background: #211c1e;
+    background: #242423;
 
-    border: 1px solid #54202d;
+    border: 1px solid #541116;
 
-    color: #c9c1bf;
+    color: #aaa7a5;
 
     text-decoration: none;
+
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        "함초롬바탕",
+        serif;
 
     font-size: 14px;
 
     letter-spacing: 3px;
 
-    transition: 0.25s;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
+
 
 .menu a:hover {
-    background: #3b0a15;
+    background: #35080b;
 
-    border-color: #702238;
+    border-color: #75151b;
 
-    color: #eee8e6;
+    color: #ddd9d7;
 }
 
 
-/* 인용문 */
+/* =================================
+   한자 문구
+================================= */
 
 .quote {
     margin-top: 60px;
 
-    color: #74243a;
+    color: #8f1d24;
 
-    font-size: 13px;
+    font-family:
+        "Noto Serif KR",
+        "Nanum Myeongjo",
+        serif;
 
-    letter-spacing: 2px;
+    font-size: 18px;
+
+    letter-spacing: 3px;
 
     text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeIn 1.5s ease forwards;
+
+    animation-delay: 2.1s;
 }
 
 
-/* 모바일 */
+/* =================================
+   등장 효과
+================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =================================
+   모바일
+================================= */
 
 @media (max-width: 600px) {
 
@@ -178,7 +307,7 @@ body {
     .title {
         font-size: 62px;
 
-        letter-spacing: 8px;
+        letter-spacing: 7px;
 
         margin-bottom: 45px;
     }
@@ -187,24 +316,48 @@ body {
         font-size: 13px;
 
         margin-bottom: 45px;
+
+        line-height: 2;
     }
 
     .description strong {
         font-size: 16px;
     }
 
+    .menu {
+        gap: 10px;
+    }
+
     .menu a {
-        height: 58px;
+        height: 62px;
 
         font-size: 12px;
 
-        letter-spacing: 3px;
+        letter-spacing: 2px;
     }
 
     .quote {
         margin-top: 45px;
 
-        font-size: 11px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* =================================
+   모션 줄이기
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .container,
+    .title,
+    .description,
+    .menu,
+    .quote {
+        animation: none !important;
+        opacity: 1 !important;
     }
 
 }
@@ -215,17 +368,29 @@ body {
 
 <body>
 
+
+<!-- =================================
+     중앙 메인
+================================= -->
+
 <div class="container">
 
-    <h1 class="title">墨花</h1>
+
+    <h1 class="title">
+        墨花
+    </h1>
 
 
     <div class="description">
 
-        <strong>먹으로 그린 꽃.</strong>
+        <strong>
+            먹으로 그린 꽃.
+        </strong>
 
         한 번 새겨진 흔적은 쉽게 지워지지 않는다.<br>
+
         검은 흔적 위에 피어난 꽃은<br>
+
         그 누구도 쉽게 지울 수 없는 이름이 된다.
 
     </div>
@@ -233,21 +398,26 @@ body {
 
     <nav class="menu">
 
+
         <a href="organization.html">
             조직 개요
         </a>
+
 
         <a href="hierarchy.html">
             내부 계층
         </a>
 
+
         <a href="identity.html">
             대외 신분
         </a>
 
+
         <a href="records.html">
             기록 및 정보
         </a>
+
 
     </nav>
 
@@ -256,7 +426,9 @@ body {
         「墨落成花，闇覆其身。」
     </div>
 
+
 </div>
+
 
 </body>
 </html>
